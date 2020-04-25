@@ -45,26 +45,6 @@
 			{float: false, src: 'img/products/soft.svg'},
 		];
 
-
-		// plastics = [
-		// 	[false, "img/products/milk.svg"],
-		// 	[true, "img/products/straw.svg"],
-		// 	[false, "img/products/champu.svg"],
-		// 	[true, "img/products/cleaner.svg"],
-		// 	[true, "img/products/cleaner.svg"],
-		// 	[true, "img/products/ketchup.svg"],
-		// 	[false, "img/products/medicine.svg"],
-		// 	[false, "img/products/package.svg"],
-		// 	[false, "img/products/peanut.svg"],
-		// 	[true, "img/products/pills.svg"],
-		// 	[true, "img/products/trash.svg"],
-		// 	[true, "img/products/yogurt.svg"],
-		// 	[false, "img/products/water.svg"],
-		// 	[false, "img/products/oil.svg"],
-		// 	[false, "img/products/soft.svg"]
-
-		// ];
-
 		var counter, interval;
 		var posicio = 0;
 		
@@ -140,10 +120,7 @@
 
 		$('#score')[0].innerHTML = currentScore;	
 	}
-	
-	
-	
-	
+		
 
 	
 //////////////FUNCIO PRODUCTE DESAPAREIX CAP AMUNT/////////
@@ -166,9 +143,7 @@
 		randomImatge();	
 
 		// canviem la imatge
-		$('#newProd').attr('src', plastics[posicio]['src']);
-		
-		
+		$('#newProd').attr('src', plastics[posicio]['src']);		
 		
 		// col·loquem la imatge
 		desplazarEntrada('0', '1'); //valors top="0%" opacity="1"
