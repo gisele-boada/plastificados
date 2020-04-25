@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<!-- 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 	-->
+		<link rel="stylesheet" href="https://use.typekit.net/vvl4bqb.css">
+		<link rel="stylesheet" type="text/css" href="css/sinkorfloat.css">
+	
+		<script src="js/jquery.js"></script> 
+
+		<style>
+
+		</style>
+		
+	<script>
+	
+	
+
+		
+	$(function() {
+	/////////////////////////////////////
+	/*
+		first var -> float
+	*/
+
+
+		var plastics = [
+			{float: false, src: 'img/products/milk.svg'},
+			{float: true, src: 'img/products/straw.svg'},
+			{float: false, src: 'img/products/champu.svg'},
+			{float: true, src: 'img/products/detergent.svg'},
+			{float: true, src: 'img/products/cleaner.svg'},
+			{float: true, src: 'img/products/ketchup.svg'},
+			{float: false, src: 'img/products/medicine.svg'},
+			{float: false, src: 'img/products/package.svg'},
+			{float: false, src: 'img/products/peanut.svg'},
+			{float: true, src: 'img/products/pills.svg'},
+			{float: true, src: 'img/products/trash.svg'},
+			{float: true, src: 'img/products/yogurt.svg'},			
+			{float: false, src: 'img/products/water.svg'},
+			{float: false, src: 'img/products/oil.svg'},
+			{float: false, src: 'img/products/soft.svg'},
+		];
+
+
+		// plastics = [
+		// 	[false, "img/products/milk.svg"],
+		// 	[true, "img/products/straw.svg"],
+		// 	[false, "img/products/champu.svg"],
+		// 	[true, "img/products/cleaner.svg"],
+		// 	[true, "img/products/cleaner.svg"],
+		// 	[true, "img/products/ketchup.svg"],
+		// 	[false, "img/products/medicine.svg"],
+		// 	[false, "img/products/package.svg"],
+		// 	[false, "img/products/peanut.svg"],
+		// 	[true, "img/products/pills.svg"],
+		// 	[true, "img/products/trash.svg"],
+		// 	[true, "img/products/yogurt.svg"],
+		// 	[false, "img/products/water.svg"],
+		// 	[false, "img/products/oil.svg"],
+		// 	[false, "img/products/soft.svg"]
+
+		// ];
+
+		var counter, interval;
+		var posicio = 0;
+		
+		gestionarNuevo();
+				
+////////////FUNCIO PERQUE ELS PLASTICS SURTIN ALEATORIAMENT/////////
+
+		function randomImatge() {
+			posicio = Math.floor(Math.random()*(plastics.length));
+			// ++posicio;
+		}
+		
+		
+/////////////WHEN PRESS START: PRESS UP/DOWN EVENT //////////////////////
+
+	$("#start").on("click", function(){
+
+		$(document).keydown(function(e){
+
+						//Arrow up
+						if (e.which == "38") {
+							desplazarSalida("-80%", '0', "opacity 0.4s, top 0.5s ");
+							
+							if (plastics[posicio]['float']) {
+								actualitzarMarcador(true);
+							} else {
+								actualitzarMarcador(false);
+							}
+							
+							
+						}
+						//Arrow down
+						if (e.which == "40") {
+							desplazarSalida("120%", '0', "opacity 0.4s, top 0.5s ");
+
+							if (plastics[posicio]['float']) {
+								actualitzarMarcador(false);
+							} else {
+								actualitzarMarcador(true);
+							}
+
+						}
+
+						setTimeout(function () {
+					        gestionarNuevo();
+					    }, 500);						
+
+		});
+		
+		
+		/*$("#start").fadeTo(1000, 0); *///DESAPARECE BUTTON
+		$("#start").hide(50, 0);
+		gestioTimer(); //s'executa el compta enrrera
+		closeMenu();
+
+	});
+	
+	
+	function actualitzarMarcador(resultat){
+
+		currentScore = parseInt($('#score')[0].innerHTML);
+
+		//true: encertat
+		if (resultat) {
+			currentScore += 10;
+			$("#score").css("color", "#041f4a");
+		}
+		//false: fallat
+		else{
+			currentScore -= 10;
+			$("#score").css("color", "#ff4d33");
+		}
+
+		$('#score')[0].innerHTML = currentScore;	
+	}
+	
+	
+	
+	
+
+	
+//////////////FUNCIO PRODUCTE DESAPAREIX CAP AMUNT/////////
+
+	function desplazarSalida(direccion, opacity, transition) {
+		$('#newProd').removeClass('notransition'); //TREC la classe que anula la transicio perque sino no ho feia automaticament
+		$('#newProd').css({
+			"top": direccion,
+			"opacity": opacity,
+			"transition": transition
+		}) ;
+	}
+
+
+////////////////NOU PRODUCTE APAREIX AMB CANVI D'IMATGE///////////
+
+	function gestionarNuevo() {	
+
+		///////canvia la imatge ALEATORIAMENT///////////////
+		randomImatge();	
+
+		// canviem la imatge
+		$('#newProd').attr('src', plastics[posicio]['src']);
+		
+		
+		
+		// col·loquem la imatge
+		desplazarEntrada('0', '1'); //valors top="0%" opacity="1"
+		
+	}
+	
+	
+//////////////FUNCIO NOU PRODUCTE ANULEM TRANSICIO Y OBJECTE TORNA PUNT 0 Y APAREIX//////////////
+
+	function desplazarEntrada(direccion, opacity) {	
+		$('#newProd').addClass('notransition');//AFEGEIXO la classe que anula la transicio perque sino no ho feia automaticament
+		$('#newProd').css({
+			"top": direccion,
+			"opacity": opacity,
+			"transition": "none"
+		}) ;
+	}
+
+	
+	$("#reStart").on("click", function(){
+				$("#start").show(50,0);
+				$("#timeUp").hide(50, 0);
+				pararTimer();
+
+	});
+
+
+
+//////CLICK START BUTTON DESAPAREIX I S'EXECUTA FUNCIO COMPTA ENRRERA///////
+/*		
+	$("#start").on("click", function(counter){
+
+		//$("#start").fadeTo(1000, 0); //DESAPARECE BUTTON
+		$("#start").hide(50, 0);
+		gestioTimer(); //s'executa el compta enrrera
+		closeMenu();
+	});
+*/
+
+///////////FUNCTION CUENTA ATRAS 60SEC///////////
+
+	function gestioTimer() {
+		
+		counter = 120;
+		interval = setInterval(function() {
+		    counter--;
+
+		    if (counter <= 0) {
+		        clearInterval(interval);
+		        $('#timer').html("0"); 
+		        $('#timeUp').css("display", "block"); //contador arriba a 0 i apareix #timeUp
+		        $('#timeUp').css("opacity", "1"); //per la seguent volta la opacity ha quedat en 0 i s'ha de tornar a 1 #timeUp
+		        return;
+		    }else{
+		      $('#timer').text(counter);
+		      // console.log("Timer --> " + counter);
+		    }
+
+		}, 1000);
+
+		
+	};
+	
+	
+/////////// atura el temps
+	function pararTimer(){	
+		clearInterval(interval);	
+	}
+
+
+///////////PROBLEMA//////////////////////
+
+
+///Quan obro MENU vull que el contador vagi al final (0) i una vegada clico re-start o try again, que el comptador es reinicii.
+///El que pasa es que aconsegueixo parar el comptador pero despres ja no es reinicia amb la formula gestioTimer() i apareix el boto TRY AGAIN en bucle.
+
+//////FUNCIO PER PARAR EL COMPTADOR/////
+/*
+	function stopTimer() {
+ 		this.counter = 0;
+ 		console.log("CLEAR");
+ 		$("#timeUp").hide();
+	};
+
+	//////AL FER CLIC A BACK ES PARA EL COMPTADOR (0)
+
+	$("#back").on("click", function(){
+			stopTimer();
+			
+		
+	});
+
+//////QUAN CLICO RE-START EN EL MENU HAURIA DE APREIXER EL BOTO START ORIGINAL I AL FER CLICK QUE ES REINICII EL COMPTADOR/////
+
+	$("#reStart").on("click", function(){
+				$("#timeUp").hide();
+				$("#start").show();
+				$("#start").on("click", function(){
+					$("#timeUp").hide();
+					gestioTimer().reset();
+				})
+				
+	});*/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+///////////CLICK TRY AGAIN: EMPIEZA CUENTA ATRAS 60SEC///////////
+
+	$("#timeUp").on("click", function(){
+						
+		$("#timeUp").hide(50, 0); //DESAPARECE BUTTON opacity 0
+		gestioTimer();
+		closeMenu();
+
+	});
+
+
+/////////////BACK: MENU OPEN ////////
+
+
+
+			$("#back").on("click", function(){
+				$("#sinkorfloat").fadeTo("slow", 1);
+				$('#back').css("display", "none");
+				$('#cross').css("display", "block");
+				$("#menu").css({
+						"left": "0",
+						"transition": "left 0.5s"
+				});
+				$("#sinkorfloat").css({"color": "#041f4a",
+										"transition": "color 1s"
+				});
+		
+				/*stopTimer();*/
+			});
+		
+
+			/////////////////CLOSE MENU//////////
+
+			$("#cross").on("click", function(){
+				$('#back').css("display", "block");
+				$('#cross').css("display", "none");
+				$("#menu").css({
+						"left": "-25%",
+						"transition": "left 0.5s"
+				});
+				
+				$("#sinkorfloat").css({"color": "#ff4d33",
+								"transition": "color 1s"
+				});
+
+			});
+
+
+			///////////CLOSE MENU PARA OTRAS FUNCIONES/////////
+
+		function closeMenu(){
+				$("#menu").css({
+						"left": "-25%",
+						"transition": "left 0.5s"
+				});
+				$('#back').css("display", "block");
+				$('#cross').css("display", "none");
+				$("#sinkorfloat").css({"color": "#ff4d33",
+								"transition": "color 1s"
+				});
+
+		};
+
+
+
+
+	///////////////////////////////////
+
+
+	});
+
+
+
+
+
+
+	</script>
+		
+
+	</head>	
+	<body>
+
+		<div id="content">
+
+			<div id="start">START!</div>
+			<div id="timeUp">You lost...<br><span id="tryAgain">TRY AGAIN!</span></div>
+
+			<div id="header">
+				<div id="titulo">
+					<img id="back" src="img/deco/back.svg"><img style="display: none;" id="cross" src="img/deco/cross.svg">
+					<div id="sinkorfloat">Sink or float?</div><div style="clear: both"></div>
+				</div>
+				<div id="time"><span id="timer">30</span><br><span id="score" style="color: #041f4a;">0</span></div>			
+				<div style="clear: both"></div>
+			</div>
+
+			<div id="menu">
+				<div id="reStart" class="opcionesMenu">RE-START!</div>
+				<a href="games.html"><div class="opcionesMenu">LOGOUT</div></a>
+			</div>
+
+			<!-- <img id="ondas"src="img/deco/waves2.gif"> -->
+			
+		
+			<img id="floor1" src="img/deco/deco1.svg">
+			
+
+			<img id="floor2" src="img/deco/deco2.svg">
+
+
+
+			<img id="starfish" src="img/deco/star.svg">
+
+
+			<img  class="fish" src="img/deco/fish.svg" style="left:9%;">
+				<img  class="oposite" src="img/deco/fish.svg" style="animation-duration: 8s; left:4%; bottom: 51%;">
+					<img  class="fish" src="img/deco/fish.svg" style="animation-duration: 12s; left:14%; bottom: 45%; z-index:-2; animation-delay: 2s;">
+						<img  class="oposite" src="img/deco/fish.svg" style="animation-duration: 15s; left:7%; bottom: 43%; z-index: -2;">
+
+			
+			<img  class="fishBlue" src="img/deco/fishBlue.svg" style="right:5%; bottom: 46%; z-index: 1; animation-delay: 2s">
+				<img  class="fishBlue" src="img/deco/fishBlue.svg" style="right:18%; bottom: 31%; z-index: 1; animation-delay: 3s">
+					<img  class="fishBlue" src="img/deco/fishBlue.svg" style="right:22%; bottom: 36%; z-index: 1; animation-delay: 4s">
+
+
+			<div id="footer">2</div>
+
+
+			<div id="product"><!-- AQUÍ VA PRODUCTE A PROGRAMAR -->
+				<img id="newProd" src="">
+			</div>
+
+		</div>
+
+		<div id="turn">
+			Please rotate your device!
+		</div>
+		
+
+
+	</body>
+
+</html>

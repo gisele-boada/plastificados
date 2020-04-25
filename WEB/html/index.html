@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+		
+
+		<script src="js/jquery.js"></script>
+		<script src="js/scroll.js"></script> 
+
+	<style>
+
+		@font-face {
+			font-family: HelveticaNeueMd;
+			src: url(fonts/HelveticaNeueMd.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeueRoman;
+			src: url(fonts/HelveticaNeueRoman.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeue Bold Condensed;
+			src: url(fonts/HelveticaNeueBdCn.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeue Light Italic;
+			src: url(fonts/HelveticaNeueLightIt.otf);
+		}
+
+	    * {
+             box-sizing: border-box;
+             margin:auto;
+        }
+        h1 {
+        	font-family: HelveticaNeue Bold Condensed;
+        	font-size: 50px;
+        	text-decoration: none;
+        	margin-top: 0;
+    		margin-bottom: 0;
+    		color: #ff4633;
+        }
+
+        h2 {
+        	font-family: HelveticaNeue Bold Condensed;
+        	font-size: 28px;
+        	text-decoration: none;
+        	margin-top: 0;
+    		margin-bottom: 5px;
+    		color: #041f4a;
+        }
+
+        h3 {
+        	font-family: HelveticaNeue Light Italic;
+        }
+
+		body{
+			height: 5720px;
+			width: 100%;
+		}
+
+		#home {
+			height: 100vh;
+		}
+
+		#homePage {
+			height: 100%;
+		}
+
+		#background {
+			position: absolute;
+			background-image:url('img/background.gif');
+			width: 100%;
+			background-repeat:no-repeat;
+			background-size:contain;
+			background-position:center;
+			z-index: -1;
+		}
+
+		#header {
+			height: 100px;
+			width: 100%;
+			position: fixed;
+			top:0;
+			left: 0;
+			z-index: 3;
+		}
+
+		#logo {
+			float:left;
+			width:50%;
+			height: 100%;
+			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0));
+		}
+
+		#logo img {
+			width:28%;
+			margin-top: 35px;
+			margin-left: 50px;
+		}
+		#logo1 {
+			display: block;
+		}
+
+		#logo2, #logo3 {
+			display:none;
+		}
+
+		#buttonsCont {
+			float:left;
+			width:50%;
+			height: 100%;
+			padding-right: 50px;
+		}
+
+		.button {
+			min-width:10px;
+			margin-top: 35px;
+			padding-right: 25px;
+			padding-left: 25px;
+			height: 38px;
+			float:right;
+			background-color: green;
+			margin-left: 30px;
+			font-family: HelveticaNeueRoman;
+			font-size: 15px;
+			letter-spacing: 1px;
+			color:white;
+			text-align: center;
+			padding-top: 10px;
+			border-radius: 7.5px;
+		}
+
+		#soundOn, #soundOff {
+			position: absolute;
+			bottom:50px;
+			right: 50px;
+			height: 5%;
+/*			-webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.5));*/
+		}
+
+		#soundOn {
+			display: none;
+		}
+
+		#test {
+			position: absolute;
+			bottom: 20%;
+			right: 10%;
+			width: 30%;
+		}
+
+
+		#first {
+			height: 100vh;
+			width: 100%;
+			background: #041f4a;
+		}
+
+		#second {
+			height: 100vh;
+			width: 100%;
+			background: #041f4a;
+			
+		}
+
+
+
+		#last {
+			height: 100vh;
+			width: 100%;
+			background: #ff4633;
+		}
+
+		#firstCont {
+			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
+			position: relative;
+		}
+
+			#bloc0 {
+				width: 100%;
+			}
+
+			#textCont {
+				position:absolute;
+				width: 100%;
+				height: 100%;
+			}
+
+				.text1 {
+					float:left;
+					width: 22%;
+					height: 100%;
+					font-family: HelveticaNeueRoman;
+					font-size: 18px;
+				    margin-left: 9%;
+				    padding-top: 6%;
+				    /*padding-right: 2%;*/
+				    line-height: 1.7;
+				    color: #041f4a;
+				}
+
+			#straw {
+				height: 17%;
+			    position: absolute;	
+			    left: 13%;
+    			margin-top: 0%;			
+			}
+
+			#palito {
+				height: 9%;
+			    position: absolute;	
+			    right: 19%;
+    			margin-top: 10%;			
+			}
+
+			#palito1 {
+				height: 3%;
+			    position: absolute;	
+				right: 30%;
+				/*margin-top: 4%;*/		
+			}
+
+			#tapon {
+				height: 5%;
+			    position: absolute;
+			    right: 10%;
+			    margin-top: 4%;
+			}
+
+			#bag {
+				height: 28%;
+				position: absolute;
+				right: 48%;
+				margin-top: 10%;
+				transform: rotate(-45deg);
+			}
+			
+		#secondCont {
+			width: 52%;
+			height: 100%;
+			float:left;
+			margin-top: -5%;
+			position: relative;
+			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
+		}
+			#bloc1, #bloc2 {
+				width: 100%;
+			}
+
+			#palito2 {
+				height: 4%;
+			    position: absolute;	
+				/*right: 30%;*/
+				margin-top: 7%;
+				margin-left: 32%;	
+			}
+
+			#soft {
+				height: 40%;
+			    position: absolute;	
+				margin-left: 11%;
+    			margin-top: 22%;		
+			}
+
+	#third {
+		height: 100vh;
+		width: 100%;
+		background: #041f4a;
+		position: relative;
+	}
+
+		#thirdCont {
+			width: 55%;
+			height: 100%;
+			float:right;
+			margin-top: -5%;
+			-webkit-filter: drop-shadow(-15px 30px 15px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(-15px 30px 15px rgba(0,0,0,0.5));
+			
+		} 
+
+			#water {
+				height: 20%;
+			    position: absolute;	
+			    top: 380%;
+			    left: 15%;
+			    z-index: 3;
+			    transform: rotate(45deg);
+/*				margin-left: 13%;*/
+				/*margin-top: 13%;*/	
+			}
+
+			#detergent {
+				position: absolute;
+				height: 20%;
+				top: 320%;
+				left: 35%;
+				z-index: 1;
+/*				margin-top: 21%;
+				margin-left: 37%;*/	
+			}
+
+			.fish  {
+				width: 3%;
+				position: absolute;
+				bottom: 30%;;
+				left: 5%;
+				z-index: -3;
+				animation-name: fish;
+				animation-duration: 10s;
+				animation-iteration-count: infinite;
+				z-index: 3;
+			}
+
+			.oposite {
+				width: 3%;
+				position: absolute;
+				bottom: 30%;
+				left: 5%;
+				animation-name: oposite;
+				animation-duration: 15s ease-in-out;
+				animation-iteration-count: infinite;
+				z-index: 1;
+			}
+
+		#contFondo {
+			width: 100%;
+			position: absolute;
+			bottom:0;
+			-webkit-filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5));
+			z-index: 2;
+}
+		}
+
+			#fondo1 {
+				height: 100%;
+
+			}
+
+			#fondo2 {
+				width: 100%;
+				position:absolute;
+				bottom: 0%;
+				-webkit-filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5)); 
+				filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5));
+			}
+
+
+
+
+
+	@keyframes fish {
+		0% {
+			transform: translateY(0px); 
+			}
+		50% {
+			transform: translateY(20px);
+		}
+		100% {
+			transform: translateY(0px); 
+		}
+	}
+
+	@keyframes oposite {
+		0% {
+			transform: translateY(0px); 
+			}
+
+		50% {
+			transform: translateY(20px);
+		}
+
+		100% {
+			transform: translateY(0px); 
+		}
+	}
+
+	</style>
+</head>	
+<body>
+
+	<script>
+
+	$(function() {
+	/////////////////////////////////////
+
+$(document).ready(function () {
+	// We'll read the rate from each <div>.
+  $(".parallax").each(function () {
+    var $this = $(this);
+    
+    // We need to remember the element's original
+    // top offset as a reference point.
+		$this.data("top", $this.offset().top);
+
+    // We've used a custom attribute in the HTML
+    // to specify the scrolling rate.
+		$this.data("rate", $this.attr("data-parallax-rate"));
+	});
+
+	$(window).scroll(function () {
+    // Whenever the window scrolls, we reposition
+    // each parallax element.
+		$(".parallax").each(function () {
+			var scrollTop = $(window).scrollTop();
+			var rate = $(this).data("rate");
+			var thisTop  = scrollTop - scrollTop * rate
+			$(this).css("top", $(this).data("top") + thisTop);
+		});
+	});
+});
+
+/////////////////SOUND ON/OFF////////////////////
+
+		$("#soundOff").on("click", function(){
+			$('#soundOff').css("display", "none");
+			$('#soundOn').css("display", "block");
+		});
+
+		$("#soundOn").on("click", function(){
+			$('#soundOn').css("display", "none");
+			$('#soundOff').css("display", "block");
+		});
+
+	///////////////////////////////////
+	});
+
+
+	</script>
+
+
+
+<!-- 	
+	<img id="background" src="img/background.gif"> -->
+	
+	<div id="header">
+		<div id="logo">
+			<img id="logo1" src="img/logo.svg">
+			<img id="logo2" src="img/logo2.svg">
+			<img id="logo3" src="img/logo3.svg">
+		</div>
+		<div id="buttonsCont">
+			<div class="button" style="background-color: #ff4633">Tour virtual</div>
+			<div class="button" style="background-color: #041f4a">Entradas</div>
+		</div>
+	</div>
+
+	<div id="home">
+		<img id="homePage" src="img/home.jpg">
+		<img id="soundOn" src="img/soundOn2.svg">
+		<img id="soundOff" src="img/soundOff2.svg">
+		<img id="test" src="img/test.svg">
+	</div>
+
+	<div id="first">
+		<div id="firstCont">
+			<div id="textCont">
+				<div class="text1">
+					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				</div>
+				<div class="text1">
+					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				</div>
+				<div class="text1">
+					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				</div><div style="clear: both;"></div>
+			</div>
+			<img id="bloc0" src="img/deco/bloc0.svg">
+		</div>
+		<img id="straw" class="parallax" data-parallax-rate="0.9" src="img/deco/straw.svg">
+		<img id="palito" class="parallax" data-parallax-rate="1.1" src="img/deco/palito.svg">
+		<img id="palito1" class="parallax" data-parallax-rate="0.8" src="img/deco/palito1.svg">
+		<img id="tapon" class="parallax" data-parallax-rate="0.9" src="img/deco/tapon.svg">
+		<img id="bag" class="parallax" data-parallax-rate="1.1" src="img/deco/bag.svg">
+	</div>
+	<div id="second">
+		<div id="secondCont">
+			<img id="bloc1" src="img/deco/bloc1.svg">
+		</div>
+		<img id="soft" class="parallax" data-parallax-rate="1.3" src="img/deco/soft.svg">
+		<img id="palito2" class="parallax" data-parallax-rate="0.9" src="img/deco/palito2.svg">
+		<img id="water" class="parallax" data-parallax-rate="1.2" src="img/deco/water.svg">
+		<img id="detergent" class="parallax" data-parallax-rate="0.9" src="img/deco/detergent.svg">
+	</div>
+	<div id="third">
+		<div id="thirdCont">
+			<img id="bloc2" src="img/deco/bloc2.png">
+		</div><!-- <div style="clear: both;"></div> -->
+		
+		<div id="contFondo">
+			<img id="fondo2" src="img/deco/fondo2.svg">
+			<img id="fondo1" class="parallax" data-parallax-rate="1.5" src="img/deco/fondo1.svg">
+		</div>
+
+		<img  class="fish" src="img/deco/fish.svg" style="left:9%;">
+			<img  class="oposite" src="img/deco/fish.svg" style="animation-duration: 8s; left:4%; bottom: 36%;">
+				<img  class="fish" src="img/deco/fish.svg" style="animation-duration: 12s; left:14%; bottom: 35%; z-index:2; animation-delay: 2s;">
+					<img  class="oposite" src="img/deco/fish.svg" style="animation-duration: 15s; left:9%; bottom: 40%; z-index: 1;">	
+
+	</div>
+	<div id="last"></div>
+
+</body>
+
+</html>

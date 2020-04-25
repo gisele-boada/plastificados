@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" href="https://use.typekit.net/vvl4bqb.css">
+	<style>
+		*{
+			padding:0;
+			margin:0;
+			font-family:monospace;
+			box-sizing:border-box;
+		}
+
+		body{
+			background-color: #041f4a;
+			height: 100vh;
+		}
+
+		#video{ 
+			width: 80%;
+    		margin-left: 10%;
+		}	
+
+		#barra {
+			border:1px solid red; 
+			border-radius: 25px;
+			margin-left: 600px;
+			overflow: hidden;
+		}
+
+		#progres {
+			width:1%;
+			height:35px;
+			background: linear-gradient(45deg, #ff4633, red);
+    		border-radius: 25px;
+
+		}
+
+		.boto{border:1px solid #099;
+			margin-top:10px;
+			margin-bottom:10px;
+			width:200px;
+			height:60px;
+			float:left;
+		}
+
+		#temps{
+			color: white;
+			margin-left: 42%;
+			margin-top: 10px;
+			font-size: 20pt;
+			font-family: myriad-pro-condensed, sans-serif;
+			font-weight: 700;
+			font-style: normal;
+			font-size: 25pt;
+			color: #ff4d33;
+			margin-bottom: 80px;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<video id="video" >
+	  <source src="vid/mapa.mp4" type="video/mp4">
+	</video>
+	
+	<div id="barra" style="width:600px">
+		<div id="progres"> 
+    	
+    	</div>
+	</div>
+
+	<div id="temps"> AÑO 1940 - 2025 </div>
+	
+	<script>
+
+		video = document.getElementById("video") ;
+		var estat = 0 ;
+		
+		temps    = document.getElementById("temps") ;
+		barra    = document.getElementById("barra") ;
+		progres  = document.getElementById("progres") ;
+		
+				
+		video.ontimeupdate =  actualitzar;
+
+		function actualitzar(){		
+		
+			// calculem el percentatge
+			percent = (100 / video.duration) * video.currentTime ;
+			
+			percent = percent.toFixed(0) ;
+			
+			/*temps.innerHTML = video.currentTime + " / " + percent + "%";
+
+*/			
+			progres.style.width =  percent + "%"
+			
+		};
+		
+		barra.onclick = function(e){
+		
+			var x = e.clientX - 600 ;
+			
+			time = ( video.duration * x ) / 600 ;
+			
+			video.currentTime = time ;
+
+
+			
+		};
+
+
+
+
+
+
+
+
+
+		
+		
+		/*verd.onclick = function() {vid(0,2.4)};
+		vermell.onclick = function() {vid(2.65,5.8)} ;
+		blau.onclick = function() {vid(6,10)} ;
+		
+		var from, to ;
+		// també és podria fer amb un array inici_final = [0,0]
+		// utilitzar inici_final[0] per l'inici i inici_final[1] pel final
+		
+		function vid(a,b){
+			
+			from = a ;
+			to = b ;
+			
+			video.currentTime = from ;
+			video.play();
+			
+			video.addEventListener("timeupdate", function(){
+					actualitzar() ;
+					if( video.currentTime >= to ){					
+						video.pause();
+					}	
+			}) ;
+			
+		
+		}*/
+
+	</script>
+</body>
+</html>
+
+
+
+
+
