@@ -70,16 +70,43 @@
 				/*visibility: hidden;*/
 			}
 
+
 			#tryAgain {
 				font-size: 40pt;
 				color:#ff4d33;
+			}
+
+			#congratulations {
+				border-radius: 25px 25px;
+				position: absolute;
+				left: 30%;
+				top: 25%;		
+				z-index: 3;
+				width: 40%;
+				background-color: #ff4d33;
+				height: 50%;
+				text-align: center;
+				padding-top: 1.4%;
+				font-family: myriad-pro-condensed, sans-serif;
+				font-weight: 700;
+				font-style: normal;
+				font-size: 40pt;
+				color: #041f4a;
+				cursor: pointer;
+				display: none;
+				padding-top: 3%;
+				/*visibility: hidden;*/
+			}
+
+			#youWon {
+				font-size: 60pt;
+				color:white;
 			}
 
 			#header {
 				padding: 2%;
 				padding-left: 3%;
 				padding-right: 3%;
-
 			}
 
 			#titulo {

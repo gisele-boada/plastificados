@@ -21,6 +21,7 @@
 
 		
 	$(function() {
+
 	/////////////////////////////////////
 	/*
 		first var -> float
@@ -57,48 +58,52 @@
 			// ++posicio;
 		}
 		
-		
+
 /////////////WHEN PRESS START: PRESS UP/DOWN EVENT //////////////////////
 
 	$("#start").on("click", function(){
-
-		$(document).keydown(function(e){
-
-						//Arrow up
-						if (e.which == "38") {
-							desplazarSalida("-80%", '0', "opacity 0.4s, top 0.5s ");
-							
-							if (plastics[posicio]['float']) {
-								actualitzarMarcador(true);
-							} else {
-								actualitzarMarcador(false);
-							}
-							
-							
-						}
-						//Arrow down
-						if (e.which == "40") {
-							desplazarSalida("120%", '0', "opacity 0.4s, top 0.5s ");
-
-							if (plastics[posicio]['float']) {
-								actualitzarMarcador(false);
-							} else {
-								actualitzarMarcador(true);
-							}
-
-						}
-
-						setTimeout(function () {
-					        gestionarNuevo();
-					    }, 500);						
-
-		});
 		
 		
-		/*$("#start").fadeTo(1000, 0); *///DESAPARECE BUTTON
-		$("#start").hide(50, 0);
-		gestioTimer(); //s'executa el compta enrrera
-		closeMenu();
+			$(document).keydown(function(e){
+
+				if(parseInt($('#timer')[0].innerHTML) > 0) {
+					//Arrow up
+					if (e.which == "38") {
+						desplazarSalida("-80%", '0', "opacity 0.4s, top 0.5s ");
+						
+						if (plastics[posicio]['float']) {
+							actualitzarMarcador(true);
+						} else {
+							actualitzarMarcador(false);
+						}
+				
+						
+					}
+					//Arrow down
+					if (e.which == "40") {
+						desplazarSalida("120%", '0', "opacity 0.4s, top 0.5s ");
+
+						if (plastics[posicio]['float']) {
+							actualitzarMarcador(false);
+						} else {
+							actualitzarMarcador(true);
+						}
+
+					}
+
+					setTimeout(function () {
+				        gestionarNuevo();
+				    }, 500);		
+			    }				
+
+			});
+			
+			
+			/*$("#start").fadeTo(1000, 0); *///DESAPARECE BUTTON
+			$("#start").hide(50, 0);
+			gestioTimer(); //s'executa el compta enrrera
+			closeMenu();
+		
 
 	});
 	
@@ -106,6 +111,8 @@
 	function actualitzarMarcador(resultat){
 
 		currentScore = parseInt($('#score')[0].innerHTML);
+		totalProds = parseInt($('#footer')[0].innerHTML);
+
 
 		//true: encertat
 		if (resultat) {
@@ -119,6 +126,9 @@
 		}
 
 		$('#score')[0].innerHTML = currentScore;	
+
+		totalProds += 1;
+		$('#footer')[0].innerHTML = totalProds;
 	}
 		
 
@@ -172,30 +182,41 @@
 
 
 
-//////CLICK START BUTTON DESAPAREIX I S'EXECUTA FUNCIO COMPTA ENRRERA///////
-/*		
-	$("#start").on("click", function(counter){
+	function finalScore() {
 
-		//$("#start").fadeTo(1000, 0); //DESAPARECE BUTTON
-		$("#start").hide(50, 0);
-		gestioTimer(); //s'executa el compta enrrera
-		closeMenu();
-	});
-*/
+				console.log('entra funcio');
+
+				currentScore = parseInt($('#score')[0].innerHTML);
+
+				if (currentScore >= 100) {
+					console.log('mes deu');
+					$("#congratulations").css("display", "block");
+					$("#timeUp").css("display", "none");
+				} else {
+					console.log('menys deu');
+					$("#congratulations").css("display", "none");
+					$("#timeUp").css("display", "block");
+					
+				}
+
+				$('#score')[0].innerHTML = 0;
+				$('#footer')[0].innerHTML = 0;
+			}
 
 ///////////FUNCTION CUENTA ATRAS 60SEC///////////
 
 	function gestioTimer() {
 		
-		counter = 120;
+		counter = 31;
 		interval = setInterval(function() {
 		    counter--;
 
 		    if (counter <= 0) {
 		        clearInterval(interval);
-		        $('#timer').html("0"); 
-		        $('#timeUp').css("display", "block"); //contador arriba a 0 i apareix #timeUp
-		        $('#timeUp').css("opacity", "1"); //per la seguent volta la opacity ha quedat en 0 i s'ha de tornar a 1 #timeUp
+		        $('#timer').html("0");
+		        finalScore(); 
+		       /* $('#timeUp').css("display", "block");*/ //contador arriba a 0 i apareix #timeUp
+		        /*$('#timeUp').css("opacity", "1");*/ //per la seguent volta la opacity ha quedat en 0 i s'ha de tornar a 1 #timeUp
 		        return;
 		    }else{
 		      $('#timer').text(counter);
@@ -214,28 +235,6 @@
 	}
 
 
-///////////PROBLEMA//////////////////////
-
-
-///Quan obro MENU vull que el contador vagi al final (0) i una vegada clico re-start o try again, que el comptador es reinicii.
-///El que pasa es que aconsegueixo parar el comptador pero despres ja no es reinicia amb la formula gestioTimer() i apareix el boto TRY AGAIN en bucle.
-
-//////FUNCIO PER PARAR EL COMPTADOR/////
-/*
-	function stopTimer() {
- 		this.counter = 0;
- 		console.log("CLEAR");
- 		$("#timeUp").hide();
-	};
-
-	//////AL FER CLIC A BACK ES PARA EL COMPTADOR (0)
-
-	$("#back").on("click", function(){
-			stopTimer();
-			
-		
-	});
-
 //////QUAN CLICO RE-START EN EL MENU HAURIA DE APREIXER EL BOTO START ORIGINAL I AL FER CLICK QUE ES REINICII EL COMPTADOR/////
 
 	$("#reStart").on("click", function(){
@@ -244,20 +243,24 @@
 				$("#start").on("click", function(){
 					$("#timeUp").hide();
 					gestioTimer().reset();
-				})
+				});
 				
-	});*/
+	});
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+	function callNextGame(){	
+		$("#congratulations").on("click", function(){
+				$("#congratulations").css("display", "none");
+				gestioTimer();
+				});
+	};
 
 
 ///////////CLICK TRY AGAIN: EMPIEZA CUENTA ATRAS 60SEC///////////
 
-	$("#timeUp").on("click", function(){
+	$(".replay").on("click", function(){
 						
-		$("#timeUp").hide(50, 0); //DESAPARECE BUTTON opacity 0
+		$(".replay").hide(50, 0); //DESAPARECE BUTTON opacity 0
 		gestioTimer();
 		closeMenu();
 
@@ -267,54 +270,53 @@
 /////////////BACK: MENU OPEN ////////
 
 
-
-			$("#back").on("click", function(){
-				$("#sinkorfloat").fadeTo("slow", 1);
-				$('#back').css("display", "none");
-				$('#cross').css("display", "block");
-				$("#menu").css({
-						"left": "0",
-						"transition": "left 0.5s"
-				});
-				$("#sinkorfloat").css({"color": "#041f4a",
-										"transition": "color 1s"
-				});
-		
-				/*stopTimer();*/
-			});
-		
-
-			/////////////////CLOSE MENU//////////
-
-			$("#cross").on("click", function(){
-				$('#back').css("display", "block");
-				$('#cross').css("display", "none");
-				$("#menu").css({
-						"left": "-25%",
-						"transition": "left 0.5s"
-				});
-				
-				$("#sinkorfloat").css({"color": "#ff4d33",
+	$("#back").on("click", function(){
+		$("#sinkorfloat").fadeTo("slow", 1);
+		$('#back').css("display", "none");
+		$('#cross').css("display", "block");
+		$("#menu").css({
+				"left": "0",
+				"transition": "left 0.5s"
+		});
+		$("#sinkorfloat").css({"color": "#041f4a",
 								"transition": "color 1s"
-				});
+		});
 
+		/*stopTimer();*/
+	});
+		
+
+	/////////////////CLOSE MENU//////////
+
+	$("#cross").on("click", function(){
+		$('#back').css("display", "block");
+		$('#cross').css("display", "none");
+		$("#menu").css({
+				"left": "-25%",
+				"transition": "left 0.5s"
+		});
+		
+		$("#sinkorfloat").css({"color": "#ff4d33",
+						"transition": "color 1s"
+		});
+
+	});
+
+
+	///////////CLOSE MENU PARA OTRAS FUNCIONES/////////
+
+	function closeMenu(){
+			$("#menu").css({
+					"left": "-25%",
+					"transition": "left 0.5s"
+			});
+			$('#back').css("display", "block");
+			$('#cross').css("display", "none");
+			$("#sinkorfloat").css({"color": "#ff4d33",
+							"transition": "color 1s"
 			});
 
-
-			///////////CLOSE MENU PARA OTRAS FUNCIONES/////////
-
-		function closeMenu(){
-				$("#menu").css({
-						"left": "-25%",
-						"transition": "left 0.5s"
-				});
-				$('#back').css("display", "block");
-				$('#cross').css("display", "none");
-				$("#sinkorfloat").css({"color": "#ff4d33",
-								"transition": "color 1s"
-				});
-
-		};
+	};
 
 
 
@@ -323,7 +325,6 @@
 
 
 	});
-
 
 
 
@@ -338,11 +339,12 @@
 		<div id="content">
 
 			<div id="start">START!</div>
-			<div id="timeUp">You lost...<br><span id="tryAgain">TRY AGAIN!</span></div>
+			<div id="timeUp" class="replay">You lost...<br><span id="tryAgain">TRY AGAIN!</span></div>
+			<div id="congratulations" class="replay">Congratulations!<br><span id="youWon">YOU WON!</span><br>Re-Play</div>
 
 			<div id="header">
 				<div id="titulo">
-					<img id="back" src="img/deco/back.svg"><img style="display: none;" id="cross" src="img/deco/cross.svg">
+					<img id="back" src="img/deco/menu.svg"><img style="display: none;" id="cross" src="img/deco/cross.svg">
 					<div id="sinkorfloat">Sink or float?</div><div style="clear: both"></div>
 				</div>
 				<div id="time"><span id="timer">30</span><br><span id="score" style="color: #041f4a;">0</span></div>			
@@ -378,7 +380,7 @@
 					<img  class="fishBlue" src="img/deco/fishBlue.svg" style="right:22%; bottom: 36%; z-index: 1; animation-delay: 4s">
 
 
-			<div id="footer">2</div>
+			<div id="footer">0</div>
 
 
 			<div id="product"><!-- AQUÍ VA PRODUCTE A PROGRAMAR -->
