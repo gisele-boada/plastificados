@@ -18,6 +18,13 @@
 				background-color: #E9E9E9;
 				/*position: fixed;*/
 			}
+
+			#logo {
+				position: absolute;
+				bottom: 4%;
+				left: 3%;
+				height: 4%;
+			}
 			
 			#start {
 				border-radius: 25px 25px;
