@@ -66,8 +66,18 @@
 			height: 100vh;
 		}
 
-		#homePage {
+/*		#homePage {
 			height: 100%;
+		}*/
+
+		#homePage {
+			width: 100%;
+			 transform: rotateY(180deg);
+		}
+
+		#homePageMobile {
+			width: 100%;
+			display: none;
 		}
 
 		#background {
@@ -383,6 +393,42 @@
 		}
 	}
 
+
+
+/*//////////////QUERIES/////////////////////*/
+
+	@media screen and (max-width: 850px) {
+		
+		#homePage {
+			display: none;
+		}
+
+		#homePageMobile {
+			display: block;
+		}
+
+		#logo {
+			width: 70%;
+		}
+
+		#logo img {
+			width: 90%;
+			margin-top: 8%;
+			margin-left: 8%;
+		}
+
+		#buttonCont {
+			width: 30%;
+		}
+
+		.button {
+			display: none;
+		}
+
+
+
+	}
+
 	</style>
 </head>	
 <body>
@@ -454,7 +500,9 @@ $(document).ready(function () {
 	</div>
 
 	<div id="home">
-		<img id="homePage" src="img/home.jpg">
+		<video autoplay muted loop id="homePage" src="img/deco/background.mp4" type="video/mp4"></video>
+		<video autoplay muted loop id="homePageMobile" src="img/deco/background_mobile.mp4" type="video/mp4"></video>
+		<!-- <img id="homePage" src="img/home.jpg"> -->
 		<img id="soundOn" src="img/soundOn2.svg">
 		<img id="soundOff" src="img/soundOff2.svg">
 		<img id="test" src="img/test.svg">

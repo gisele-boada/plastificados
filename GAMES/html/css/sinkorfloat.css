@@ -16,7 +16,8 @@
 
 				overflow: hidden;
 				background-color: #E9E9E9;
-				/*position: fixed;*/
+				margin:0;padding:0;width:100%;height:100%;
+
 			}
 
 			#turn {
@@ -330,6 +331,14 @@
 /*		//////////////QUERIES/////////////////////*/
 
 			@media screen and (max-width: 1024px) {
+
+			html {
+
+				overflow: hidden;
+				background-color: #E9E9E9;
+				margin:0;padding:0;width:100%;
+
+			}
 
 
 				#back {
