@@ -4,10 +4,11 @@
 
 	<head>
 		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
 <!-- 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 	-->
 		<link rel="stylesheet" href="https://use.typekit.net/vvl4bqb.css">
 		<link rel="stylesheet" type="text/css" href="css/sinkorfloat.css">
+		<script src="https://hammerjs.github.io/dist/hammer.js"></script>
 	
 		<script src="js/jquery.js"></script> 
 
@@ -107,7 +108,61 @@
 
 	});
 	
+//////////////////EVENT TOUCH PAN////////////////////////
+
+$("#start").on("click", function(){
+
+		var newProd = document.getElementById('newProd');
+
+		// creem l'element sensible al swipe
+		var element = new Hammer(newProd);
+
+		// events als que serà sensible --> funció
+		element.on("panup pandown", function(ev) {
+		console.log(ev.type);
+			if(ev.type == "panup"){
+				direccionar(1) ;
 	
+			}else{
+				direccionar(0) ;
+
+			}
+			
+		});
+		
+		function direccionar(x){
+		
+			if(parseInt($('#timer')[0].innerHTML) > 0) {
+			
+				if(x == 1){console.log("UP");
+					desplazarSalida("-80%", '0', "opacity 0.4s, top 0.5s ");
+						if (plastics[posicio]['float']) {
+									actualitzarMarcador(true);
+
+								} else {
+									actualitzarMarcador(false);
+								}	
+				}else{console.log("DOWN");
+					desplazarSalida("120%", '0', "opacity 0.4s, top 0.5s ");
+						if (plastics[posicio]['float']) {
+								actualitzarMarcador(false);
+						} else {
+								actualitzarMarcador(true);
+						}	
+				};
+
+				setTimeout(function () {
+				        gestionarNuevo();
+				    }, 500);
+			};
+		};
+
+
+
+});
+
+/////////////////////ACTUALITZAR MARCADOR///////////////////////////////////
+
 	function actualitzarMarcador(resultat){
 
 		currentScore = parseInt($('#score')[0].innerHTML);
@@ -183,16 +238,16 @@
 
 	function finalScore() {
 
-				console.log('entra funcio');
+				console.log('entra funcio finalScore');
 
 				currentScore = parseInt($('#score')[0].innerHTML);
 
-				if (currentScore >= 10) {
-					console.log('mes deu');
+				if (currentScore >= 0) {
+					console.log('won');
 					$("#congratulations").css("display", "block");
 					$("#timeUp").css("display", "none");
 				} else {
-					console.log('menys deu');
+					console.log('lost');
 					$("#congratulations").css("display", "none");
 					$("#timeUp").css("display", "block");
 					
@@ -209,7 +264,7 @@
 
 	function gestioTimer() {
 		
-		counter = 11;
+		counter = 31;
 		interval = setInterval(function() {
 		    counter--;
 
