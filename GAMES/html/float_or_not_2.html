@@ -111,21 +111,31 @@
 //////////////////EVENT TOUCH PAN////////////////////////
 
 $("#start").on("click", function(){
+	currentScore = 0 ;
 
 		var newProd = document.getElementById('newProd');
 
 		// creem l'element sensible al swipe
 		var element = new Hammer(newProd);
 
-		// events als que serà sensible --> funció
-		element.on("panup pandown", function(ev) {
-		console.log(ev.type);
-			if(ev.type == "panup"){
-				direccionar(1) ;
-	
-			}else{
-				direccionar(0) ;
+		// CAL CAPTURAR LA DIRECCIÓ
+		element.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 
+		// events als que serà sensible --> funció
+		element.on("swipe", function(ev) {
+			/*alert(ev.direction) ;*/
+			if(ev.direction == 8){
+			
+				// aquí el teu codi del joc
+				
+				direccionar(1) ;	
+				
+			}else if(ev.direction == 16){
+			
+				// aquí el teu codi del joc
+				
+				direccionar(0) ;
+				
 			}
 			
 		});
@@ -256,15 +266,16 @@ $("#start").on("click", function(){
 				$('#score')[0].innerHTML = 0;
 				$('#footer')[0].innerHTML = 0;
 				$('#congratulations')[0].innerHTML += currentScore + " " + "points!";
-			}
 
-	
+	}
+
+			
 
 ///////////FUNCTION CUENTA ATRAS 60SEC///////////
 
 	function gestioTimer() {
 		
-		counter = 31;
+		counter = 11;
 		interval = setInterval(function() {
 		    counter--;
 
@@ -312,8 +323,10 @@ $("#start").on("click", function(){
 	function callNextGame(){	
 		$("#congratulations").on("click", function(){
 				$("#congratulations").css("display", "none");
+				/*$('#congratulations')[0].innerHTML = 0;*/
 				gestioTimer();
 				});
+		currentScore = 0 ;
 	};
 
 
@@ -324,7 +337,6 @@ $("#start").on("click", function(){
 		$(".replay").hide(50, 0); //DESAPARECE BUTTON opacity 0
 		gestioTimer();
 		closeMenu();
-
 	});
 
 
@@ -379,8 +391,6 @@ $("#start").on("click", function(){
 			});
 
 	};
-
-
 
 
 	///////////////////////////////////
