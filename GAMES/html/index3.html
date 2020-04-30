@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Menu principal</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+		<script src="js/jquery.js"></script> 
+		<style>
+
+			@font-face {
+				font-family: HelveticaNeue Bold Condensed;
+				src: url(fonts/HelveticaNeueBdCn.otf);
+			}
+
+			*{
+				padding:0;
+				margin:0;
+				box-sizing:border-box;
+			}
+
+			body {
+				background-color: #041f4a;				
+				overflow: hidden;
+				margin:0;padding:0;width:100%;height:100%;
+			}
+			
+			#logo {
+				position: absolute;
+				bottom: 4%;
+				left: 3%;
+				width: 18%;
+			}
+
+			#turn {
+				background-color: #041f4a;
+				height: 100vh;
+				width: 100%;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 30pt;
+				color: #ff4633;
+				text-align: center;
+				padding-top: 10%;
+
+			}
+
+			#shareCont {
+				position: absolute;
+				bottom: 4%;
+				right: 0%;
+				width: 150px;
+				/*width: 11%;*/
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 24pt;
+				color: #ff4633;
+				cursor: pointer;
+			}
+
+			#share {
+				width: 60%;
+				float: left;
+				margin-right: 6px;
+			}
+			
+			#share:hover + #shareSVG {
+				stroke: red;
+			}
+
+			#share:hover {
+				color:red;
+			}
+
+			#shareSVG {
+				width: 30%;
+				float: left;
+				stroke: #ff4633;
+				stroke-width: 3;
+				fill: none;
+				stroke-linecap:round;
+				height: 100%;
+			}
+
+			circle:hover {
+				fill:red;
+				
+			}
+
+
+
+
+			#game1 {
+				animation-name: game;
+				animation-duration: 10s;
+				animation-iteration-count: infinite;
+				position: absolute;
+				top:10%;
+				right:13%;
+				cursor: pointer;
+			}
+
+			#game2 {
+				animation-name: game;
+				animation-duration: 5s;
+				animation-iteration-count: infinite;
+				position: absolute;
+				top:5%;
+				left:30%;
+				cursor: pointer;
+			}
+
+			#game3 {
+				animation-name: gameOther;
+				animation-duration: 15s;
+				animation-iteration-count: infinite;
+				position: absolute;
+				bottom:5%;
+				right:33%;
+				cursor: pointer;
+			}
+
+			#game4 {
+				animation-name: gameOther;
+				animation-duration: 8s;
+				animation-iteration-count: infinite;
+				position: absolute;
+				bottom:10%;
+				left:15%;
+				cursor: pointer;
+			}
+
+			#game5 {
+				animation-name: other;
+				animation-duration: 10s;
+				animation-iteration-count: infinite;
+				position: absolute;
+				top:13%;
+				right:35%;
+				cursor: pointer;
+			}
+
+			#game6 {
+				animation-name: other;
+				animation-duration: 15s;
+				animation-iteration-count: infinite;
+				position: absolute;
+				top:5%;
+				right:72%;
+				cursor: pointer;
+			}
+
+			#game7 {
+				animation-name: other;
+				animation-duration: 15s;
+				animation-iteration-count: infinite;
+				position: absolute;
+				bottom:15%;
+				right:20%;
+				cursor: pointer;
+			}
+
+			.gameTitle {
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 24pt;
+				fill: #041f4a;
+				text-align: center;		
+				animation: none;
+				cursor: pointer;
+			}
+
+
+			.gameTitle:hover ~ circle {
+				fill: red;
+			}
+
+
+
+
+
+			/*		//////////////BLOQUEO SOLO LANDSCAPE VIEW///////////*/
+
+			@media only screen and (orientation:portrait){
+				#turn{ display:block; }
+				#content{ display:none; }
+			}
+			@media only screen and (orientation:landscape){
+				#turn{ display:none; }
+				#content{ display:block; }
+			}
+
+
+
+			/*//////////QUERIES////////////*/
+
+			@media screen and (min-width: 1800px) {
+				
+				#game1 {
+					position:absolute;
+					 top:21%;
+					 right:23%;
+				}
+
+				#game2 {
+					position:absolute;
+					 top:15%;
+					 left:35%;
+				}
+
+				#game3 {
+					position:absolute;
+					 bottom:22%;
+					 right:40%;
+				}
+
+				#game4 {
+					position:absolute;
+					 bottom:27%;
+					 left:25%;
+				}
+
+				#game5 {
+					position:absolute;
+					 top:25%;
+					 right:40%;
+				}
+
+				#game6 {
+					position:absolute;
+					 top:18%;
+					 right:67%;
+				}
+
+				#game7 {
+					position:absolute;
+					 bottom:27%;
+					 right:30%;
+				}
+			}
+
+			/*///////////ANIMACIONES/////////////////*/
+
+			@keyframes game {
+					0% {
+						transform: skew(-10deg) rotate(0deg);
+	     			}
+	    			25% {
+	
+						transform: skew(10deg) ;
+	    			}
+	    			100% {
+						transform: skew(-10deg) rotate(360deg);
+	    			}
+				}
+
+				@keyframes gameOther {
+					0% {
+						transform: skew(5deg) rotate(0deg);
+	     			}
+	    			25% {
+	
+						transform: skew(-10deg) ;
+	    			}
+	    			100% {
+						transform: skew(5deg) rotate(-360deg);
+	    			}
+				}
+
+				@keyframes other {
+					0% {
+						transform: skew(5deg);
+	     			}
+	    			25% {
+	
+						transform: skew(-10deg) ;
+	    			}
+	    			100% {
+						transform: skew(5deg);
+	    			}
+				}
+
+
+		</style>
+		
+	<script>
+	</script>
+		
+
+	</head>	
+	<body>
+		<div id="content">
+
+			<svg id="game1" class="button" height="300" width="350">
+			  <circle cx="160" cy="150" r="100" fill="#ff4633" />
+			  <text class="gameTitle" x="80" y="145" dy=".3em">
+			  		<tspan x="130" y="130">Sink</tspan>
+    				<tspan x="110" y="180">or flote?</tspan>
+			  </text>
+			</svg>
+
+			<svg id="game2" class="button" height="300" width="350">
+			  <circle cx="160" cy="150" r="100" fill="white" />
+			  <text class="gameTitle" x="80" y="145" dy=".3em"> 
+			  	    <tspan x="100" y="120" >Good or</tspan>
+    				<tspan x="80" y="170">bad choice?</tspan>
+			  </text>
+			</svg>
+
+			<svg id="game3" class="button" height="300" width="350">
+			  <circle cx="160" cy="150" r="100" fill="#ff4633" />
+			  <text class="gameTitle" x="80" y="145" dy=".3em"> 
+			  	    <tspan x="100" y="140" >Recyclable</tspan>
+    				<tspan x="120" y="190">or not?</tspan>
+			  </text>
+			</svg>
+
+			<svg id="game4" class="button" height="300" width="350">
+			  <circle cx="160" cy="150" r="100" fill="#ff7460" />
+			  <text class="gameTitle" x="80" y="145" dy=".3em"> 
+			  	    <tspan x="115" y="130" >Plastic</tspan>
+    				<tspan x="105" y="180">lifecycle</tspan>
+			  </text>
+			</svg>
+
+			<svg id="game5" class="button" height="200" width="250">
+				<circle cx="150" cy="150" r="50" fill="#ff7460" />
+			</svg>
+			
+			<svg id="game6" class="button" height="200" width="250">
+				<circle cx="150" cy="120" r="60" fill="#ff4633" />
+			</svg>
+
+			<svg id="game7" class="button" height="200" width="250">
+				<circle cx="150" cy="120" r="45" fill="white" />
+			</svg>
+
+
+			<img id="logo" src="img/deco/logo.svg">
+			<div id="shareCont">
+				<div id="share"> Share </div>
+				<svg id="shareSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60" >
+					<rect class="cls-1" x="1.5" y="16.35" width="38.15" height="38.15" rx="5.23"/>
+					<line class="cls-1" x1="20.57" y1="36.09" x2="20.57" y2="3.5"/>
+					<polyline class="cls-1" points="12.9 9.38 20.78 1.5 28.25 8.96"/>
+				</svg>
+<!-- 				<img src="img/deco/share.svg"> -->
+			</div>
+
+		</div>
+
+
+
+
+		<div id="turn">
+			Please rotate your device!
+			<img id="plants" src="img/deco/plants.svg">
+		</div>
+
+
+
+	</body>
+
+</html>

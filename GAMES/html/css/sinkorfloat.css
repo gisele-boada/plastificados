@@ -1,3 +1,14 @@
+			
+		@font-face {
+			font-family: HelveticaNeue Bold Condensed;
+			src: url(../fonts/HelveticaNeueBdCn.otf);
+		}
+
+		@font-face {
+			font-family: HelveticaNeue Light;
+			src: url(../fonts/HelveticaNeueLight.otf);
+		}
+
 			*{
 				padding:0;
 				margin:0;
@@ -24,9 +35,7 @@
 				background-color: #041f4a;
 				height: 100vh;
 				width: 100%;
-				font-family: myriad-pro-condensed, sans-serif;
-				font-weight: 700;
-				font-style: normal;
+				font-family: HelveticaNeue Bold Condensed;
 				font-size: 30pt;
 				color: #ff4633;
 				text-align: center;
@@ -60,9 +69,7 @@
 				height: 20%;
 				text-align: center;
 				padding-top: 2.3%;
-				font-family: myriad-pro-condensed, sans-serif;
-				font-weight: 700;
-				font-style: normal;
+				font-family: HelveticaNeue Bold Condensed;
 				font-size: 40pt;
 				color: #ff4d33;
 				cursor: pointer;
@@ -90,9 +97,7 @@
 				height: 25%;
 				text-align: center;
 				padding-top: 1.4%;
-				font-family: myriad-pro-condensed, sans-serif;
-				font-weight: 700;
-				font-style: normal;
+				font-family: HelveticaNeue Bold Condensed;
 				font-size: 30pt;
 				color: white;
 				cursor: pointer;
@@ -151,8 +156,18 @@
 					float:left;
 					margin-top:2%;
 					z-index: 5;
-
+					cursor: pointer;
 				}
+
+				#back:hover, #cross:hover {
+					transform: scale(1.2);
+				}
+
+				#closeWindow:hover {
+					transform: scale(1.2);
+				}
+
+
 
 				#sinkorfloat {
 					float:left;
@@ -204,18 +219,6 @@
 
 			a {text-decoration: none;}
 
-
-
-			#ondas {
-
-				position: absolute;
-				bottom: -35%;
-				z-index: -1;
-				width: 100%;
-				animation-name: ondas;
-				animation-duration: 10s;
-
-			}
 
 
 			#floor1 {
@@ -313,7 +316,68 @@
 				top:0;
 			}
 
+		
+		#info {
+			background-color: #e6e6e6;
+			width: 80%;
+			height: 90vh;
+			position:absolute;
+			top:10%;
+			left:10%;
+			z-index:4;
+			border-radius: 20px;
+			filter: drop-shadow(10px 5px 15px rgba(0,0,0,0.7));
+			overflow: scroll;
+			display: none;
+		}
 
+			#closeWindow {
+				height: 5%;
+				position: sticky;
+				top: 3%;
+				left:2%;
+				cursor: pointer;
+			}
+
+			.infoTitle {
+				color: #ff4d33;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 30pt;
+				text-decoration: underline;
+				text-align: center;
+				margin-top: 5%;
+			}
+
+			.infoText {
+				font-family: HelveticaNeue Light;
+				font-size: 16pt;
+				color:#041f4a;
+				width: 68%;
+			    text-align: center;
+			    margin: auto;
+			    margin-top: 2%;
+			}
+
+			#grafico {
+				width: 70%;
+				margin-left: 15%;
+				margin-top: 2%;
+				border-radius: 18px;
+				filter: drop-shadow(10px 5px 15px rgba(0,0,0,0.5));
+				margin-bottom: 2%;
+			}
+
+			#controles {
+				width: 20%;
+				margin-left: 40%;
+    			margin-top: 2%;
+			}
+
+			#clasificacion {
+				width: 80%;
+				margin-left: 10%;
+    			margin-top: 2%;
+			}
 
 
 /*		//////////////BLOQUEO SOLO LANDSCAPE VIEW///////////*/

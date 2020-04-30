@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Menu principal</title>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
+		<script src="js/jquery.js"></script> 
+		<style>
+
+			@font-face {
+				font-family: HelveticaNeue Bold Condensed;
+				src: url(fonts/HelveticaNeueBdCn.otf);
+			}
+
+			*{
+				padding:0;
+				margin:0;
+				box-sizing:border-box;
+			}
+
+			body {
+				background-color: #041f4a;				
+				overflow: hidden;
+				margin:0;
+				padding:0;
+				width:100%;
+				height: 100%;
+			}
+			
+			#logo {
+				position: absolute;
+				bottom: 4%;
+				left: 3%;
+				width: 18%;
+			}
+
+			#turn {
+				background-color: #041f4a;
+				height: 100vh;
+				width: 100%;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 23pt;
+				color: #ff4633;
+				text-align: center;
+				padding-top: 15%;
+
+			}
+
+			#shareCont {
+				position: absolute;
+				bottom: 4%;
+				right: 0%;
+				width: 150px;
+				/*width: 11%;*/
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 24pt;
+				color: #ff4633;
+				cursor: pointer;
+			}
+
+			#share {
+				width: 60%;
+				float: left;
+				margin-right: 6px;
+			}
+			
+			#share:hover + #shareSVG {
+				stroke: red;
+			}
+
+			#share:hover {
+				color:red;
+			}
+
+			#shareSVG {
+				width: 30%;
+				float: left;
+				stroke: #ff4633;
+				stroke-width: 3.5;
+				fill: none;
+				stroke-linecap:round;
+				height: 100%;
+			}
+			
+
+			.button {
+				width: 36%;
+				height: 20vh;
+				float: left;
+				margin-left: 9%;
+				margin-top: 7%;
+				border-radius: 18px;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 30pt;
+				text-align: center;
+				color: #041f4a;
+				padding-top: 4%;
+			}
+
+			#g1 {background-color: #ff4633;}
+			#g2 {background-color: #e6e6e6;}
+			#g3 {background-color: #ff7460;}
+			#g4 {background-color: #ff4633;}
+
+			#g1:hover {
+				background-color: red;
+			}
+			#g2:hover {
+				background-color: red;
+			}
+			#g3:hover {
+				background-color: red;
+			}
+			#g4:hover {
+				background-color: red;
+			}
+	
+
+
+			/*		//////////////BLOQUEO SOLO LANDSCAPE VIEW///////////*/
+
+			@media only screen and (orientation:portrait){
+				#turn{ display:block; }
+				#content{ display:none; }
+			}
+			@media only screen and (orientation:landscape){
+				#turn{ display:none; }
+				#content{ display:block; }
+			}
+
+
+
+			/*//////////QUERIES////////////*/
+
+
+			@media screen and (max-width: 1024px) {
+
+				html {
+
+					overflow: hidden;
+					margin:0;padding:0;width:100%;
+
+				}
+
+				#shareCont {
+					font-size: 18pt;
+					width: 125px;
+					margin-right: -5px;
+				}
+
+				#share {
+					width: 50%;
+				}
+
+				#shareSVG {
+					width: 25%;
+				}
+
+				.button {
+					margin-top: 5%;
+					font-size: 26px;
+					padding-top: 4%;
+					height: 25vh;
+				}
+
+
+
+			}	
+
+			@media screen and (min-width: 1800px) {
+				
+				.button {
+					height: 170px;
+					padding-top: 3%; 
+				}
+			}
+
+			/*///////////ANIMACIONES/////////////////*/
+
+
+
+		</style>
+		
+	<script>
+	</script>
+		
+
+	</head>	
+	<body>
+		<div id="content">
+			<div class="button" id="g1" >Plastic lifecycle</div>
+			<div class="button" id="g2" >Sink or float?</div>
+			<a href="sinkorfloat.html"><div class="button" id="g3" >Recyclable or not?</div>
+			<div class="button" id="g4" >Good or bad choice?</div>
+
+
+			<img id="logo" src="img/deco/logo.svg">
+			<div id="shareCont">
+				<div id="share"> Share </div>
+				<svg id="shareSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60" >
+					<rect class="cls-1" x="1.5" y="16.35" width="38.15" height="38.15" rx="5.23"/>
+					<line class="cls-1" x1="20.57" y1="36.09" x2="20.57" y2="3.5"/>
+					<polyline class="cls-1" points="12.9 9.38 20.78 1.5 28.25 8.96"/>
+				</svg>
+			</div>
+		</div>
+
+
+
+
+		<div id="turn">
+			Please rotate your device!
+			<!-- <img id="plants" src="img/deco/plants.svg"> -->
+		</div>
+
+
+
+	</body>
+
+</html>
