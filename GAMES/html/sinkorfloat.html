@@ -71,7 +71,7 @@
 		
 			$(document).keydown(function(e){
 
-				if(parseInt($('#timer')[0].innerHTML) > 0) {
+				if(parseInt($('#timer')[0].innerHTML) > 0 &&(e.which == "38" || e.which == "40")) {
 					//Arrow up
 					if (e.which == "38") {
 						desplazarSalida("-80%", '0', "opacity 0.4s, top 0.5s ");
@@ -252,24 +252,23 @@ $("#start").on("click", function(){
 	function finalScore() {
 
 				console.log('entra funcio finalScore');
-
 				currentScore = parseInt($('#score')[0].innerHTML);
-
-				if (currentScore >= 10) {
-					console.log('won');
-					$("#congratulations").css("display", "block");
-					$("#timeUp").css("display", "none");
-				} else {
-					console.log('lost');
-					$("#congratulations").css("display", "none");
-					$("#timeUp").css("display", "block");
-					
-				}
 
 				$('#score')[0].innerHTML = 0;
 				$('#footer')[0].innerHTML = 0;
-				$('#congratulations')[0].innerHTML += currentScore + " " + "points!";
-				$('#timeUp')[0].innerHTML += "<br>" + currentScore + " " + "points!";
+
+				if (currentScore >= 50) {
+					console.log('won');
+					$("#congratulations").css("display", "block");
+					$("#timeUp").css("display", "none");
+					$('#congratulations span.score')[0].innerHTML = currentScore + " " + "points!";
+				} else {
+					console.log('lost');
+					$("#congratulations span#score").css("display", "none");
+					$("#timeUp").css("display", "block");
+					$('#timeUp span.score')[0].innerHTML = "<br>" + currentScore + " " + "points!";
+					
+				}			
 
 	}
 
@@ -279,7 +278,7 @@ $("#start").on("click", function(){
 
 	function gestioTimer() {
 		
-		counter = 11;
+		counter = 31;
 		interval = setInterval(function() {
 		    counter--;
 
@@ -310,16 +309,17 @@ $("#start").on("click", function(){
 //////QUAN CLICO RE-START EN EL MENU HAURIA DE APREIXER EL BOTO START ORIGINAL I AL FER CLICK QUE ES REINICII EL COMPTADOR/////
 
 	$("#reStart").on("click", function(){
-				pararTimer();
-				$("#timeUp").hide();
-				$("#congratulations").hide();
-				$("#start").show();
-				$('#score')[0].innerHTML = 0;
-				$('#footer')[0].innerHTML = 0;
-				$("#start").on("click", function(){
-					$("#timeUp").hide();
-					/*gestioTimer().reset();*/
-				});
+				// pararTimer();
+				// $("#timeUp").hide();
+				// $("#congratulations").hide();
+				// $("#start").show();
+				// $('#score')[0].innerHTML = 0;
+				// $('#footer')[0].innerHTML = 0;
+				// $("#start").on("click", function(){
+				// 	$("#timeUp").hide();
+				// 	/*gestioTimer().reset();*/
+				// });
+				location.reload();
 				
 	});
 
@@ -436,7 +436,7 @@ $("#start").on("click", function(){
 				<img id="grafico" src="img/deco/grafico.png">
 
 				<div class="infoTitle">2. REGLAS DE JUEGO</div>
-				<div class="infoText">El juego consiste en clasificar correctamente los diferentes productos que contienen plástico, según si se cree que flotará o se hundirá. Los controles a la hora de clasificar los objetos será enviandolos hacia arriba/abajo con las teclas o desde los dispositivos táctiles arrastrando con el dedo hacia arrba/abajo. </div>
+				<div class="infoText">El juego consiste en clasificar correctamente los diferentes productos que contienen plástico, según si se cree que flotará o se hundirá. Los controles a la hora de clasificar los objetos serán las teclas arriba/abajo o desde los dispositivos táctiles arrastrando con el dedo hacia arrba/abajo. Tienes 30 segundos para clasificar el máximo número de plásticos! ¿Qué podría salir mal?</div>
 				<img id="controles" src="img/deco/controles.svg">
 
 				<div class="infoTitle">3. TIPOS DE PLÁSTICO</div>
@@ -446,8 +446,10 @@ $("#start").on("click", function(){
 			</div>
 
 			<div id="start">START!</div>
-			<div id="timeUp" class="replay">You lost...<br><span id="tryAgain">TRY AGAIN!</span></div>
-			<div id="congratulations" class="replay">Congratulations!<br><span id="youWon">REPLAY!</span><br></div>
+
+			<div id="timeUp" class="replay">You lost...<br><span id="tryAgain">TRY AGAIN!</span><span class="score"></span></div>
+			
+			<div id="congratulations" class="replay">Congratulations!<br><span id="youWon">REPLAY!</span><br><span class="score"></span></div>
 
 			<div id="header">
 				<div id="titulo">
@@ -460,7 +462,7 @@ $("#start").on("click", function(){
 
 			<div id="menu">
 				<div id="reStart" class="opcionesMenu">RE-START!</div>
-				<div id="reglas" class="opcionesMenu">EL JUEGO</div>
+				<div id="reglas" class="opcionesMenu" style="color:#041f4a">REGLAS</div>
 				<a href="index.html"><div class="opcionesMenu">BACK MENU</div></a>
 
 			</div>
@@ -501,7 +503,7 @@ $("#start").on("click", function(){
 
 		<div id="turn">
 			Please rotate your device!
-			<img id="plants" src="img/deco/plants.svg">
+			<!-- <img id="plants" src="img/deco/plants.svg"> -->
 		</div>
 		
 
