@@ -26,7 +26,7 @@
         }
 
         p {font-family: HelveticaNeueRoman;
-        	color:#041f4a;
+        	/*color:#041f4a;*/
         	/*font-size: 12pt;*/
         }
 
@@ -51,6 +51,13 @@
         	margin-top: 0;
     		margin-bottom: 5px;
     		color: #041f4a;
+        }
+
+        .cursive {
+        	font-family: HelveticaNeue Light Italic;
+        	font-size: 12pt;
+        	color: #ff4d33;
+        	
         }
 
 
@@ -325,7 +332,16 @@
 				text-align: right;
 				padding-left: 12%;
 				z-index: 1;
+				overflow: hidden;
 			}
+
+				#plantas {
+				    height: 71%;
+				   position: absolute;
+				    left: 2%;
+				    bottom: -13%;
+				    
+				}
 
 				.text3 {
 					padding-top: 2%;
@@ -337,8 +353,8 @@
 
 				#test {
 					background-color: #ff4633;
-					padding-right: 50px;
-					padding-left: 50px;
+					padding-right: 70px;
+					padding-left: 70px;
 					height: 40px;
 					font-family: HelveticaNeue Light;
 					font-size: 18px;
@@ -350,7 +366,6 @@
 					cursor: pointer;
 					float: right;
 					margin-top: 1%;
-					
 				}
 
 			#fondoMarino {
@@ -368,6 +383,68 @@
 			position: relative;
 		}
 
+			#contLastLeft {
+				width: 30%;
+				float: left;
+				height: 70%;
+				margin-top: 8%;
+				margin-left: 6%;
+				padding-right: 10%;
+				padding-top: 2%;
+			}
+
+			#contLastRight {
+			 	width:60%;
+			 	float: left;
+			 	height: 70%;
+			 	margin-top: 8%;
+			 	position: relative;
+			}
+
+				.text4 {
+					padding-right: 20%;
+					padding-top: 3%;
+					color: white;
+					padding-bottom: 1%;
+				}
+
+
+				#habitos {
+					background-color: rgb(255,255,255,0.2);
+					padding-right: 50px;
+					padding-left: 50px;
+					height: 40px;
+					font-family: HelveticaNeue Light;
+					font-size: 18px;
+					letter-spacing: 0.5px;
+					color: white;
+					text-align: center;
+					padding-top: 6px;
+					border-radius: 7.5px;
+					cursor: pointer;
+					float: left;
+					margin-top: 1%;
+				}
+
+				#plato {
+					position: absolute;
+					width: 85%;
+					-webkit-filter: drop-shadow(10px 25px 6px rgba(0, 0, 0, 0.5));
+					filter: drop-shadow(10px 25px 6px rgba(0, 0, 0, 0.5));
+				}
+
+				#botella {
+					position: absolute;
+					width: 53%;
+					right: 30%;
+   	 				top: 15%;	
+					-webkit-filter: drop-shadow(10px 25px 6px rgba(0, 0, 0, 0.5));
+					filter: drop-shadow(10px 25px 6px rgba(0, 0, 0, 0.5));
+				}
+
+
+
+				   
 
 
 
