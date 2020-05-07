@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		
+
+		<script src="js/jquery.js"></script>
+		<!-- <script src="js/scroll.js"></script>  -->
+
+	<style>
+
+		@font-face {
+			font-family: HelveticaNeueMd;
+			src: url(fonts/HelveticaNeueMd.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeueRoman;
+			src: url(fonts/HelveticaNeueRoman.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeue Bold Condensed;
+			src: url(fonts/HelveticaNeueBdCn.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeue Light Italic;
+			src: url(fonts/HelveticaNeueLightIt.otf);
+		}
+
+	    * {
+             box-sizing: border-box;
+             margin:auto;
+        }
+        h1 {
+        	font-family: HelveticaNeue Bold Condensed;
+        	font-size: 40pt;
+        	text-decoration: none;
+        	margin-top: 0;
+    		margin-bottom: 3%;
+    		color: #ff4633;
+    		padding-right: 28%;
+
+
+        }
+
+        h2 {
+        	font-family: HelveticaNeue Bold Condensed;
+        	font-size: 23px;
+        	text-decoration: none;
+        	margin-top: 0;
+    		margin-bottom: 5px;
+    		color: #041f4a;
+        }
+
+        .cursive {
+        	font-family: HelveticaNeue Light Italic;
+        	font-size: 12pt;
+        	color: #ff4d33;
+        	text-decoration: underline;
+        }
+
+        p {font-family: HelveticaNeueRoman;
+        	color:#041f4a;
+        	font-size: 12pt;
+        }
+
+		body{
+			height: 5720px;
+			width: 100%;
+		}
+
+		div {
+			border:1px solid green;
+		}
+
+		#home {
+			height: 100vh;
+		}
+
+/*		#homePage {
+			height: 100%;
+		}*/
+
+		#homePage {
+
+			transform: rotateY(180deg);
+			object-fit: cover;
+			width: 100vw;
+			height: 100vh;
+/*			position: fixed;
+			top: 0;
+			left: 0;*/
+		}
+
+		#homePageMobile {
+			width: 100%;
+			display: none;
+		}
+
+		#background {
+			position: absolute;
+			background-image:url('img/background.gif');
+			width: 100%;
+			background-repeat:no-repeat;
+			background-size:contain;
+			background-position:center;
+			z-index: -1;
+		}
+
+		#header {
+			height: 100px;
+			width: 100%;
+			position: fixed;
+			top:0;
+			left: 0;
+			z-index: 3;
+		}
+
+		#logo {
+			float:left;
+			width:50%;
+			height: 100%;
+			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0));
+		}
+
+		.logoIMG {
+			width:40%;
+			margin-top: 35px;
+			margin-left: 50px;
+		}
+		#logo1 {
+			display: block;
+		}
+
+		#logo2, #logo3 {
+			display:none;
+		}
+
+		#sos {
+			display: none;
+		}
+
+		#buttonsCont {
+			float:left;
+			width:50%;
+			height: 100%;
+			padding-right: 50px;
+		}
+
+			#burger {
+				display: none;
+
+			}
+
+		.button {
+			min-width:10px;
+			margin-top: 35px;
+			padding-right: 25px;
+			padding-left: 25px;
+			height: 38px;
+			float:right;
+			background-color: green;
+			margin-left: 30px;
+			font-family: HelveticaNeueRoman;
+			font-size: 15px;
+			letter-spacing: 1px;
+			color:white;
+			text-align: center;
+			padding-top: 10px;
+			border-radius: 7.5px;
+		}
+
+
+
+		#soundOn, #soundOff {
+			position: absolute;
+			bottom:50px;
+			right: 50px;
+			height: 5%;
+/*			-webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.5));*/
+		}
+
+		#soundOn {
+			display: none;
+		}
+
+
+		#first {
+			height: 100vh;
+			width: 100%;
+			background: #041f4a;
+		}
+
+		#second {
+			height: 100vh;
+			width: 100%;
+			background: #041f4a;
+		}
+
+
+		#last {
+			height: 100vh;
+			width: 100%;
+			background: #ff4633;
+		}
+
+		#firstCont {
+			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
+			position: relative;
+			background-color: white;
+			height: 40%;
+			border-radius: 0px 0px 0px 220px;
+			padding-left: 3%;
+			padding-right: 3%
+		}
+
+
+				.text1 {
+/*					float:left;
+					width: 22%;
+					height: 100%;
+					font-family: HelveticaNeueRoman;
+					
+				    margin-left: 9%;
+				    padding-top: 6%;
+				    line-height: 1.5;
+				    color: #041f4a;*/
+				    /*color: white;*/
+				    font-size: 15px;
+				    text-align: center;
+				    padding-top: 4rem;
+				}
+
+			#straw {
+				height: 17%;
+			    position: absolute;	
+			    left: 13%;
+    			margin-top: 3%;			
+			}
+
+			#palito {
+				height: 9%;
+			    position: absolute;	
+			    right: 19%;
+    			margin-top: 13%;			
+			}
+
+			#palito1 {
+				height: 3%;
+			    position: absolute;	
+				right: 30%;
+				margin-top: 4%;		
+			}
+
+			#tapon {
+				height: 5%;
+			    position: absolute;
+			    right: 10%;
+			    margin-top: 4%;
+			}
+
+			#bag {
+				height: 28%;
+				position: absolute;
+				right: 48%;
+				margin-top: 10%;
+			}
+
+			#textCont1 {
+				position: relative;
+				/*top:10%;*/
+				left:0;
+				z-index: 1;
+				margin-top: 0px;
+				/*margin-right: 40%;*/
+
+				height: 28rem;
+			}
+
+			#parrafo1 {
+				margin-right: 30%;
+			}
+			
+		#secondCont {
+			width: 52%;
+			height: 100%;
+			float:left;
+			margin-top: -29%;
+			position: relative;
+			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
+
+		}
+
+		.soft {
+    		margin: 0;
+    		height: 28em;
+		}
+
+			#bloc1 {
+				display: block;
+			}
+
+			#bloc1mob {
+				display: none;
+			}
+			#bloc1, #bloc2 {
+				width: 100%;
+			}
+
+			#palito2 {
+				height: 4%;
+			    position: absolute;	
+				/*right: 30%;*/
+				margin-top: 12%;
+				margin-left: 32%;	
+			}
+
+			#soft {
+				height: 40%;
+			    position: absolute;	
+				margin-left: 11%;
+    			margin-top: 22%;		
+			}
+
+	#third {
+		height: 100vh;
+		width: 100%;
+		background: #041f4a;
+		position: relative;
+		z-index: -1;
+	}
+
+		#thirdCont {
+			width: 55%;
+			height: 100%;
+			float:right;
+			margin-top: -5%;
+			-webkit-filter: drop-shadow(-15px 30px 15px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(-15px 30px 15px rgba(0,0,0,0.5));
+			
+		} 
+
+			#water {
+				height: 20%;
+			    position: absolute;	
+				margin-top: 60%;
+			    left: 15%;
+			    z-index: 3;
+
+	
+			}
+
+			#detergent {
+				position: absolute;
+				height: 20%;
+				margin-top:72%;
+				left: 45%;
+				z-index: 1;
+
+			}
+
+			.fish  {
+				width: 3%;
+				position: absolute;
+				bottom: 30%;;
+				left: 5%;
+				z-index: -3;
+				animation-name: fish;
+				animation-duration: 10s;
+				animation-iteration-count: infinite;
+				z-index: 3;
+			}
+
+			.oposite {
+				width: 3%;
+				position: absolute;
+				bottom: 30%;
+				left: 5%;
+				animation-name: oposite;
+				animation-duration: 15s ease-in-out;
+				animation-iteration-count: infinite;
+				z-index: 1;
+			}
+
+		#contFondo {
+			width: 100%;
+			position: absolute;
+			bottom:0;
+			-webkit-filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5));
+			z-index: 2;
+}
+		}
+
+			#fondo1 {
+				height: 100%;
+
+			}
+
+			#fondo2 {
+				width: 100%;
+				position:absolute;
+				bottom: 0%;
+				-webkit-filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5)); 
+				filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5));
+			}
+
+		.floating {
+			animation-name: plastic;
+			animation-duration: 5s ;
+			animation-iteration-count: infinite;
+
+		}
+
+
+	@keyframes fish {
+		0% {
+			transform: translateY(0px); 
+			}
+		50% {
+			transform: translateY(20px);
+		}
+		100% {
+			transform: translateY(0px); 
+		}
+	}
+
+	@keyframes oposite {
+		0% {
+			transform: translateY(0px); 
+			}
+
+		50% {
+			transform: translateY(20px);
+		}
+
+		100% {
+			transform: translateY(0px); 
+		}
+	}
+
+	@keyframes plastic {
+		0% {
+			transform: translateY(0px); 
+			}
+		50% {
+			transform: translateY(20px);
+		}
+		100% {
+			transform: translateY(0px); 
+		}
+	}
+
+
+.background-nuvol {
+	background-image: url("img/deco/blocMapa.svg");
+	background-repeat: no-repeat;
+}
+
+
+/*//////////////QUERIES/////////////////////*/
+
+@media screen and (max-width: 1024px) {
+
+		#firstCont {
+			height: 50%;
+			border-radius: 0px 0px 0px 260px;
+		}
+/*
+		#secondCont {
+			margin-top: -20%;
+		}*/
+
+
+	}
+
+	@media screen and (max-width: 768px) {
+		
+/*		#homePage {
+			display: none;
+		}
+
+		#homePageMobile {
+			display: block;
+		}*/
+
+		#logo {
+			width: 70%;
+		}
+
+		.logoIMG {
+			width: 70%;
+			margin-top: 8%;
+			margin-left: 8%;
+			display:none;
+		}
+
+		#logo1, #logo2, #logo3 {
+			display: none;
+		}
+
+		#sos {
+			display: block;
+			width: 22%;
+			margin-top: 8%;
+			margin-left: 8%;
+		}
+
+		#buttonsCont {
+			width: 30%;
+			padding-right: 5%;
+    		padding-top: 5%;
+		}
+		
+
+		#burger { 	
+			display: block;		
+			height: 30%;
+		 }
+
+		 #burger img {
+			height: 100%;
+		 	float:right;
+		 }
+
+
+		.button {
+			display: none;
+		}
+
+
+		#firstCont {
+			height: 80%;
+			padding-top: 16%;
+			border-radius: 0px 0px 0px 120px;
+		}
+
+		.text1 {
+			font-size: 11pt;
+			text-align:center;
+			height: auto;
+			padding-left: 5rem!important;
+			padding-right: 5rem!important;
+			padding-top: 0;
+
+		}
+		
+		#straw {
+			height: 9%;
+			left: 13%;
+			margin-top: 3%;
+		}
+
+		#palito {
+			height: 4%;
+			right: 10%;
+			margin-top: 44%;
+		}
+		
+		#palito1 {
+			height: 2%;
+			right: 39%;
+			margin-top: 18%;
+		}
+
+		#tapon {
+			height: 3%;
+			right: 10%;
+			margin-top: 10%;
+		}
+		
+		#bag {
+			height: 14%;
+			margin-top: 40%;
+			left:0;
+		}
+
+		#soft {
+/*			height: 20%;
+			margin-top:19%;
+			right: 25%;*/
+		}
+
+/*		#secondCont {
+			width: 85%;
+			float:left;
+			position: relative;
+			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
+			top: 23%;
+		}*/
+
+/*			#bloc1 {
+				display: none;
+			}
+
+			#bloc1mob {
+				display: block;
+			}*/
+
+
+
+
+
+	}
+
+	
+.text-test {
+    margin-top: 13%;
+}
+
+#textCont1 {
+        height: 55rem;
+    margin-top: -3%;
+}
+
+#parrafo1 {
+    margin-right: 50%;
+}
+
+@media screen and (max-width: 1375px) {
+	#parrafo1 {
+	    margin-right: 30%;
+	    margin-right: 0;
+	}
+
+	.text-test h1 {
+		margin-right: 0;
+		padding-right: 0;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	#parrafo1 {
+	    margin-right: 0 !important;
+	}
+
+	.text-test h1 {
+		font-size: 35pt;
+		margin-right: 0;
+		flex: 0 0 0%;
+		width: 100% !important;
+	}
+}
+
+@media screen and (max-width: 700px) {
+	#parrafo1 {
+	    margin-right: 5%;
+	}
+
+	p#parrafo1 {
+	    font-size: 12pt;
+	}
+	
+	.text-test h1 {
+		font-size: 28pt;
+	}
+
+	.text-test {
+		padding-top: 20px;
+	}
+
+	.background-nuvol {
+	background-image: url("img/deco/blocMapa2.svg");
+	background-repeat: no-repeat;
+}
+
+	
+
+	
+}
+
+@media screen and (max-width: 575px) {
+	#parrafo1 {
+	    margin-right: 10%;
+	}
+
+	p#parrafo1 {
+	    font-size: 12pt;
+	}
+	.text-test h1 {
+		font-size: 22pt;
+	}
+}
+
+	</style>
+</head>	
+<body>
+
+	<script>
+
+	$(function() {
+	/////////////////////////////////////
+
+
+
+	///////////////////////////////////
+	});
+
+
+	</script>
+
+
+
+	<div id="header">
+		<div id="logo">
+			<img id="logo1" class="logoIMG" src="img/logo.svg">
+			<img id="logo2" class="logoIMG" src="img/logo2.svg">
+			<img id="logo3" class="logoIMG" src="img/logo3.svg">
+			<img id="sos" src="img/sos.svg">
+		</div>
+		<div id="buttonsCont">
+			<div id="burger">
+				<img src="img/burger.svg"></div>
+			<div class="button" style="background-color: #ff4633">Tour virtual</div>
+			<div class="button" style="background-color: #041f4a">Entradas</div>
+		</div>
+	</div>
+
+	<div id="home">
+		<video autoplay muted loop id="homePage" src="img/deco/background.mp4" type="video/mp4"></video>
+		<video autoplay muted loop id="homePageMobile" src="img/deco/background_mobile.mp4" type="video/mp4"></video>
+<!-- 		<img id="soundOn" src="img/soundOn2.svg">
+		<img id="soundOff" src="img/soundOff2.svg"> -->
+
+	</div>
+
+	<div id="first">
+		<div id="firstCont" class="row">
+				<div class="text1 col-md-4 col-sm-12 px-5">
+					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+				</div>
+				<div class="text1 col-md-4 col-sm-12 px-5">
+					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+				</div>
+				<div class="text1 col-md-4 col-sm-12 px-5">
+					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+				</div><div style="clear: both;"></div>
+
+		</div>
+		<img id="straw" class="floating" src="img/deco/straw.svg">
+		<img id="palito" class="floating" style="animation-delay: 0.5s;" src="img/deco/palito.svg">
+		<img id="palito1" class="floating" style="animation-delay: -0.2s;" src="img/deco/palito1.svg">
+		<img id="tapon" class="floating" src="img/deco/tapon.svg">
+		<img id="bag" class="floating" style="animation-delay: 0.8s;" src="img/deco/bag.svg">
+	</div>
+	<div id="second" class="row">
+		<div id="textCont1" class="px-5 col-md-8 col-sm-12 background-nuvol">
+			<div class="text-test">
+				<h1>LA EVOLUCIÓN GLOBAL DEL CONSUMO DEL PLÁSTICO.</h1>
+				<p id="parrafo1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum <span class="cursive">dolor</span> sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-12 soft">
+			<img id="soft" class="floating" src="img/deco/soft.svg">
+		</div>
+<!-- 		<div id="secondCont">
+			<img id="bloc1" src="img/deco/bloc1.svg">
+			<img id="bloc1mob" src="img/deco/bloc1mob.svg">
+		</div> -->
+ 		
+	<!--	<img id="palito2" class="floating" style="animation-delay: 0.7s;" src="img/deco/palito2.svg">
+		<img id="water" class="floating" src="img/deco/water.svg">
+		<img id="detergent" class="floating" style="animation-delay: 1s;" src="img/deco/detergent.svg"> -->
+	</div>
+	<div id="third">
+		<div id="thirdCont">
+			<img id="bloc2" src="img/deco/bloc2.png">
+		</div><!-- <div style="clear: both;"></div> -->
+		
+		<div id="contFondo">
+			<img id="fondo2" src="img/deco/fondo2.svg">
+			<img id="fondo1" class="parallax" data-parallax-rate="1.5" src="img/deco/fondo1.svg">
+		</div>
+
+		<img  class="fish" src="img/deco/fish.svg" style="left:9%;">
+			<img  class="oposite" src="img/deco/fish.svg" style="animation-duration: 8s; left:4%; bottom: 36%;">
+				<img  class="fish" src="img/deco/fish.svg" style="animation-duration: 12s; left:14%; bottom: 35%; z-index:2; animation-delay: 2s;">
+					<img  class="oposite" src="img/deco/fish.svg" style="animation-duration: 15s; left:9%; bottom: 40%; z-index: 1;">	
+
+	</div>
+	<div id="last"></div>
+
+</body>
+
+</html>

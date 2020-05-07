@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		
+
+		<script src="js/jquery.js"></script>
+		<script src="js/scroll.js" ></script> 
+<!-- 		<script src="js/scroll_mobile.js" media="media screen and (max-width: 768px)"></script>  -->
+
+
+
+		
+	<style>
+
+
+
+	</style>
+</head>	
+<body>
+
+	<script>
+
+		$(function() {
+	/////////////////////////////////////
+		
+		/////SCROLL TOP///////
+		$("#top").on("click", function topFunction() {
+			$('html, body').animate({scrollTop:0}, 'slow');
+			$('#logo1').css("display", "block");
+			$('#logo2').css("display", "none");
+			$('#logo3').css("display", "none");
+
+	   	});
+
+/*	$(window).resize(function(){
+    	if ($(window).width() <= 768){
+        	$("#logo1").css("display","none");
+    	}
+	});*/
+
+
+		$("#burgerImg").on("click", function(){
+
+
+			$('#burgerImg').css("display", "none");
+			$('#cross').css("display", "block");
+			$("#burgerCont").css({
+					"right": "0",
+					"transition": "right 0.5s"
+			});
+			$("#logo1").css("display", "none");
+			$("#logo3").css("display", "block");
+
+		});
+
+		$("#cross").on("click", function(){
+
+			
+			$('#burgerImg').css("display", "block");
+			$('#cross').css("display", "none");
+			$("#burgerCont").css({
+					"right": "-100%",
+					"transition": "right 0.5s"
+			});
+			$("#logo1").css("display", "block");
+			$("#logo3").css("display", "none");
+		});
+
+		$(".opcionesMenu").on("click", function(){
+			$(".opcionesMenu").css("background-color", "#041f4a");
+		});
+
+
+
+
+	///////////////////////////////////
+	});
+	
+
+
+  
+
+	</script>
+
+
+ 	<video autoplay muted loop id="seabed">
+		<source src="img/seabed.mp4" type="video/mp4">
+	</video>
+
+	<img id="top" src="img/top.svg">
+
+	<div id="header">
+		<div id="logo">
+			<img id="logo1" class="logoIMG" src="img/logo.svg">
+			<img id="logo2" class="logoIMG" src="img/logo2.svg">
+			<img id="logo3" class="logoIMG" src="img/logo3.svg">
+			<img id="sos" src="img/sos.svg">
+		</div>
+		<div id="buttonsCont">
+			<div id="burgerCont">
+				<div class="opcionesMenu">ENTRADAS</div>
+				<div class="opcionesMenu">VISITA VIRTUAL</div>
+			</div>
+			<div id="burger">
+				<img id="burgerImg" src="img/burger.svg">
+				<img id="cross" src="img/cross.svg">
+			</div>
+
+			<div class="button" style="background-color: #ff4633">Tour virtual</div>
+			<div class="button" style="background-color: #041f4a">Entradas</div>
+
+		</div>
+	</div>
+
+	<div id="home">
+		<video autoplay muted loop id="homePage" src="img/deco/background.mp4" type="video/mp4"></video> 
+<!-- 		<video autoplay muted loop id="homePageMobile" src="img/deco/background_mobile.mp4" type="video/mp4"></video> -->
+
+	</div>
+
+	<div id="first">
+		<div id="firstCont" class="row">
+			<div class="text1 col-md-4 col-sm-12 ">
+				<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+			</div>
+			<div class="text1 col-md-4 col-sm-12 ">
+				<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+			</div>
+			<div class="text1 col-md-4 col-sm-12 ">
+				<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
+				<p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="second">
+		<div id="secondCont">
+			<h1>LA EVOLUCIÓN GLOBAL DEL CONSUMO DEL PLÁSTICO.</h1>
+			<div class="text2"><p>Los problemas relacionados con el medioambiente no aparecen de un día para otro. Lo mismo ocurre con el consumo y mal uso del plástico en el plano global. Desde que se descubrió lo útil que era el plástico en los cuarenta, el consumo del plástico ha ido subiendo exponencialmente. </p></div>
+			<div class="text2"><p>¡Clica en "Ver mapa" y analiza el crecimiento a nivel global!</p></div>
+			<div style="clear: both;"></div>
+			<div id="verMapa">Ver mapa</div>
+		</div>
+		<img id="mapa" src="img/mapa.svg">
+	</div>
+	<div id="third">
+	</div>
+	<div id="last"></div>
+
+</body>
+
+</html>
+
