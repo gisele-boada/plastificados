@@ -1,0 +1,618 @@
+			
+		@font-face {
+			font-family: HelveticaNeue Bold Condensed;
+			src: url(../fonts/HelveticaNeueBdCn.otf);
+		}
+
+		@font-face {
+			font-family: HelveticaNeue Light;
+			src: url(../fonts/HelveticaNeueLight.otf);
+		}
+
+			*{
+				padding:0;
+				margin:0;
+				box-sizing:border-box;
+			}
+
+			.notransition {
+			  -webkit-transition: none !important;
+			  -moz-transition: none !important;
+			  -o-transition: none !important;
+			  -ms-transition: none !important;
+			  transition: none !important;
+			}
+
+			body {
+
+				overflow: hidden;
+				background-color: #E9E9E9;
+				margin:0;padding:0;width:100%;height:100%;
+
+			}
+
+			#turn {
+				background-color: #041f4a;
+				height: 100vh;
+				width: 100%;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 30pt;
+				color: #ff4633;
+				text-align: center;
+				padding-top: 10%;
+
+			}
+
+				#plants {
+					width: 110%;
+					position: absolute;
+					bottom: -30%;
+					right: -7%;	
+				}
+
+			#logo {
+				position: absolute;
+				bottom: 4%;
+				left: 3%;
+				width: 18%;
+				z-index: -2;
+			}
+			
+			#start {
+				border-radius: 25px 25px;
+				position: absolute;
+				left: 40%;
+				top:40%;
+				z-index: 3;
+				width: 20%;
+				background-color: #041f4a;
+				height: 20%;
+				text-align: center;
+				padding-top: 2.3%;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 40pt;
+				color: #ff4d33;
+				cursor: pointer;
+				/*transform: scale(1.5);*/
+
+				-webkit-box-shadow: 13px 16px 55px -9px rgba(0,0,0,1);
+				-moz-box-shadow: 13px 16px 55px -9px rgba(0,0,0,1);
+				box-shadow: 13px 16px 55px -9px rgba(0,0,0,1);
+			}
+
+			#start:hover {
+				-webkit-box-shadow: inset 13px 16px 55px -9px rgba(0,0,0,1);
+				-moz-box-shadow: inset 13px 16px 55px -9px rgba(0,0,0,1);
+				box-shadow: inset 13px 16px 55px -9px rgba(0,0,0,1);
+			}
+
+			#timeUp {
+				border-radius: 25px 25px;
+				position: absolute;
+				left: 35%;
+				top:40%;
+				z-index: 3;
+				width: 30%;
+				background-color: #041f4a;
+				height: 30%;
+				text-align: center;
+				padding-top: 1.4%;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 30pt;
+				color: white;
+				cursor: pointer;
+				display: none;
+				filter: drop-shadow(10px 5px 15px rgba(0,0,0,0.5));
+			}
+
+
+			#tryAgain {
+				font-size: 40pt;
+				color:#ff4d33;
+			}
+
+			#congratulations {
+				border-radius: 25px 25px;
+				position: absolute;
+				left: 30%;
+				top: 25%;		
+				z-index: 3;
+				width: 40%;
+				background-color: #ff4d33;
+				height: 50%;
+				text-align: center;
+				padding-top: 1.4%;
+				font-family: myriad-pro-condensed, sans-serif;
+				font-weight: 700;
+				font-style: normal;
+				font-size: 40pt;
+				color: #041f4a;
+				cursor: pointer;
+				display: none;
+				padding-top: 3%;
+				filter: drop-shadow(3px 7px 15px rgba(0,0,0,0.5));			}
+
+			#youWon {
+				font-size: 60pt;
+				color:white;
+			}
+
+			#header {
+				padding: 2%;
+				padding-left: 3%;
+				padding-right: 3%;
+			}
+
+			#titulo {
+
+				float: left;
+				width: 50%;
+			}
+
+				#back, #cross {
+					height: 27px;
+					padding-right: 10px;
+					float:left;
+					margin-top:2%;
+					z-index: 5;
+					cursor: pointer;
+				}
+
+				#back:hover, #cross:hover {
+					transform: scale(1.2);
+				}
+
+				#closeWindow:hover {
+					transform: scale(1.2);
+				}
+
+
+
+				#sinkorfloat {
+					float:left;
+					font-family: myriad-pro-condensed, sans-serif;
+					font-weight: 700;
+					font-style: normal;
+					font-size: 28pt;
+					color: #ff4d33;
+					z-index: 4;
+
+
+				}
+				#time {
+					float: left;
+					width: 50%;
+					padding-top: 3px;
+					text-align: right;
+					font-family: myriad-pro-condensed, sans-serif;
+					font-weight: 700;
+					font-style: normal;
+					font-size: 30pt;
+					line-height: 1;
+					color:red;
+				}
+		
+		#menu {
+			background-color: #ff4d33; 
+			position: absolute;
+			top:0;
+			height: 100%;
+			width: 22%;
+			z-index: -1;
+			left:-22%;
+			/*left:0;*/
+			color: white;
+			font-family: myriad-pro-condensed, sans-serif;
+			font-size: 24pt;
+			padding-top: 10%;
+			text-align: center;
+			line-height: 2.5;
+			filter: drop-shadow(10px 5px 15px rgba(0,0,0,0.5));
+		}
+				
+
+			.opcionesMenu {
+				text-decoration: none;
+				color: white;
+				cursor:pointer;
+			}
+
+			a {text-decoration: none;}
+
+
+
+			#floor1 {
+				position: absolute;
+				bottom: 0;
+				z-index: -2;
+			}
+
+			#floor2  {
+				position: absolute;
+				bottom: -20px;
+				left: -59px;
+				width: 115%;
+				z-index: -2;
+			}
+
+			#starfish {
+				position: absolute;
+				bottom: 5%;
+				left: 22%;
+				width: 7%;	
+				animation-name: starfish;
+				animation-duration: 20s;
+				animation-iteration-count: infinite;
+				z-index: -2;	
+			}
+
+			.fish  {
+				width: 3%;
+				position: absolute;
+				bottom: 50%;;
+				left: 5%;
+				z-index: -3;
+				animation-name: fish;
+				animation-duration: 10s;
+				animation-iteration-count: infinite;
+
+			}
+
+			.oposite {
+				width: 3%;
+				position: absolute;
+				bottom: 50%;
+				left: 5%;
+				z-index: -2;
+				animation-name: oposite;
+				animation-duration: 15s ease-in-out;
+				animation-iteration-count: infinite;
+			}
+
+
+			.fishBlue {
+				width: 3%;
+				position: absolute;
+				/*bottom: 50%;*/
+				right: 10%;
+				z-index: -1;
+				animation-name: fishBlue;
+				animation-duration: 5s ;
+				animation-iteration-count: infinite;
+			}
+
+
+			#footer {
+				position: absolute;
+				bottom: 3%;
+				right:3%;
+				color: red;
+				font-family: myriad-pro-condensed, sans-serif;
+				font-weight: 700;
+				font-style: normal;
+				font-size: 30pt;
+			}
+
+
+			#product1 {
+				position: absolute;
+				left: 20%;
+				top: 25%;
+				z-index: 2;
+				width: 15%;
+				height: 30%;
+				animation-name:product;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			/*	border:1px solid;*/
+			}
+
+			#product2 {
+				position: absolute;
+				right: 20%;
+				top: 25%;
+				z-index: 2;
+				width: 15%;
+				height: 30%;
+				animation-name:product;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+			/*	border:1px solid;*/
+			}
+			
+			#newProd {
+				height: 100%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				position:relative;
+				top:0;
+			}
+
+			#newProd2 {
+				height: 100%;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				position:relative;
+				top:0;
+			}
+
+		
+		#info {
+			background-color: #e6e6e6;
+			width: 80%;
+			height: 80vh;
+			position:absolute;
+			top:10%;
+			left:10%;
+			z-index:4;
+			border-radius: 20px;
+			filter: drop-shadow(10px 5px 15px rgba(0,0,0,0.7));
+			overflow: scroll;
+			display: none;
+		}
+
+			#closeWindow {
+				height: 5%;
+				position: sticky;
+				top: 3%;
+				left:2%;
+				cursor: pointer;
+			}
+
+			.infoTitle {
+				color: #ff4d33;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 30pt;
+				text-align: center;
+				margin-top: 5%;
+			}
+
+			.infoText {
+				font-family: HelveticaNeue Light;
+				font-size: 15pt;
+				color:#041f4a;
+				width: 70%;
+			    text-align: center;
+			    margin: auto;
+			    margin-top: 2%;
+			    line-height: 1.3;
+			}
+
+			#grafico {
+				width: 70%;
+				margin-left: 15%;
+				margin-top: 2%;
+				border-radius: 18px;
+				filter: drop-shadow(10px 5px 15px rgba(0,0,0,0.5));
+				margin-bottom: 2%;
+			}
+
+			#controles {
+				width: 20%;
+				margin-left: 40%;
+    			margin-top: 2%;
+			}
+
+			#clasificacion {
+				width: 80%;
+				margin-left: 10%;
+    			margin-top: 2%;
+			}
+
+
+			#statement {
+				position:absolute;
+				top:40%;
+				left:35%;
+				z-index: 3;
+				color: #ff4d33;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 25pt;
+				text-align: center;
+				width: 30%;
+			}
+			#variante {
+				font-size: 45pt;
+				color:#041f4a;
+			}
+
+/*		//////////////BLOQUEO SOLO LANDSCAPE VIEW///////////*/
+
+			@media only screen and (orientation:portrait){
+				#turn{ display:block; }
+				#content{ display:none; }
+			}
+			@media only screen and (orientation:landscape){
+				#turn{ display:none; }
+				#content{ display:block; }
+			}
+
+
+/*		//////////////QUERIES/////////////////////*/
+
+			@media screen and (max-width: 1024px) {
+
+			html {
+
+				overflow: hidden;
+				/*background-color: #E9E9E9;*/
+				margin:0;padding:0;width:100%;
+
+			}
+
+			#closeWindow {
+				height: 10%;
+			}
+
+
+				#back {
+					height: 35px;
+					margin-top:2%;
+				}
+
+				#sinkorfloat, #time, #footer {
+					font-size: 25pt;
+				}
+
+				#floor2  {
+					bottom: -10px;
+				}
+
+				#start {
+					top: 30%;
+					left:30%;
+					width: 40%;
+					height: 130px;
+					font-size: 50pt;
+					padding-top: 4%;
+				}
+
+				#timeUp {
+					top:30%;
+					left:30%;
+					width: 40%;
+					height: 40%;
+					padding-top: 2.5%;
+					font-size: 25pt; 
+				}
+
+				#congratulations {
+					font-size: 25pt;
+					padding-top: 2%;
+					height: 180px;
+				}
+
+				#youWon {
+					font-size: 38pt;
+				}
+
+				#logo {
+					bottom: 5%;
+				}
+
+				#menu {
+					width: 33%;
+					left: -33%;
+				}
+
+			}
+
+			@media screen and (max-width: 1200px) {
+				
+				#start {
+					height: 170px;
+					font-size: 60pt;
+				}
+
+			}
+		
+			@media screen and (min-width: 1850px) {
+				#start {
+					font-size: 56pt;
+				}
+
+				#timeUp {
+					font-size: 40pt;
+				}
+
+				#tryAgain {
+					font-size: 55pt;
+				}
+
+				#congratulations {
+					font-size: 50pt;
+					padding-top: 2%;
+					height: 37%;
+					width: 35%;
+					left: 32%;
+				}
+
+				#back, #cross {
+					    margin-top: 1.5%;
+				}
+
+				#menu {
+					width: 18%;
+				}
+
+
+			}
+
+		/*///////////ANIMACIONES/////////////////*/
+
+			@keyframes ondas {
+				0% {
+					transform: translateY(0%); 
+     			}
+
+    			100% {
+					transform: translateY(-30%); 
+    			}
+			}
+
+
+
+			@keyframes starfish {
+				0% {
+					transform: translate(0px) ;
+     			}
+				50% {
+					transform: translate(50px) ;
+    			}
+    			100% {
+					transform: translate(0px) ;
+    			}
+			}
+
+			@keyframes fish {
+				0% {
+					transform: translateY(0px); 
+     			}
+				50% {
+					transform: translateY(20px);
+    			}
+    			100% {
+					transform: translateY(0px); 
+    			}
+			}
+
+			@keyframes oposite {
+				0% {
+					transform: translateY(0px); 
+     			}
+
+				50% {
+					transform: translateY(20px);
+    			}
+
+    			100% {
+					transform: translateY(0px); 
+    			}
+			}
+
+			@keyframes fishBlue {
+				0% {
+					transform: translateY(0px); 
+     			}
+				50% {
+					transform: translateY(15px);
+    			}
+    			100% {
+					transform: translateY(0px); 
+    			}
+
+    		}
+
+    		@keyframes product {
+				0% {
+					transform: translateY(0px); 
+     			}
+				50% {
+					transform: translateY(20px);
+    			}
+    			100% {
+					transform: translateY(0px); 
+	    		}
+	    	}
