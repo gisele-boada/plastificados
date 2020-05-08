@@ -300,6 +300,10 @@
 					margin-top: 1%;
 				}
 
+				#verMapa:hover {
+					background-color: #041f4a;
+				}
+
 				#mapa {
 					position: absolute;
 					bottom: 3%;
@@ -368,6 +372,10 @@
 					margin-top: 1%;
 				}
 
+				#test:hover {
+					background-color: #041f4a;
+				}
+
 			#fondoMarino {
 				width: 107%;
 				position: absolute;
@@ -402,7 +410,7 @@
 			}
 
 				.text4 {
-					padding-right: 20%;
+					padding-right: 0;
 					padding-top: 3%;
 					color: white;
 					padding-bottom: 1%;
@@ -424,6 +432,10 @@
 					cursor: pointer;
 					float: left;
 					margin-top: 1%;
+				}
+
+				#habitos:hover {
+					background-color: #041f4a;
 				}
 
 				#plato {
@@ -535,6 +547,21 @@
 			bottom: 10%;
     		right: 17%;
 		}
+
+		#contLastLeft {
+				width: 30%;
+				float: left;
+				height: 70%;
+				margin-top: 8%;
+				margin-left: 6%;
+				padding-right: 10%;
+				padding-top: 2%;
+			}
+
+				.text4 {
+					padding-right: 20%;
+				}
+
 	}
 
 	@media screen and (min-width: 1380px) and (max-width: 1600px) {
