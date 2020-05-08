@@ -236,7 +236,8 @@
 				/*border-radius: 0px 0px 0px 220px;*/
 				padding-left: 3%;
 				padding-right: 3%;
-				padding-top: 6%;
+				/*padding-top: 6%;*/
+				top:20%;
 
 			}
 
@@ -522,6 +523,28 @@
 			#footer2 {
 				height: 40%;
 				width: 100%;
+				color:white;
+				padding-left: 10%;
+				position:relative;
+			}
+
+				.text5 {
+					color:white;
+					font-size: 1rem;
+					margin-top: 8%;
+				}
+
+			#logoFooter {
+				height: 10%;
+				position: absolute;
+				top: 15%;
+				left: 11%;
+			}
+
+			.lastFotoer {
+				float:left;
+				min-width: auto;
+				margin-top: 0;
 			}
 
 
@@ -964,8 +987,10 @@
 		#firstCont {
 			/*border-radius: 0px 0px 0px 140px;*/
 			height: 77%;
-			padding-top: 22%;
+			padding-top: 10%;
 			padding-bottom: 7%;
+			top:10%;
+
 		}
 
 			.text1 {
