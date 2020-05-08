@@ -26,7 +26,7 @@
         }
 
         p {font-family: HelveticaNeueRoman;
-        	/*color:#041f4a;*/
+        	color:white;
         	/*font-size: 12pt;*/
         }
 
@@ -36,7 +36,7 @@
         	text-decoration: none;
         	margin-top: 0;
     		margin-bottom: 3%;
-    		color: #ff4633;
+    		color: white;
     		padding-right: 28%;
     		margin-right: 0!important;
     		padding-right: 0!important;
@@ -50,21 +50,23 @@
         	text-decoration: none;
         	margin-top: 0;
     		margin-bottom: 5px;
-    		/*color: #041f4a;*/
-    		color:#ff4633;
+    		color: white;
         }
 
         .cursive {
         	font-family: HelveticaNeue Light Italic;
+        	font-weight: 900;
         	font-size: 12pt;
-        	color: #ff4d33;
-        	
+        	color: #041f4a;
         }
 
 
-        body{
-			height: 5720px;
+        body,html {
+			
 			width: 100%;
+			margin:0;
+			padding:0;
+			overflow:hidden;
 
 		}
 
@@ -229,7 +231,7 @@
 				-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
 				filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
 				position: relative;
-				background-color: white;
+				background-color: #ff4633;
 				height: 50%;
 				/*border-radius: 0px 0px 0px 220px;*/
 				padding-left: 3%;
@@ -240,7 +242,6 @@
 
 				.text1 {
 					font-family: HelveticaNeueRoman;
-
 				    line-height: 1.5;
 				    color: #041f4a;
 				padding-right: 3rem!important;
@@ -257,7 +258,7 @@
 		}
 
 			#secondCont {
-				background-color: white;
+				background-color: #ff4633;
 				position: absolute;
 				top:18%;
 				left: 10%;
@@ -285,14 +286,15 @@
 				}
 
 				#verMapa {
-					background-color: #ff4633;
+					color: white;
+					background-color: #ffffff38;
 					padding-right: 50px;
 					padding-left: 50px;
 					height: 40px;
 					font-family: HelveticaNeue Light;
 					font-size: 18px;
 					letter-spacing: 0.5px;
-					color: white;
+					
 					text-align: center;
 					padding-top: 6px;
 					border-radius: 7.5px;
@@ -303,6 +305,7 @@
 
 				#verMapa:hover {
 					background-color: #041f4a;
+					opacity: 1;
 				}
 
 				#mapa {
@@ -323,7 +326,7 @@
 
 
 			#thirdCont {
-				background-color: white;
+				background-color: #ff4633;
 				position: absolute;
 				top:18%;
 				right: 10%;
@@ -345,6 +348,8 @@
 				   position: absolute;
 				    left: 2%;
 				    bottom: -13%;
+				    -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5)); 
+					filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
 				    
 				}
 
@@ -357,14 +362,15 @@
 				}
 
 				#test {
-					background-color: #ff4633;
+					color: white;
+					
+					background-color:#ffffff70;
 					padding-right: 70px;
 					padding-left: 70px;
 					height: 40px;
 					font-family: HelveticaNeue Light;
 					font-size: 18px;
 					letter-spacing: 0.5px;
-					color: white;
 					text-align: center;
 					padding-top: 6px;
 					border-radius: 7.5px;
@@ -405,7 +411,7 @@
 			#contLastRight {
 			 	width:60%;
 			 	float: left;
-			 	height: 70%;
+			 	/*height: 70%;*/
 			 	margin-top: 8%;
 			 	position: relative;
 			}
@@ -450,10 +456,74 @@
 					position: absolute;
 					width: 53%;
 					right: 30%;
-   	 				top: 15%;	
+   	 				top: 15%;
+   	 				margin-top: 9%;	
 					-webkit-filter: drop-shadow(10px 25px 6px rgba(0, 0, 0, 0.5));
 					filter: drop-shadow(10px 25px 6px rgba(0, 0, 0, 0.5));
 				}
+
+		#footer {
+			background-color: #041f4a;
+			height: 100vh;
+			width: 100%;
+
+		}
+
+			#scrollFooter {
+				height: 50vh;
+				position: absolute;
+				bottom:0;
+				width: 100%;
+			}
+
+			#footer1 {
+				background-color: white;
+				height: 60%;
+				width: 101%;
+				
+			}
+
+			#arrowLeft {
+				position: absolute;
+				height: 35%;
+				top: 23%;
+				left: -3%;
+			}
+
+			#arrowRight {
+				position: absolute;
+				height: 35%;
+				top: 23%;
+				right: 3%;
+				transform: rotate(180deg);
+			}
+
+				#titleFooter {
+					font-family: HelveticaNeue Bold Condensed;
+					color: #ff4633;
+					text-align: center;
+					line-height: 1.2;
+					font-size: 2.5rem;position: relative;
+				}
+
+
+					#opinion1 {
+						text-align: left;
+						position: relative;
+					}
+
+					#opinion2 {
+						text-align: left;
+						position: relative;
+					}					    
+
+
+
+			#footer2 {
+				height: 40%;
+				width: 100%;
+			}
+
 
 
 
@@ -563,6 +633,24 @@
 					padding-right: 20%;
 				}
 
+			#titleFooter {
+				font-family: HelveticaNeue Bold Condensed;
+				color: #ff4633;
+				font-size: 4rem;
+				text-align: center;
+				line-height: 1.2;
+			}
+
+			#opinion1, #opinion2 {
+				
+				    padding-right: 115px!important;
+				    padding-left: 30px!important;
+			}
+
+		#botella {
+			margin-top: 8%;
+		}
+
 	}
 
 	@media screen and (min-width: 1380px) and (max-width: 1600px) {
@@ -606,7 +694,7 @@
 		}
 	}
 	
-	@media screen and (max-width: 414px) {
+	@media screen and (max-width: 750px) {
 		h1 {
 			font-size:2.3rem!important;
 		}
@@ -615,7 +703,6 @@
         	font-family: HelveticaNeue Bold Condensed;
         	font-size: 16px;
         	margin-top: 0;
-       		color: #041f4a;
        		margin-bottom: 0;
         }
 
@@ -755,6 +842,8 @@
 			height: 50px;
 			margin-right: 17%;
 			font-size: 23px;
+			background-color:#ffffff70;
+
 		}
 
 		#fondoMarino {
@@ -773,7 +862,6 @@
 				    z-index:-1;
 				    opacity: 0.5
 				}
-
 
 
 		#contLastLeft {
@@ -798,11 +886,12 @@
 					margin-left: 10%;
 			}
 
+
 		#contLastRight {
 				width: 80%;
 				margin-top: -15%;
 				margin-left: 12%;
-		}
+			}
 
 			#botella {
 				top: 7%;
@@ -815,7 +904,6 @@
         	font-family: HelveticaNeue Bold Condensed;
         	font-size: 16px;
         	margin-top: 0;
-       		color: #041f4a;
        		margin-bottom: 0;
         }
 
@@ -955,6 +1043,8 @@
 			height: 50px;
 			margin-right: 11%;
 			font-size: 23px;
+			background-color:#ffffff70;
+
 		}
 
 		#fondoMarino {
@@ -996,11 +1086,12 @@
 					margin-left: 6%;
 			}
 
-		#contLastRight {
-			width: 80%;
-			margin-top: -8%;
-			margin-left: 12%;
-		}
+
+			#contLastRight {
+				width: 80%;
+				margin-top: -8%;
+				margin-left: 12%;
+			}
 
 			#botella {
 				top: 7%;
