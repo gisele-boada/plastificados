@@ -46,7 +46,7 @@
 
         h2 {
         	font-family: HelveticaNeue Bold Condensed;
-        	font-size: 1.8rem!important;
+        	font-size: 1.7rem!important;
         	text-decoration: none;
         	margin-top: 0;
     		margin-bottom: 5px;
@@ -240,8 +240,8 @@
 
 				.text1 {
 					font-family: HelveticaNeueRoman;
-
-				    line-height: 1.5;
+					font-size: 0.9rem!import;
+				    line-height: 1.4;
 				    color: #041f4a;
 				padding-right: 3rem!important;
 				padding-left: 3rem!important;
@@ -813,7 +813,7 @@
 
 		h2 {
         	font-family: HelveticaNeue Bold Condensed;
-        	font-size: 16px;
+        	font-size: 14px;
         	margin-top: 0;
        		color: #041f4a;
        		margin-bottom: 0;
@@ -875,9 +875,10 @@
 
 		#firstCont {
 			/*border-radius: 0px 0px 0px 140px;*/
-			height: 77%;
-			padding-top: 22%;
+			height: 80%;
+			padding-top: 3%;
 			padding-bottom: 7%;
+			top: 10%;
 		}
 
 			.text1 {
@@ -899,6 +900,7 @@
 				padding-right: 3%;
 				padding-left: 4%;
 				text-align: center;
+				overflow: hidden;
 			}
 
 			h1 {
@@ -919,8 +921,9 @@
 		}
 
 		#mapa {
-			display: none;
-			
+			/*display: none;*/
+			display: block;
+			opacity: 0.3;			
 		}
 
 		#verMapa {
