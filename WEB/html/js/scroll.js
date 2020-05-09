@@ -11,17 +11,15 @@
         scrollTop: $("#first").offset().top},
         1200);
         $('#logo1').css("display", "none");
-        $('#logo2').css("display", "none");
-        $('#logo3').css("display", "block");
+        $('#logo2').css("display", "block");
+        $('#logo3').css("display", "none");
 
          console.log('Down');
 
      }else {
          //scroll up
          console.log('Up');
-        $('#logo1').css("display", "none");
-		$('#logo2').css("display", "none");
-		$('#logo3').css("display", "block");
+
      }
 
      //prevent page fom scrolling
