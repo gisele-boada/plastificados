@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+		<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+		<!-- <link rel="stylesheet" type="text/css" href="css/index_red.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/entradas.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		
+
+		<script src="js/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- 		<script src="js/scroll.js" ></script>  -->
+<!-- 		<script src="js/scroll_mobile.js" media="media screen and (max-width: 768px)"></script>  -->
+
+
+
+		
+	<style>
+
+
+
+	</style>
+</head>	
+<body>
+
+	<script>
+
+		$(function() {
+	/////////////////////////////////////
+		
+		/////SCROLL TOP///////
+		$("#top").on("click", function topFunction() {
+			$('html, body').animate({scrollTop:0}, 'slow');
+			$('#logo1').css("display", "block");
+			$('#logo2').css("display", "none");
+			$('#logo3').css("display", "none");
+
+	   	});
+
+/*	$(window).resize(function(){
+    	if ($(window).width() <= 768){
+        	$("#logo1").css("display","none");
+    	}
+	});*/
+
+
+	//////////////ABRIR MENU///////////////////////
+		$("#burgerImg").on("click", function(){
+
+
+			$('#burgerImg').css("display", "none");
+			$('#cross').css("display", "block");
+			$("#burgerCont").css({
+					"right": "0",
+					"transition": "right 0.5s"
+			});
+			$("#logo1").css("display", "none");
+			$("#logo3").css("display", "block");
+
+		});
+
+
+	//////////////CERRAR MENU///////////////////////
+		$("#cross").on("click", function(){
+
+			$('#burgerImg').css("display", "block");
+			$('#cross').css("display", "none");
+			$("#burgerCont").css({
+					"right": "-100%",
+					"transition": "right 0.5s"
+			});
+			$("#logo1").css("display", "block");
+			$("#logo3").css("display", "none");
+		});
+
+		$(".opcionesMenu").on("click", function(){
+			$(".opcionesMenu").css("background-color", "#041f4a");
+		});
+
+
+	
+
+
+
+
+
+	///////////////////////////////////
+	});
+	
+
+
+  
+
+	</script>
+
+
+ 	<video autoplay muted loop id="seabed">
+		<source src="img/seabed.mp4" type="video/mp4">
+	</video>
+
+	<img id="top" src="img/top.svg">
+
+	<div id="header">
+		<div id="logo">
+			<img id="logo1" class="logoIMG" src="img/logo1.gif">
+			<img id="logo2" class="logoIMG" src="img/logo2.gif">
+			<img id="logo3" class="logoIMG" src="img/logo3.gif">
+			<img id="sos" src="img/sos.svg">
+		</div>
+		<div id="buttonsCont">
+			<div id="burgerCont">
+				<div class="opcionesMenu">ENTRADAS</div>
+				<div class="opcionesMenu">VISITA VIRTUAL</div>
+			</div>
+			<div id="burger">
+				<img id="burgerImg" src="img/burger.svg">
+				<img id="cross" src="img/cross.svg">
+			</div>
+
+			<div class="button" style="background-color: #ff4633">Tour virtual</div>
+			<div class="button" style="background-color: #041f4a">Entradas</div>
+		</div>
+	</div>
+	<img id="entradas" src="img/entradas.svg">
+
+	<div id="home">
+		<div id="titEntrada">COMPRA TUS ENTRADAS AQUÍ</div>
+		<div id="cuerpoEntrada"><p>Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat <span class="cursive">asasasa</span>lore magna aliquam erat.</div>
+		<div id="empezar">Empezar</div>
+		
+	</div>
+	
+
+</body>
+
+</html>
+

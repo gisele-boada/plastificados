@@ -296,7 +296,8 @@
 
 				#verMapa {
 					color: white;
-					background-color: #ffffff38;
+					/*background-color: #ffffff38;*/
+					background-color: #041f4a;
 					padding-right: 50px;
 					padding-left: 50px;
 					height: 40px;
@@ -313,8 +314,9 @@
 				}
 
 				#verMapa:hover {
-					background-color: #041f4a;
-					opacity: 1;
+					/*background-color: #041f4a;*/
+					background-color: red;
+					/*opacity: 1;*/
 				}
 
 				#mapa {
@@ -372,8 +374,8 @@
 
 				#test {
 					color: white;
-					
-					background-color:#ffffff38;
+					background-color: #041f4a;
+					/*background-color:#ffffff38;*/
 					padding-right: 70px;
 					padding-left: 70px;
 					height: 40px;
@@ -389,7 +391,7 @@
 				}
 
 				#test:hover {
-					background-color: #041f4a;
+					background-color: red;
 				}
 
 			#fondoMarino {
