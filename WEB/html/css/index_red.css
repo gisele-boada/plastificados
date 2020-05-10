@@ -321,9 +321,9 @@
 
 				#mapa {
 					position: absolute;
-					bottom: 3%;
-					right:18%;
-					width: 42vw;
+					bottom: 7%;
+					right: 14%;
+					width: 46vw;
 				}	
 		
 
@@ -541,7 +541,8 @@
 				.text5 {
 					color:white;
 					font-size: 1rem;
-					margin-top: 8%;
+					/*margin-top: 8%;*/
+
 				}
 
 			#logoFooter {
@@ -554,13 +555,22 @@
 			.lastFotoer {
 				float:left;
 				min-width: auto;
-				margin-top: 0;
+				margin-top: 0!important;
+			}
+
+			#copyright {
+				padding-left: 1%;
+				margin: 0!important;
 			}
 
 
 
 
-				   
+		#first {
+			height: 100vh;
+			width: 100%;
+
+		}	   
 
 
 
@@ -657,8 +667,8 @@
 		 }
 
 		 #mapa {
-			bottom: 10%;
-    		right: 17%;
+			bottom: 14%;
+    		right: 18%;
 		}
 
 		#contLastLeft {
@@ -712,7 +722,7 @@
 	@media screen and (min-width:950px) and (max-width: 1200px) {
 		#mapa {
 			bottom: 10%;
-    		right: 17%;
+    		right: 14%;
 		}
 
 		#contLastLeft {
@@ -739,9 +749,10 @@
 
 	@media screen and (max-width: 1120px) {
 		#mapa {
-			bottom: 11%;
-    		right: 17%;
-		}		
+			bottom: 12%;
+			right: 9%;				
+		}
+
 		#secondCont {
 			width: 65vw;
 		}
@@ -751,9 +762,9 @@
 
 
 		#mapa {
-			bottom: 13%;
-    		right: 8%;
-    		width: 45vw;
+			bottom: 14%;
+			right: 6%;
+			width: 49vw;	
 		}
 
 	}
@@ -1226,6 +1237,7 @@
 
 					.lastFooter {
 						text-align: center;
+
 					}
 
 					#logoFooter {
@@ -1234,6 +1246,11 @@
 
 						#arrowRight, #arrowLeft {
 							display: none;
+						}
+
+						#copyright
+						{
+							margin-left: 0;
 						}
 
 

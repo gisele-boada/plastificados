@@ -4,430 +4,23 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
-
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+		<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/index_red.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 		
 
 		<script src="js/jquery.js"></script>
-		<script src="js/scroll.js"></script> 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="js/scroll.js" ></script> 
+<!-- 		<script src="js/scroll_mobile.js" media="media screen and (max-width: 768px)"></script>  -->
 
+
+
+		
 	<style>
 
-		@font-face {
-			font-family: HelveticaNeueMd;
-			src: url(fonts/HelveticaNeueMd.otf);
-		}
-		@font-face {
-			font-family: HelveticaNeueRoman;
-			src: url(fonts/HelveticaNeueRoman.otf);
-		}
-		@font-face {
-			font-family: HelveticaNeue Bold Condensed;
-			src: url(fonts/HelveticaNeueBdCn.otf);
-		}
-		@font-face {
-			font-family: HelveticaNeue Light Italic;
-			src: url(fonts/HelveticaNeueLightIt.otf);
-		}
 
-	    * {
-             box-sizing: border-box;
-             margin:auto;
-        }
-        h1 {
-        	font-family: HelveticaNeue Bold Condensed;
-        	font-size: 50px;
-        	text-decoration: none;
-        	margin-top: 0;
-    		margin-bottom: 0;
-    		color: #ff4633;
-        }
-
-        h2 {
-        	font-family: HelveticaNeue Bold Condensed;
-        	font-size: 28px;
-        	text-decoration: none;
-        	margin-top: 0;
-    		margin-bottom: 5px;
-    		color: #041f4a;
-        }
-
-        h3 {
-        	font-family: HelveticaNeue Light Italic;
-        }
-
-		body{
-			height: 5720px;
-			width: 100%;
-		}
-
-		#home {
-			height: 100vh;
-		}
-
-/*		#homePage {
-			height: 100%;
-		}*/
-
-		#homePage {
-			width: 100%;
-			 transform: rotateY(180deg);
-		}
-
-		#homePageMobile {
-			width: 100%;
-			display: none;
-		}
-
-		#background {
-			position: absolute;
-			background-image:url('img/background.gif');
-			width: 100%;
-			background-repeat:no-repeat;
-			background-size:contain;
-			background-position:center;
-			z-index: -1;
-		}
-
-		#header {
-			height: 100px;
-			width: 100%;
-			position: fixed;
-			top:0;
-			left: 0;
-			z-index: 3;
-		}
-
-		#logo {
-			float:left;
-			width:50%;
-			height: 100%;
-			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0));
-		}
-
-		#logo img {
-			width:28%;
-			margin-top: 35px;
-			margin-left: 50px;
-		}
-		#logo1 {
-			display: block;
-		}
-
-		#logo2, #logo3 {
-			display:none;
-		}
-
-		#buttonsCont {
-			float:left;
-			width:50%;
-			height: 100%;
-			padding-right: 50px;
-		}
-
-		.button {
-			min-width:10px;
-			margin-top: 35px;
-			padding-right: 25px;
-			padding-left: 25px;
-			height: 38px;
-			float:right;
-			background-color: green;
-			margin-left: 30px;
-			font-family: HelveticaNeueRoman;
-			font-size: 15px;
-			letter-spacing: 1px;
-			color:white;
-			text-align: center;
-			padding-top: 10px;
-			border-radius: 7.5px;
-		}
-
-		#soundOn, #soundOff {
-			position: absolute;
-			bottom:50px;
-			right: 50px;
-			height: 5%;
-/*			-webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.5)); 
-			filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.5));*/
-		}
-
-		#soundOn {
-			display: none;
-		}
-
-		#test {
-			position: absolute;
-			bottom: 20%;
-			right: 10%;
-			width: 30%;
-		}
-
-
-		#first {
-			height: 100vh;
-			width: 100%;
-			background: #041f4a;
-		}
-
-		#second {
-			height: 100vh;
-			width: 100%;
-			background: #041f4a;
-			
-		}
-
-
-
-		#last {
-			height: 100vh;
-			width: 100%;
-			background: #ff4633;
-		}
-
-		#firstCont {
-			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
-			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
-			position: relative;
-		}
-
-			#bloc0 {
-				width: 100%;
-			}
-
-			#textCont {
-				position:absolute;
-				width: 100%;
-				height: 100%;
-			}
-
-				.text1 {
-					float:left;
-					width: 22%;
-					height: 100%;
-					font-family: HelveticaNeueRoman;
-					font-size: 18px;
-				    margin-left: 9%;
-				    padding-top: 6%;
-				    /*padding-right: 2%;*/
-				    line-height: 1.7;
-				    color: #041f4a;
-				}
-
-			#straw {
-				height: 17%;
-			    position: absolute;	
-			    left: 13%;
-    			margin-top: 0%;			
-			}
-
-			#palito {
-				height: 9%;
-			    position: absolute;	
-			    right: 19%;
-    			margin-top: 10%;			
-			}
-
-			#palito1 {
-				height: 3%;
-			    position: absolute;	
-				right: 30%;
-				/*margin-top: 4%;*/		
-			}
-
-			#tapon {
-				height: 5%;
-			    position: absolute;
-			    right: 10%;
-			    margin-top: 4%;
-			}
-
-			#bag {
-				height: 28%;
-				position: absolute;
-				right: 48%;
-				margin-top: 10%;
-				transform: rotate(-45deg);
-			}
-			
-		#secondCont {
-			width: 52%;
-			height: 100%;
-			float:left;
-			margin-top: -5%;
-			position: relative;
-			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
-			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
-		}
-			#bloc1, #bloc2 {
-				width: 100%;
-			}
-
-			#palito2 {
-				height: 4%;
-			    position: absolute;	
-				/*right: 30%;*/
-				margin-top: 7%;
-				margin-left: 32%;	
-			}
-
-			#soft {
-				height: 40%;
-			    position: absolute;	
-				margin-left: 11%;
-    			margin-top: 22%;		
-			}
-
-	#third {
-		height: 100vh;
-		width: 100%;
-		background: #041f4a;
-		position: relative;
-	}
-
-		#thirdCont {
-			width: 55%;
-			height: 100%;
-			float:right;
-			margin-top: -5%;
-			-webkit-filter: drop-shadow(-15px 30px 15px rgba(0,0,0,0.5)); 
-			filter: drop-shadow(-15px 30px 15px rgba(0,0,0,0.5));
-			
-		} 
-
-			#water {
-				height: 20%;
-			    position: absolute;	
-			    top: 380%;
-			    left: 15%;
-			    z-index: 3;
-			    transform: rotate(45deg);
-/*				margin-left: 13%;*/
-				/*margin-top: 13%;*/	
-			}
-
-			#detergent {
-				position: absolute;
-				height: 20%;
-				top: 320%;
-				left: 35%;
-				z-index: 1;
-/*				margin-top: 21%;
-				margin-left: 37%;*/	
-			}
-
-			.fish  {
-				width: 3%;
-				position: absolute;
-				bottom: 30%;;
-				left: 5%;
-				z-index: -3;
-				animation-name: fish;
-				animation-duration: 10s;
-				animation-iteration-count: infinite;
-				z-index: 3;
-			}
-
-			.oposite {
-				width: 3%;
-				position: absolute;
-				bottom: 30%;
-				left: 5%;
-				animation-name: oposite;
-				animation-duration: 15s ease-in-out;
-				animation-iteration-count: infinite;
-				z-index: 1;
-			}
-
-		#contFondo {
-			width: 100%;
-			position: absolute;
-			bottom:0;
-			-webkit-filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5)); 
-			filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5));
-			z-index: 2;
-}
-		}
-
-			#fondo1 {
-				height: 100%;
-
-			}
-
-			#fondo2 {
-				width: 100%;
-				position:absolute;
-				bottom: 0%;
-				-webkit-filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5)); 
-				filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5));
-			}
-
-
-
-
-
-	@keyframes fish {
-		0% {
-			transform: translateY(0px); 
-			}
-		50% {
-			transform: translateY(20px);
-		}
-		100% {
-			transform: translateY(0px); 
-		}
-	}
-
-	@keyframes oposite {
-		0% {
-			transform: translateY(0px); 
-			}
-
-		50% {
-			transform: translateY(20px);
-		}
-
-		100% {
-			transform: translateY(0px); 
-		}
-	}
-
-
-
-/*//////////////QUERIES/////////////////////*/
-
-	@media screen and (max-width: 850px) {
-		
-		#homePage {
-			display: none;
-		}
-
-		#homePageMobile {
-			display: block;
-		}
-
-		#logo {
-			width: 70%;
-		}
-
-		#logo img {
-			width: 90%;
-			margin-top: 8%;
-			margin-left: 8%;
-		}
-
-		#buttonCont {
-			width: 30%;
-		}
-
-		.button {
-			display: none;
-		}
-
-
-
-	}
 
 	</style>
 </head>	
@@ -435,134 +28,253 @@
 
 	<script>
 
-	$(function() {
+		$(function() {
 	/////////////////////////////////////
+		
+		/////SCROLL TOP///////
+		$("#top").on("click", function topFunction() {
+			$('html, body').animate({scrollTop:0}, 'slow');
+			$('#logo1').css("display", "block");
+			$('#logo2').css("display", "none");
+			$('#logo3').css("display", "none");
 
-$(document).ready(function () {
-	// We'll read the rate from each <div>.
-  $(".parallax").each(function () {
-    var $this = $(this);
-    
-    // We need to remember the element's original
-    // top offset as a reference point.
-		$this.data("top", $this.offset().top);
+	   	});
 
-    // We've used a custom attribute in the HTML
-    // to specify the scrolling rate.
-		$this.data("rate", $this.attr("data-parallax-rate"));
-	});
+/*	$(window).resize(function(){
+    	if ($(window).width() <= 768){
+        	$("#logo1").css("display","none");
+    	}
+	});*/
 
-	$(window).scroll(function () {
-    // Whenever the window scrolls, we reposition
-    // each parallax element.
-		$(".parallax").each(function () {
-			var scrollTop = $(window).scrollTop();
-			var rate = $(this).data("rate");
-			var thisTop  = scrollTop - scrollTop * rate
-			$(this).css("top", $(this).data("top") + thisTop);
-		});
-	});
-});
 
-/////////////////SOUND ON/OFF////////////////////
+	//////////////ABRIR MENU///////////////////////
+		$("#burgerImg").on("click", function(){
 
-		$("#soundOff").on("click", function(){
-			$('#soundOff').css("display", "none");
-			$('#soundOn').css("display", "block");
+
+			$('#burgerImg').css("display", "none");
+			$('#cross').css("display", "block");
+			$("#burgerCont").css({
+					"right": "0",
+					"transition": "right 0.5s"
+			});
+			$("#logo1").css("display", "none");
+			$("#logo3").css("display", "block");
+
 		});
 
-		$("#soundOn").on("click", function(){
-			$('#soundOn').css("display", "none");
-			$('#soundOff').css("display", "block");
+
+	//////////////CERRAR MENU///////////////////////
+		$("#cross").on("click", function(){
+
+			$('#burgerImg').css("display", "block");
+			$('#cross').css("display", "none");
+			$("#burgerCont").css({
+					"right": "-100%",
+					"transition": "right 0.5s"
+			});
+			$("#logo1").css("display", "block");
+			$("#logo3").css("display", "none");
 		});
+
+		$(".opcionesMenu").on("click", function(){
+			$(".opcionesMenu").css("background-color", "#041f4a");
+		});
+
+
+	//////////////SOMBRA MOVIMIENTO PLATO///////////////////////
+			$(window).scroll(function(){
+        		var wScroll = $(this).scrollTop();
+
+				if (wScroll>=2000){
+
+				$("#plato").css({"filter":"drop-shadow(10px 25px 4px rgba(0, 0, 0, 0.7))",
+						"transition" : "filter 3s" });
+					
+				} if (wScroll>=2300) {
+					$("#plato").css({"filter":"drop-shadow(15px 18px 4px rgba(0, 0, 0, 0.7))",
+						"transition" : "filter 3s" });
+				} if (wScroll>=2600) {
+					$("#plato").css({"filter":"drop-shadow(20px 6px 4px rgba(0, 0, 0, .7))",
+						"transition" : "filter 3s" });
+				}
+
+   		 	});
+
+	//////////////SOMBRA MOVIMIENTO BOTELLA///////////////////////
+			$(window).scroll(function(){
+        		var wScroll = $(this).scrollTop();
+
+				if (wScroll>=2000){
+
+				$("#botella").css({"filter":"drop-shadow(10px 20px 6px rgba(0, 0, 0, 0.7))",
+						"transition" : "filter 3s" });
+					
+				} if (wScroll>=2300) {
+					$("#botella").css({"filter":"drop-shadow(15px 15px 6px rgba(0, 0, 0, 0.7))",
+						"transition" : "filter 3s" });
+				} if (wScroll>=2600) {
+					$("#botella").css({"filter":"drop-shadow(20px 5px 6px rgba(0, 0, 0, 0.7))",
+						"transition" : "filter 3s" });
+				}
+
+   		 	});
+
+
+	/////////////PLANTAS GROW///////////////////////
+   		 	$(window).scroll(function(){
+        		var wScroll = $(this).scrollTop();
+
+				if (wScroll>=1200){
+
+				$("#plantas").css({"bottom":"-38%",
+						"transition" : "bottom 3s" });
+					
+				} if (wScroll>=1800) {
+				$("#plantas").css({"bottom":"-20%",
+						"transition" : "bottom 2s" });
+				} if (wScroll>=2300) {
+				$("#plantas").css({"bottom":"-38%",
+						"transition" : "bottom 2s" });
+				}
+
+   		 	});
+
+
+
 
 	///////////////////////////////////
 	});
+	
 
+
+  
 
 	</script>
 
 
+ 	<video autoplay muted loop id="seabed">
+		<source src="img/seabed.mp4" type="video/mp4">
+	</video>
 
-<!-- 	
-	<img id="background" src="img/background.gif"> -->
-	
+	<img id="top" src="img/top.svg">
+
 	<div id="header">
-		<div id="logo">
-			<img id="logo1" src="img/logo.svg">
-			<img id="logo2" src="img/logo2.svg">
-			<img id="logo3" src="img/logo3.svg">
-		</div>
+		<a href="index.html"><div id="logo">
+			<img id="logo1" class="logoIMG" src="img/logo1.gif">
+			<img id="logo2" class="logoIMG" src="img/logo2.gif">
+			<img id="logo3" class="logoIMG" src="img/logo3.gif">
+			<img id="sos" src="img/sos.svg">
+		</div></a>
 		<div id="buttonsCont">
+			<div id="burgerCont">
+				<div class="opcionesMenu">ENTRADAS</div>
+				<div class="opcionesMenu">VISITA VIRTUAL</div>
+			</div>
+			<div id="burger">
+				<img id="burgerImg" src="img/burger.svg">
+				<img id="cross" src="img/cross.svg">
+			</div>
+
 			<div class="button" style="background-color: #ff4633">Tour virtual</div>
-			<div class="button" style="background-color: #041f4a">Entradas</div>
+			<a href="entradas.html"><div class="button" style="background-color: #041f4a">Entradas</div></a>
 		</div>
 	</div>
 
 	<div id="home">
-		<video autoplay muted loop id="homePage" src="img/deco/background.mp4" type="video/mp4"></video>
-		<video autoplay muted loop id="homePageMobile" src="img/deco/background_mobile.mp4" type="video/mp4"></video>
-<!-- 		<img id="soundOn" src="img/soundOn2.svg">
-		<img id="soundOff" src="img/soundOff2.svg"> -->
-
+		<video autoplay muted loop id="homePage" src="img/deco/background.mp4" type="video/mp4"></video> 
 	</div>
 
 	<div id="first">
-		<div id="firstCont">
-			<div id="textCont">
-				<div class="text1">
-					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-				</div>
-				<div class="text1">
-					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-				</div>
-				<div class="text1">
-					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
-					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-				</div><div style="clear: both;"></div>
+		<div id="firstCont" class="row">
+			<div class="text1 col-md-4 col-sm-12 ">
+				<h2>Estamos<span style="color: #041f4a; font-family: HelveticaNeue Black Condensed;"> plastificados.</span></h2>
+				<p>El plástico nos está ahogando en un mar de plástico, y no solo el océano se está plastificando, sino también nosotros mismos al utilizarlo. Te ayudamos a abrir los ojos y te contamos lo que no sabías sobre el plástico. </p>
 			</div>
-			<div class="imatge-ona">
-				<img id="bloc0" src="img/deco/bloc0.svg">
+			<div class="text1 col-md-4 col-sm-12 ">
+				<h2>Una experiéncia<span style="color: #041f4a; font-family: HelveticaNeue Black Condensed;"> única.</span></h2>
+				<p>En esta exposición te informaremos de una forma sensorial e interactiva, incluyendote tanto en el problema como en la solución del plástico. Aprenderás sobre los hábitos para una vida sana a través de juegos y experiencias inmersivas.</p>
+			</div>
+			<div class="text1 col-md-4 col-sm-12 ">
+				<h2>Tu tienes la<span style="color: #041f4a; font-family: HelveticaNeue Black Condensed;"> solución.</span></h2>
+				<p>Nosotros no queremos engañarte, y por esto te haremos protagonista tanto del problema como de la solución. Vivirás en primera persona el impacto del plástico de forma personal y única. </p>
 			</div>
 		</div>
-		<img id="straw" class="parallax" data-parallax-rate="0.9" src="img/deco/straw.svg">
-		<img id="palito" class="parallax" data-parallax-rate="1.1" src="img/deco/palito.svg">
-		<img id="palito1" class="parallax" data-parallax-rate="0.8" src="img/deco/palito1.svg">
-		<img id="tapon" class="parallax" data-parallax-rate="0.9" src="img/deco/tapon.svg">
-		<img id="bag" class="parallax" data-parallax-rate="1.1" src="img/deco/bag.svg">
 	</div>
+
 	<div id="second">
 		<div id="secondCont">
-			<img id="bloc1" src="img/deco/bloc1.svg">
+			<h1>LA EVOLUCIÓN GLOBAL DEL CONSUMO DEL PLÁSTICO.</h1>
+			<div class="text2"><p>Los problemas relacionados con el medioambiente no aparecen de un día para otro. Lo mismo ocurre con el consumo y mal uso del plástico en el plano global. Desde que se descubrió lo útil que era el plástico en los cuarenta, el consumo del plástico ha ido subiendo exponencialmente. </p></div>
+			<!-- <div class="text2"><p>¡Clica en "Ver mapa" y analiza el crecimiento a nivel global!</p></div> -->
+			<div style="clear: both;"></div>
+			<div id="verMapa">Ver mapa</div>
 		</div>
-		<img id="soft" class="parallax" data-parallax-rate="1.3" src="img/deco/soft.svg">
-		<img id="palito2" class="parallax" data-parallax-rate="0.9" src="img/deco/palito2.svg">
-		<img id="water" class="parallax" data-parallax-rate="1.2" src="img/deco/water.svg">
-		<img id="detergent" class="parallax" data-parallax-rate="0.9" src="img/deco/detergent.svg">
+		<img id="mapa" src="img/mapa.svg">
 	</div>
 	<div id="third">
 		<div id="thirdCont">
-			<img id="bloc2" src="img/deco/bloc2.png">
-		</div><!-- <div style="clear: both;"></div> -->
-		
-		<div id="contFondo">
-			<img id="fondo2" src="img/deco/fondo2.svg">
-			<img id="fondo1" class="parallax" data-parallax-rate="1.5" src="img/deco/fondo1.svg">
+			<h1>¿TE ATREVES A DESCUBRIR SI ESTÁS PLASTIFICADO?</h1>
+			<div class="text3"><p>Los problemas relacionados con el medioambiente no aparecen de un día para otro. Lo mismo ocurre con el <span style="font-family: HelveticaNeue Medium Italic; color: #041f4a;">consumo</span> y mal uso del plástico en el plano global. Desde que se descubrió lo útil que era el plástico en los cuarenta, el consumo del plástico ha ido subiendo exponencialmente. </p>
+			</div>
+			<div style="clear: both;"></div>
+			<div id="test">Test</div>
+			<img id="plantas" src="img/deco/plantas.svg">
 		</div>
 
-		<img  class="fish" src="img/deco/fish.svg" style="left:9%;">
-			<img  class="oposite" src="img/deco/fish.svg" style="animation-duration: 8s; left:4%; bottom: 36%;">
-				<img  class="fish" src="img/deco/fish.svg" style="animation-duration: 12s; left:14%; bottom: 35%; z-index:2; animation-delay: 2s;">
-					<img  class="oposite" src="img/deco/fish.svg" style="animation-duration: 15s; left:9%; bottom: 40%; z-index: 1;">	
-
+		<img id="fondoMarino" src="img/deco/fondoMarino.svg">
 	</div>
-	<div id="last"></div>
+	<div id="last">
+		<div id="contLastLeft">
+			<h1 style="color:white; font-size: 2.9rem;">UN DETOX DE UNA VIDA DE PLÁSTICOS.</h1>
+			<div class="text4"><p>Los problemas relacionados con el medioambiente no aparecen de un día para otro. Lo mismo ocurre con el consumo y mal uso del plástico en el plano global. Desde que se descubrió lo útil que era el plástico en los cuarenta, el consumo del plástico ha ido subiendo exponencialmente.</p></div>
+			<div style="clear: both;"></div>
+			<div id="habitos">Hábitos</div>
+		</div>
+		<div id="contLastRight">
+			<img id="plato" src="img/deco/plato.png">
+			<img id="botella" src="img/deco/botella.png">
+		</div>
+	</div>
+	<div id="footer">
+		<div id="footer1" class="row">
+
+			<div id="titleFooter" class="text1 col-md-4 col-sm-12">
+				¡CUÉNTANOS TU EXPERIENCIA EN 
+				<span style="color: #041f4a;">PLASTIFICADOS!</span>
+			</div>
+			<div id="opinion1" class="text1 col-md-4 col-sm-12">
+				<img id="arrowLeft" src="img/deco/arrow.svg">"La exposición merece la pena! Soy profesora y decidí llevarme a mis chicos a visitar Plastificados, y resultó ser un acierto total! Ya me he comprado el kit de rescate y he eliminado el plástico de mi vida!"
+				<br><br>
+				<span style="color:#ff4633; font-family: HelveticaNeue Light Italic;">Sandra M.</span>
+			</div>
+			<div id="opinion2" class="text1 col-md-4 col-sm-12">
+				<img id="arrowRight" src="img/deco/arrow.svg">"A mi novia le gusta el "healthy life" y me convenció para acompañarla a la expo. La verdad es que había cosas que no sabía del plástico, hasta me he comprado una botella de esas reutilizables."
+				<br><br>
+				<span style="color:#ff4633; font-family: HelveticaNeue Light Italic;">Xavi S.</span>
+			</div>
+		</div>
+		<div id="footer2" class="row">
+			<!-- <img id="logoFooter" src="img/logo3.svg"> -->
+			<div class="text5 col-md-4 col-sm-12">
+				Visita virtual <br><br>
+				Entradas
+			</div>
+			<div class="text5 col-md-4 col-sm-12">
+				Email: gisele.boada@gmail.com <br><br>
+				Tel: 666622261
+			</div>
+			<div class="text5 col-md-4 col-sm-12">
+				Carrer d'Isaac Newton, 26 <br>
+				08022 Barcelona
+			</div>
+			<div class="lastFooter col-md-4 col-sm-12" style="margin-left:0px;">Condiciones de uso</div>
+			<div class="lastFooter col-md-4 col-sm-12">Privacidad</div>
+			<div class="lastFooter col-md-4 col-sm-12">Contacto</div>
+			<div id="copyright" class="lastFooter">Copyright @ 2020 Created by Gisèle Boada. All rights reserved.</div>
+		</div>
+	</div>
 
 </body>
 
 </html>
+

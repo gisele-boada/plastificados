@@ -5,12 +5,12 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
-		<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
 		
 
 		<script src="js/jquery.js"></script>
-		<!-- <script src="js/scroll.js"></script>  -->
+		<script src="js/scroll.js"></script> 
 
 	<style>
 
@@ -37,44 +37,29 @@
         }
         h1 {
         	font-family: HelveticaNeue Bold Condensed;
-        	font-size: 40pt;
+        	font-size: 50px;
         	text-decoration: none;
         	margin-top: 0;
-    		margin-bottom: 3%;
+    		margin-bottom: 0;
     		color: #ff4633;
-    		padding-right: 28%;
-
-
         }
 
         h2 {
         	font-family: HelveticaNeue Bold Condensed;
-        	font-size: 23px;
+        	font-size: 28px;
         	text-decoration: none;
         	margin-top: 0;
     		margin-bottom: 5px;
     		color: #041f4a;
         }
 
-        .cursive {
+        h3 {
         	font-family: HelveticaNeue Light Italic;
-        	font-size: 12pt;
-        	color: #ff4d33;
-        	text-decoration: underline;
-        }
-
-        p {font-family: HelveticaNeueRoman;
-        	color:#041f4a;
-        	font-size: 12pt;
         }
 
 		body{
 			height: 5720px;
 			width: 100%;
-		}
-
-		div {
-			border:1px solid green;
 		}
 
 		#home {
@@ -86,14 +71,8 @@
 		}*/
 
 		#homePage {
-
-			transform: rotateY(180deg);
-			object-fit: cover;
-			width: 100vw;
-			height: 100vh;
-/*			position: fixed;
-			top: 0;
-			left: 0;*/
+			width: 100%;
+			 transform: rotateY(180deg);
 		}
 
 		#homePageMobile {
@@ -127,8 +106,8 @@
 			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0));
 		}
 
-		.logoIMG {
-			width:40%;
+		#logo img {
+			width:28%;
 			margin-top: 35px;
 			margin-left: 50px;
 		}
@@ -140,21 +119,12 @@
 			display:none;
 		}
 
-		#sos {
-			display: none;
-		}
-
 		#buttonsCont {
 			float:left;
 			width:50%;
 			height: 100%;
 			padding-right: 50px;
 		}
-
-			#burger {
-				display: none;
-
-			}
 
 		.button {
 			min-width:10px;
@@ -174,8 +144,6 @@
 			border-radius: 7.5px;
 		}
 
-
-
 		#soundOn, #soundOff {
 			position: absolute;
 			bottom:50px;
@@ -189,6 +157,13 @@
 			display: none;
 		}
 
+		#test {
+			position: absolute;
+			bottom: 20%;
+			right: 10%;
+			width: 30%;
+		}
+
 
 		#first {
 			height: 100vh;
@@ -200,7 +175,9 @@
 			height: 100vh;
 			width: 100%;
 			background: #041f4a;
+			
 		}
+
 
 
 		#last {
@@ -213,49 +190,50 @@
 			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
 			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
 			position: relative;
-			background-color: white;
-			height: 40%;
-			border-radius: 0px 0px 0px 220px;
-			padding-left: 3%;
-			padding-right: 3%
 		}
 
+			#bloc0 {
+				width: 100%;
+			}
+
+			#textCont {
+				position:absolute;
+				width: 100%;
+				height: 100%;
+			}
 
 				.text1 {
-/*					float:left;
+					float:left;
 					width: 22%;
 					height: 100%;
 					font-family: HelveticaNeueRoman;
-					
+					font-size: 18px;
 				    margin-left: 9%;
 				    padding-top: 6%;
-				    line-height: 1.5;
-				    color: #041f4a;*/
-				    /*color: white;*/
-				    font-size: 15px;
-				    text-align: center;
-				    padding-top: 4rem;
+				    /*padding-right: 2%;*/
+				    line-height: 1.7;
+				    color: #041f4a;
 				}
 
 			#straw {
 				height: 17%;
 			    position: absolute;	
 			    left: 13%;
-    			margin-top: 3%;			
+    			margin-top: 0%;			
 			}
 
 			#palito {
 				height: 9%;
 			    position: absolute;	
 			    right: 19%;
-    			margin-top: 13%;			
+    			margin-top: 10%;			
 			}
 
 			#palito1 {
 				height: 3%;
 			    position: absolute;	
 				right: 30%;
-				margin-top: 4%;		
+				/*margin-top: 4%;*/		
 			}
 
 			#tapon {
@@ -270,46 +248,18 @@
 				position: absolute;
 				right: 48%;
 				margin-top: 10%;
-			}
-
-			#textCont1 {
-				position: relative;
-				/*top:10%;*/
-				left:0;
-				z-index: 1;
-				margin-top: 0px;
-				/*margin-right: 40%;*/
-
-				height: 28rem;
-			}
-
-			#parrafo1 {
-				margin-right: 30%;
+				transform: rotate(-45deg);
 			}
 			
 		#secondCont {
 			width: 52%;
 			height: 100%;
 			float:left;
-			margin-top: -29%;
+			margin-top: -5%;
 			position: relative;
 			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
 			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
-
 		}
-
-		.soft {
-    		margin: 0;
-    		height: 28em;
-		}
-
-			#bloc1 {
-				display: block;
-			}
-
-			#bloc1mob {
-				display: none;
-			}
 			#bloc1, #bloc2 {
 				width: 100%;
 			}
@@ -318,7 +268,7 @@
 				height: 4%;
 			    position: absolute;	
 				/*right: 30%;*/
-				margin-top: 12%;
+				margin-top: 7%;
 				margin-left: 32%;	
 			}
 
@@ -334,7 +284,6 @@
 		width: 100%;
 		background: #041f4a;
 		position: relative;
-		z-index: -1;
 	}
 
 		#thirdCont {
@@ -350,20 +299,22 @@
 			#water {
 				height: 20%;
 			    position: absolute;	
-				margin-top: 60%;
+			    top: 380%;
 			    left: 15%;
 			    z-index: 3;
-
-	
+			    transform: rotate(45deg);
+/*				margin-left: 13%;*/
+				/*margin-top: 13%;*/	
 			}
 
 			#detergent {
 				position: absolute;
 				height: 20%;
-				margin-top:72%;
-				left: 45%;
+				top: 320%;
+				left: 35%;
 				z-index: 1;
-
+/*				margin-top: 21%;
+				margin-left: 37%;*/	
 			}
 
 			.fish  {
@@ -412,12 +363,8 @@
 				filter: drop-shadow(15px -6px 12px rgba(0,0,0,0.5));
 			}
 
-		.floating {
-			animation-name: plastic;
-			animation-duration: 5s ;
-			animation-iteration-count: infinite;
 
-		}
+
 
 
 	@keyframes fish {
@@ -446,249 +393,41 @@
 		}
 	}
 
-	@keyframes plastic {
-		0% {
-			transform: translateY(0px); 
-			}
-		50% {
-			transform: translateY(20px);
-		}
-		100% {
-			transform: translateY(0px); 
-		}
-	}
-
-
-.background-nuvol {
-	background-image: url("img/deco/blocMapa.svg");
-	background-repeat: no-repeat;
-}
 
 
 /*//////////////QUERIES/////////////////////*/
 
-@media screen and (max-width: 1024px) {
-
-		#firstCont {
-			height: 50%;
-			border-radius: 0px 0px 0px 260px;
-		}
-/*
-		#secondCont {
-			margin-top: -20%;
-		}*/
-
-
-	}
-
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 850px) {
 		
-/*		#homePage {
+		#homePage {
 			display: none;
 		}
 
 		#homePageMobile {
 			display: block;
-		}*/
+		}
 
 		#logo {
 			width: 70%;
 		}
 
-		.logoIMG {
-			width: 70%;
-			margin-top: 8%;
-			margin-left: 8%;
-			display:none;
-		}
-
-		#logo1, #logo2, #logo3 {
-			display: none;
-		}
-
-		#sos {
-			display: block;
-			width: 22%;
+		#logo img {
+			width: 90%;
 			margin-top: 8%;
 			margin-left: 8%;
 		}
 
-		#buttonsCont {
+		#buttonCont {
 			width: 30%;
-			padding-right: 5%;
-    		padding-top: 5%;
 		}
-		
-
-		#burger { 	
-			display: block;		
-			height: 30%;
-		 }
-
-		 #burger img {
-			height: 100%;
-		 	float:right;
-		 }
-
 
 		.button {
 			display: none;
 		}
 
 
-		#firstCont {
-			height: 80%;
-			padding-top: 16%;
-			border-radius: 0px 0px 0px 120px;
-		}
-
-		.text1 {
-			font-size: 11pt;
-			text-align:center;
-			height: auto;
-			padding-left: 5rem!important;
-			padding-right: 5rem!important;
-			padding-top: 0;
-
-		}
-		
-		#straw {
-			height: 9%;
-			left: 13%;
-			margin-top: 3%;
-		}
-
-		#palito {
-			height: 4%;
-			right: 10%;
-			margin-top: 44%;
-		}
-		
-		#palito1 {
-			height: 2%;
-			right: 39%;
-			margin-top: 18%;
-		}
-
-		#tapon {
-			height: 3%;
-			right: 10%;
-			margin-top: 10%;
-		}
-		
-		#bag {
-			height: 14%;
-			margin-top: 40%;
-			left:0;
-		}
-
-		#soft {
-/*			height: 20%;
-			margin-top:19%;
-			right: 25%;*/
-		}
-
-/*		#secondCont {
-			width: 85%;
-			float:left;
-			position: relative;
-			-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
-			filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
-			top: 23%;
-		}*/
-
-/*			#bloc1 {
-				display: none;
-			}
-
-			#bloc1mob {
-				display: block;
-			}*/
-
-
-
-
 
 	}
-
-	
-.text-test {
-    margin-top: 13%;
-}
-
-#textCont1 {
-        height: 55rem;
-    margin-top: -3%;
-}
-
-#parrafo1 {
-    margin-right: 50%;
-}
-
-@media screen and (max-width: 1375px) {
-	#parrafo1 {
-	    margin-right: 30%;
-	    margin-right: 0;
-	}
-
-	.text-test h1 {
-		margin-right: 0;
-		padding-right: 0;
-	}
-}
-
-@media screen and (max-width: 900px) {
-	#parrafo1 {
-	    margin-right: 0 !important;
-	}
-
-	.text-test h1 {
-		font-size: 35pt;
-		margin-right: 0;
-		flex: 0 0 0%;
-		width: 100% !important;
-	}
-}
-
-@media screen and (max-width: 700px) {
-	#parrafo1 {
-	    margin-right: 5%;
-	}
-
-	p#parrafo1 {
-	    font-size: 12pt;
-	}
-	
-	.text-test h1 {
-		font-size: 28pt;
-	}
-
-	.text-test {
-		padding-top: 20px;
-	}
-
-	.background-nuvol {
-	background-image: url("img/deco/blocMapa2.svg");
-	background-repeat: no-repeat;
-}
-
-	
-
-	
-}
-
-@media screen and (max-width: 575px) {
-	#parrafo1 {
-	    margin-right: 10%;
-	}
-
-	p#parrafo1 {
-	    font-size: 12pt;
-	}
-	.text-test h1 {
-		font-size: 22pt;
-	}
-}
 
 	</style>
 </head>	
@@ -699,7 +438,43 @@
 	$(function() {
 	/////////////////////////////////////
 
+$(document).ready(function () {
+	// We'll read the rate from each <div>.
+  $(".parallax").each(function () {
+    var $this = $(this);
+    
+    // We need to remember the element's original
+    // top offset as a reference point.
+		$this.data("top", $this.offset().top);
 
+    // We've used a custom attribute in the HTML
+    // to specify the scrolling rate.
+		$this.data("rate", $this.attr("data-parallax-rate"));
+	});
+
+	$(window).scroll(function () {
+    // Whenever the window scrolls, we reposition
+    // each parallax element.
+		$(".parallax").each(function () {
+			var scrollTop = $(window).scrollTop();
+			var rate = $(this).data("rate");
+			var thisTop  = scrollTop - scrollTop * rate
+			$(this).css("top", $(this).data("top") + thisTop);
+		});
+	});
+});
+
+/////////////////SOUND ON/OFF////////////////////
+
+		$("#soundOff").on("click", function(){
+			$('#soundOff').css("display", "none");
+			$('#soundOn').css("display", "block");
+		});
+
+		$("#soundOn").on("click", function(){
+			$('#soundOn').css("display", "none");
+			$('#soundOff').css("display", "block");
+		});
 
 	///////////////////////////////////
 	});
@@ -709,18 +484,18 @@
 
 
 
+<!-- 	
+	<img id="background" src="img/background.gif"> -->
+	
 	<div id="header">
 		<div id="logo">
-			<img id="logo1" class="logoIMG" src="img/logo.svg">
-			<img id="logo2" class="logoIMG" src="img/logo2.svg">
-			<img id="logo3" class="logoIMG" src="img/logo3.svg">
-			<img id="sos" src="img/sos.svg">
+			<img id="logo1" src="img/logo.svg">
+			<img id="logo2" src="img/logo2.svg">
+			<img id="logo3" src="img/logo3.svg">
 		</div>
 		<div id="buttonsCont">
-			<div id="burger">
-				<img src="img/burger.svg"></div>
 			<div class="button" style="background-color: #ff4633">Tour virtual</div>
-			<a href="entradas.html"><div class="button" style="background-color: #041f4a">Entradas</div></a>
+			<div class="button" style="background-color: #041f4a">Entradas</div>
 		</div>
 	</div>
 
@@ -733,45 +508,42 @@
 	</div>
 
 	<div id="first">
-		<div id="firstCont" class="row">
-				<div class="text1 col-md-4 col-sm-12 px-5">
+		<div id="firstCont">
+			<div id="textCont">
+				<div class="text1">
 					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 				</div>
-				<div class="text1 col-md-4 col-sm-12 px-5">
+				<div class="text1">
 					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 				</div>
-				<div class="text1 col-md-4 col-sm-12 px-5">
+				<div class="text1">
 					<h2>El título va <span style="color: #ff4633">aquí.</span></h2>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.</p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 				</div><div style="clear: both;"></div>
-
-		</div>
-		<img id="straw" class="floating" src="img/deco/straw.svg">
-		<img id="palito" class="floating" style="animation-delay: 0.5s;" src="img/deco/palito.svg">
-		<img id="palito1" class="floating" style="animation-delay: -0.2s;" src="img/deco/palito1.svg">
-		<img id="tapon" class="floating" src="img/deco/tapon.svg">
-		<img id="bag" class="floating" style="animation-delay: 0.8s;" src="img/deco/bag.svg">
-	</div>
-	<div id="second" class="row">
-		<div id="textCont1" class="px-5 col-md-8 col-sm-12 background-nuvol">
-			<div class="text-test">
-				<h1>LA EVOLUCIÓN GLOBAL DEL CONSUMO DEL PLÁSTICO.</h1>
-				<p id="parrafo1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.Lorem ipsum <span class="cursive">dolor</span> sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </p>
+			</div>
+			<div class="imatge-ona">
+				<img id="bloc0" src="img/deco/bloc0.svg">
 			</div>
 		</div>
-		<div class="col-md-4 col-sm-12 soft">
-			<img id="soft" class="floating" src="img/deco/soft.svg">
-		</div>
-<!-- 		<div id="secondCont">
+		<img id="straw" class="parallax" data-parallax-rate="0.9" src="img/deco/straw.svg">
+		<img id="palito" class="parallax" data-parallax-rate="1.1" src="img/deco/palito.svg">
+		<img id="palito1" class="parallax" data-parallax-rate="0.8" src="img/deco/palito1.svg">
+		<img id="tapon" class="parallax" data-parallax-rate="0.9" src="img/deco/tapon.svg">
+		<img id="bag" class="parallax" data-parallax-rate="1.1" src="img/deco/bag.svg">
+	</div>
+	<div id="second">
+		<div id="secondCont">
 			<img id="bloc1" src="img/deco/bloc1.svg">
-			<img id="bloc1mob" src="img/deco/bloc1mob.svg">
-		</div> -->
- 		
-	<!--	<img id="palito2" class="floating" style="animation-delay: 0.7s;" src="img/deco/palito2.svg">
-		<img id="water" class="floating" src="img/deco/water.svg">
-		<img id="detergent" class="floating" style="animation-delay: 1s;" src="img/deco/detergent.svg"> -->
+		</div>
+		<img id="soft" class="parallax" data-parallax-rate="1.3" src="img/deco/soft.svg">
+		<img id="palito2" class="parallax" data-parallax-rate="0.9" src="img/deco/palito2.svg">
+		<img id="water" class="parallax" data-parallax-rate="1.2" src="img/deco/water.svg">
+		<img id="detergent" class="parallax" data-parallax-rate="0.9" src="img/deco/detergent.svg">
 	</div>
 	<div id="third">
 		<div id="thirdCont">
