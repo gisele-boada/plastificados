@@ -78,7 +78,7 @@
 			overflow:hidden;
 		}
 
-		#top {
+/*		#top {
 			position: fixed;
 			bottom: 10%;
 			right: 5%;
@@ -86,7 +86,7 @@
 			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0.5));
 			cursor: pointer;
 			z-index:1;
-		}
+		}*/
 
 		#top:hover {
 			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0));
@@ -285,7 +285,7 @@
 					font-family: HelveticaNeue Bold Condensed;
 					font-size: 3rem;
 					color: #ff4633;
-					margin-top: 7%;
+					margin-top: 6%;
 					text-align: center;
 				}
 
@@ -315,23 +315,25 @@
 						filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
 					}
 
-	/*					.entradaSvg {
-							height: 120%;
-							position: absolute;
-							bottom:0;
+						.entradaSvg {
+							cursor: pointer;
 							
-						}*/
+						}
 
-						.entradaSvg:hover {
+				/*		.entradaSvg:hover {
 							
 							transform: scale(1.3);
+						}*/
+						.clicked {
+						 transform: scale(1.2);
 						}
 
 
 
 				#unidadesCont {
-					margin:3% 8% 0% 8%;
-					height: 6%;
+					display:none;
+					margin: 2% 16% 0% 14%;
+					height: 3%;
 				}
 
 				.contUd {
