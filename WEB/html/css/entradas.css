@@ -78,15 +78,6 @@
 			overflow:hidden;
 		}
 
-/*		#top {
-			position: fixed;
-			bottom: 10%;
-			right: 5%;
-			height: 8%;
-			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0.5));
-			cursor: pointer;
-			z-index:1;
-		}*/
 
 		#top:hover {
 			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0));
@@ -108,9 +99,6 @@
 		}
 
 			#entradas {
-/*				position: absolute;
-				top: 0;
-				left: 0;*/
 				height: 90%;
 				font-size: 1.5rem!important;
 				color:#041f4a;
@@ -123,8 +111,6 @@
 				font-size: 33pt;
 				width: 28%;
 				color: #ff4633;
-/*				margin-top: 10%;
-				margin-left: 7%;*/
 				line-height: 1;
 				position:absolute;
 				top: 20%;
@@ -133,8 +119,6 @@
 
 			#cuerpoEntrada {
 			width: 20%;
-/*				margin-left: 7%;
-				margin-top: 1%;*/
 				position:absolute;
 				top:37%;
 				left: 6%;
@@ -152,9 +136,6 @@
 				padding-top: 6px;
 				border-radius: 7.5px;
 				cursor: pointer;
-/*				float: left;
-				margin-top: 1%;
-				margin-left: 7%;*/
 				color:white;
 				position:absolute;
 				top: 64%;
@@ -422,6 +403,74 @@
 
 
 
+			#soft {
+	    		position: absolute;
+				top: 20%;
+  				left: 42%;
+   				height: 24%;
+	    		z-index: 0;
+	    		animation-name: plastic;
+	    		animation-duration: 6s ;
+	    		animation-iteration-count: infinite;
+	    	}
+
+	    	#detergent {
+	    		position: absolute;
+	    		top: 59%;
+	    		left: 43%;
+	    		height: 28%;
+	    		z-index: 0;
+	    		animation-name: plastic;
+	    		animation-duration: 9s ;
+	    		animation-iteration-count: infinite;
+	    	}
+
+	    	#straw {
+	    		position: absolute;
+	    		top: 71%;
+				left: 78%;
+				height: 17%;
+	    		z-index: 0;
+	    		animation-name: plastic;
+	    		animation-duration: 4s ;
+	    		animation-iteration-count: infinite;
+	    	}
+
+	    	#water {
+	    		position: absolute;
+				top: 35%;
+    			left: 72%;
+				height: 17%;
+	    		z-index: 0;
+	    		animation-name: plastic;
+	    		animation-duration: 6s ;
+	    		animation-iteration-count: infinite;
+	    	}
+
+	    	#palito {
+	    		position: absolute;
+	    		top: 312%;
+				left: 12%;
+				height: 8%;
+	    		z-index: 0;
+	    		animation-name: plastic;
+	    		animation-duration: 9s ;
+	    		animation-iteration-count: infinite;
+	    	}
+
+
+	@keyframes plastic {
+		0% {
+			transform: translateY(0px); 
+			}
+		50% {
+			transform: translateY(20px);
+		}
+		100% {
+			transform: translateY(0px); 
+		}
+	}
+
 
 	@media screen and (min-width: 1600px) and (max-width: 2570px) {
 			 h1{
@@ -602,6 +651,11 @@
 			margin: 0% 0% 0% 3%;
 		}
 
+		#soft, #detergent, #straw, #water, #palito {
+			display: none;
+		} 
+
+
 	}
 
 
@@ -702,5 +756,10 @@
 		#entradasItems {
 			margin: 0% 0% 0% 3%;
 		}
+
+		#soft, #detergent, #straw, #water, #palito {
+			display: none;
+		} 
+
 
 	}
