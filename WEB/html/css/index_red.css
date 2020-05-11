@@ -246,6 +246,7 @@
 				padding-right: 3%;
 				/*padding-top: 6%;*/
 				top:25%;
+				z-index: 2;
 
 			}
 
@@ -571,6 +572,43 @@
 			width: 100%;
 
 		}	   
+
+
+
+			#botella {
+	    		position: absolute;
+	    		top: 90%;
+	    		left: 43%;
+	    		height: 30%;
+	    		z-index: 0;
+	    		animation-name: plastic;
+	    		animation-duration: 6s ;
+	    		animation-iteration-count: infinite;
+	    	}
+
+	    	#detergent {
+	    		position: absolute;
+	    		top: 169%;
+	    		left: 24%;
+	    		height: 28%;
+	    		z-index: 0;
+	    		animation-name: plastic;
+	    		animation-duration: 6s ;
+	    		animation-iteration-count: infinite;
+	    	}
+
+	    	#detergent {
+	    		position: absolute;
+	    		top: 169%;
+	    		left: 24%;
+	    		height: 28%;
+	    		z-index: 0;
+	    		animation-name: plastic;
+	    		animation-duration: 6s ;
+	    		animation-iteration-count: infinite;
+	    	}
+
+
 
 
 

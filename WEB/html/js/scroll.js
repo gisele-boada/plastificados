@@ -81,8 +81,8 @@
         1000);
 
         $('#logo1').css("display", "none");
-		$('#logo2').css("display", "none");
-		$('#logo3').css("display", "block");
+		$('#logo2').css("display", "block");
+		$('#logo3').css("display", "none");
      }
 
      //prevent page fom scrolling

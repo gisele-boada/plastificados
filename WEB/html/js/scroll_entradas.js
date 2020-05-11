@@ -2,6 +2,14 @@
 	/////////////////////////////////////
 
 /////SCROLL HOME TO FIRST/////
+$("#empezar").on("click", function(){
+            $('body,html').animate({
+        scrollTop: $("#first").offset().top},
+        1200);
+        $('#logo1').css("display", "none");
+        $('#logo2').css("display", "block");
+        $('#logo3').css("display", "none");
+});
 
  $('#home').bind('mousewheel', function(e){
      if(e.originalEvent.wheelDelta < 0) {
@@ -27,6 +35,15 @@
  });
 
  /////SCROLL FIRST TO SECOND and FIRST TO HOME/////
+
+ $(".item").on("click", function(){
+        $('body,html').animate({
+        scrollTop: $("#second").offset().top},
+        1200);
+        $('#logo1').css("display", "none");
+        $('#logo2').css("display", "block");
+        $('#logo3').css("display", "none");
+});
 
   $('#first').bind('mousewheel', function(e){
      if(e.originalEvent.wheelDelta < 0) {
@@ -81,8 +98,8 @@
         1000);
 
         $('#logo1').css("display", "none");
-		$('#logo2').css("display", "none");
-		$('#logo3').css("display", "block");
+		$('#logo2').css("display", "block");
+		$('#logo3').css("display", "none");
      }
 
      //prevent page fom scrolling
