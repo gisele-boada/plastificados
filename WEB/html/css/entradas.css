@@ -105,13 +105,12 @@
 		#home {
 			height: 100vh;
 			width: 100%;
-			position:relative;
 		}
 
 			#entradas {
-				position: absolute;
+/*				position: absolute;
 				top: 0;
-				left: 0;
+				left: 0;*/
 				height: 90%;
 				font-size: 1.5rem!important;
 				color:#041f4a;
@@ -124,16 +123,21 @@
 				font-size: 33pt;
 				width: 28%;
 				color: #ff4633;
-				margin-top: 10%;
-				margin-left: 7%;
+/*				margin-top: 10%;
+				margin-left: 7%;*/
 				line-height: 1;
-				    padding-top: 10%;
+				position:absolute;
+				top: 20%;
+				left: 6%;
 			}
 
 			#cuerpoEntrada {
-				width: 20%;
-				margin-left: 7%;
-				margin-top: 1%;
+			width: 20%;
+/*				margin-left: 7%;
+				margin-top: 1%;*/
+				position:absolute;
+				top:37%;
+				left: 6%;
 			}
 
 			#empezar {
@@ -148,10 +152,13 @@
 				padding-top: 6px;
 				border-radius: 7.5px;
 				cursor: pointer;
-				float: left;
+/*				float: left;
 				margin-top: 1%;
-				margin-left: 7%;
+				margin-left: 7%;*/
 				color:white;
+				position:absolute;
+				top: 64%;
+    			left: 6%;
 			}
 
 			#empezar:hover {
@@ -389,56 +396,81 @@
 
 
 	@media screen and (min-width: 1600px) and (max-width: 2570px) {
-		 h1{
-		 	font-size: 4rem!important;
-		 }
+			 h1{
+			 	font-size: 4rem!important;
+			 }
 
-		 h2 {
-			font-size: 2.8rem!important;
-			margin-right: -7%;
-			margin-left: -7%;
-			margin-bottom: 5%!important;
+			 h2 {
+				font-size: 2.8rem!important;
+				margin-right: -7%;
+				margin-left: -7%;
+				margin-bottom: 5%!important;
+			}
+
+			 p {font-size: 15pt!important;
+
+			}
+
+			#titEntrada {
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 50pt;
+				width: 28%;
+				color: #ff4633;
+				line-height: 1;
+
+			}
+
+			#cuerpoEntrada {
+				width: 22%;
+			}
+
+			#empezar {
+
+				top: 56%;
+			}
+
 		}
 
-		 p {font-size: 15pt!important;
-
-		}
-
-		#titEntrada {
-			font-family: HelveticaNeue Bold Condensed;
-			font-size: 50pt;
-			width: 28%;
-			color: #ff4633;
-			margin-top: 13%;
-			margin-left: 7%;
-			line-height: 1;
-		}
-
+	@media screen and (max-width: 1350px) {
 		#cuerpoEntrada {
-			width: 20%;
-			margin-left: 7%;
-			margin-top: 1%;
+			width: 23%
+		}
+
+		p {
+			font-size: 14px!important;
 		}
 
 		#empezar {
-			background-color: #ff4633;
-			padding-right: 70px;
-			padding-left: 70px;
-			height: 45px;
-			font-family: HelveticaNeue Light;
-			font-size: 20px;
-			letter-spacing: 0.5px;
-			text-align: center;
-			padding-top: 6px;
-			border-radius: 7.5px;
-			cursor: pointer;
-			float: left;
-			margin-top: 1%;
-			margin-left: 7%;
-			color:white;
+
+			top: 59%;
 		}
 
-}
+
+	}
+
+		@media screen and (max-width: 1090px) {
+
+		#titEntrada {
+			width: 33%;
+		}
+
+		#cuerpoEntrada {
+			width: 34%
+		}
+
+		p {
+			font-size: 14px!important;
+		}
+
+		#empezar {
+
+			top: 58%;
+		}
+
+
+	}
+
+
 
 	@media screen and (max-width: 750px) {
 		h1 {
@@ -494,11 +526,6 @@
 			display: none;
 		}
 
-			#home {
-			padding-top: 22%;
-			padding-left: 5%;
-			padding-right: 5%;
-		}
 
 		#titEntrada {
 			width: 85%;
@@ -508,20 +535,45 @@
 		}
 
 		#cuerpoEntrada {
-			padding-top: 5%;
-			margin:auto;
 			text-align: center;
 			width: 100%;
+			padding-right: 11%;
 		}
 
 		#empezar {
 			float: none;
-			margin:0;
+			margin-left: 3%;
+			width: 80%;
+			top:54%;
+
 		}
 
 		#entradas {
 			height: 82%;
+
 		}
+
+
+		#titFirst {
+			font-size: 2.5rem;
+			line-height: 1.2;
+			margin-top: 25%;
+		}
+
+		#bodyFirst {
+		    padding: 3% 5% 5% 5%;
+		    font-size: 14pt;
+		}
+
+		.item {
+			width: 24%;
+			margin: 0% 1% 0% 0%;
+		}
+
+		#entradasItems {
+			margin: 0% 0% 0% 3%;
+		}
+
 	}
 
 
@@ -578,11 +630,7 @@
 			display: none;
 		}
 
-		#home {
-			padding-top: 22%;
-			padding-left: 5%;
-			padding-right: 5%;
-		}
+
 
 		#titEntrada {
 			width: 85%;
@@ -592,19 +640,39 @@
 		}
 
 		#cuerpoEntrada {
-			padding-top: 5%;
-			margin:auto;
 			text-align: center;
 			width: 100%;
+			padding-right: 10%;
 		}
 
 		#empezar {
 			float: none;
-			margin:0;
+			margin-left: 3%;
+			width: 80%;
 		}
 
 		#entradas {
 			height: 82%;
+		}
+
+		#titFirst {
+			font-size: 2.5rem;
+			line-height: 1.2;
+			margin-top: 24%;
+		}
+
+		#bodyFirst {
+			    padding: 8% 5% 5% 5%;
+			    font-size: 14pt;
+		}
+
+		.item {
+	    	width: 26%;
+    		margin: 0% -1% 0% 0%;
+		}
+
+		#entradasItems {
+			margin: 0% 0% 0% 3%;
 		}
 
 	}
