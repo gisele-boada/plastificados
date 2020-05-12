@@ -146,6 +146,12 @@
 				background-color: red;
 			}
 
+		#appGames {
+			height: 15%;
+			position: absolute;
+			bottom: 5%;
+			left: 5%;
+		}
 
 		#background {
 			position: absolute;
@@ -561,6 +567,14 @@
        		margin-bottom: 0;
         }
 
+         #seabed {
+        	display: none;
+        }
+
+       body {
+        	background-color: #041f4a;
+        }
+
         #logo {
 			width: 70%;
 		}
@@ -572,10 +586,9 @@
 		}
 
 		.logoIMG {
-			width: 70%;
-			margin-top: 8%;
 			margin-left: 8%;
-			
+			width: 88%;
+			margin-top: 6%;
 		}
 		#buttonsCont {
 			width: 30%;
@@ -655,6 +668,10 @@
 			display: none;
 		} 
 
+		#home, #first, #second, #third, #last {
+			background-color:  #041f4a;
+		}
+
 
 	}
 
@@ -668,6 +685,14 @@
        		margin-bottom: 0;
         }
 
+         #seabed {
+        	display: none;
+        }
+
+       body {
+        	background-color: #041f4a;
+        }
+
         #logo {
 			width: 70%;
 		}
@@ -679,10 +704,10 @@
 		}
 
 		.logoIMG {
-			width: 70%;
 			margin-top: 8%;
 			margin-left: 8%;
-			
+			width: 88%;
+			margin-top: 6%;
 		}
 
 
@@ -760,6 +785,10 @@
 		#soft, #detergent, #straw, #water, #palito {
 			display: none;
 		} 
+
+		#home, #first, #second, #third, #last {
+			background-color:  #041f4a;
+		}
 
 
 	}

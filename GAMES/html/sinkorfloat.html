@@ -261,12 +261,12 @@ $("#start").on("click", function(){
 					console.log('won');
 					$("#congratulations").css("display", "block");
 					$("#timeUp").css("display", "none");
-					$('#congratulations span.score')[0].innerHTML = currentScore + " " + "points!";
+					$('#congratulations span.score')[0].innerHTML = currentScore + " " + "PTS";
 				} else {
 					console.log('lost');
 					$("#congratulations span#score").css("display", "none");
 					$("#timeUp").css("display", "block");
-					$('#timeUp span.score')[0].innerHTML = "<br>" + currentScore + " " + "points!";
+					$('#timeUp span.score')[0].innerHTML = "<br>" + currentScore + " " + "PTS";
 					
 				}			
 
@@ -447,9 +447,9 @@ $("#start").on("click", function(){
 
 			<div id="start">START!</div>
 
-			<div id="timeUp" class="replay">You lost...<br><span id="tryAgain">TRY AGAIN!</span><span class="score"></span></div>
+			<div id="timeUp" class="replay">Has perdido...<br><span id="tryAgain">¡OTRA VEZ!</span><span class="score"></span></div>
 			
-			<div id="congratulations" class="replay">Congratulations!<br><span id="youWon">REPLAY!</span><br><span class="score"></span></div>
+			<div id="congratulations" class="replay">¡Felicidades!<br><span id="youWon">¡OTRA VEZ!</span><br><span class="score"></span></div>
 
 			<div id="header">
 				<div id="titulo">
@@ -462,8 +462,15 @@ $("#start").on("click", function(){
 
 			<div id="menu">
 				<div id="reStart" class="opcionesMenu">RE-START!</div>
-				<div id="reglas" class="opcionesMenu" style="color:#041f4a">REGLAS</div>
-				<a href="index.html"><div class="opcionesMenu">BACK MENU</div></a>
+				<div id="reglas" class="opcionesMenu">
+					<img id="infoReglas" src="img/deco/info.svg">REGLAS</div>
+				
+				<a href="index.html"><div class="opcionesMenu">ATRÁS</div></a>
+				<div class="opcionesMenu">OTROS JUEGOS:</div>
+				<a href="lifecycle.html"><div class="opcionesMenu" style="font-size: 22pt; color:#041f41">- Plastic lifecycle</div></a>
+				<a href="recyclable.html"><div class="opcionesMenu" style="font-size: 22pt; color:#041f41">- Recyclable or not?</div></a>
+				<a href="dosanddonts.html"><div class="opcionesMenu" style="font-size: 22pt; color:#041f41">- Do's and don'ts.</div></a>
+				<!-- <a href="sinkorfloat.html"><div class="opcionesMenu">Sink or float?</div></a> -->
 
 			</div>
 
@@ -502,8 +509,8 @@ $("#start").on("click", function(){
 		</div>
 
 		<div id="turn">
-			Please rotate your device!<br>
-			Gire su dispositivo!
+			
+			Gire su dispositivo!<br>
 			<!-- <img id="plants" src="img/deco/plants.svg"> -->
 		</div>
 		

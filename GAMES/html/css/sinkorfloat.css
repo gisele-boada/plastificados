@@ -217,6 +217,11 @@
 				cursor:pointer;
 			}
 
+				#infoReglas {
+					width: 7%;
+    				margin-right: 5px;
+				}
+
 			a {text-decoration: none;}
 
 

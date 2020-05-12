@@ -22,6 +22,8 @@
 				margin:0;padding:0;width:100%;height:100%;
 			}
 
+			a {text-decoration: none;}
+
 			#background1 {
 				position: absolute;
 				/*height: 100vh;*/
@@ -66,7 +68,7 @@
 					height: 27px;
 					padding-right: 10px;
 					float:left;
-					margin-top:2%;
+					margin-top: 1.5%;
 					z-index: 5;
 					cursor: pointer;
 				}
@@ -108,6 +110,12 @@
 				color: white;
 				cursor:pointer;
 			}
+
+				#infoReglas {
+					width: 7%;
+    				margin-right: 5px;
+    				text-decoration: none;
+				}
 
 		#time {
 					float: left;
@@ -214,7 +222,7 @@
 			<div id="header">
 				<div id="titulo">
 					<img id="back" src="img/deco/menu.svg"><img style="display: none;" id="cross" src="img/deco/cross.svg">
-					<div id="dosanddonts">Sink or float?</div><div style="clear: both"></div>
+					<div id="dosanddonts">Recyclable or not?</div><div style="clear: both"></div>
 				</div>
 				<div id="time"><span id="timer">30</span><br><span id="score" style="color: white;">0</span></div>			
 				<div style="clear: both"></div>
@@ -222,8 +230,15 @@
 
 			<div id="menu">
 				<div id="reStart" class="opcionesMenu">RE-START!</div>
-				<div id="reglas" class="opcionesMenu" >REGLAS</div>
-				<a href="index.html"><div class="opcionesMenu">BACK MENU</div></a>
+				<div id="reglas" class="opcionesMenu">
+					<img id="infoReglas" src="img/deco/info.svg">REGLAS</div>
+				
+				<a href="index.html"><div class="opcionesMenu">ATRÁS</div></a>
+				<div class="opcionesMenu">OTROS JUEGOS:</div>
+				<a href="lifecycle.html"><div class="opcionesMenu" style="font-size: 22pt; color:#041f41">- Plastic lifecycle</div></a>
+				<!-- <a href="recyclable.html"><div class="opcionesMenu" style="font-size: 22pt; color:#041f41">- Recyclable or not?</div></a> -->
+				<a href="dosanddonts.html"><div class="opcionesMenu" style="font-size: 22pt; color:#041f41">- Do's and don'ts.</div></a>
+				<a href="sinkorfloat.html"><div class="opcionesMenu" style="font-size: 22pt; color:#041f41">- Sink or float?</div></a>
 
 			</div>
 

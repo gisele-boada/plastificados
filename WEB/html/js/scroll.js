@@ -13,13 +13,14 @@
         $('#logo1').css("display", "none");
         $('#logo2').css("display", "block");
         $('#logo3').css("display", "none");
+        $('#top').css("display", "block");
 
          console.log('Down');
 
      }else {
          //scroll up
          console.log('Up');
-
+      
      }
 
      //prevent page fom scrolling
@@ -39,6 +40,7 @@
         $('#logo1').css("display", "none");
         $('#logo2').css("display", "block");
         $('#logo3').css("display", "none");
+         $('#top').css("display", "block");
          
      }else {
          //scroll up
@@ -51,6 +53,7 @@
         $('#logo1').css("display", "block");
 		$('#logo2').css("display", "none");
 		$('#logo3').css("display", "none");
+         $('#top').css("display", "none");
      }
 
      //prevent page fom scrolling
