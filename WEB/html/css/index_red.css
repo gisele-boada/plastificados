@@ -33,31 +33,25 @@
              margin:auto;
         }
 
-        p {font-family: HelveticaNeueRoman;
+        p {font-family: HelveticaNeue Light;
         	color:white;
-        	/*font-size: 12pt;*/
         }
 
         h1 {
         	font-family: HelveticaNeue Bold Condensed;
         	font-size: 40pt;
+        	line-height: 1.2;
         	text-decoration: none;
-        	margin-top: 0;
-    		margin-bottom: 3%;
     		color: white;
-    		padding-right: 28%;
-    		margin-right: 0!important;
-    		padding-right: 0!important;
-
         }
 
 
         h2 {
         	font-family: HelveticaNeue Bold Condensed;
-        	font-size: 1.8rem!important;
+        	font-size: 1.8rem;
         	text-decoration: none;
         	margin-top: 0;
-    		margin-bottom: 5px;
+    		margin-bottom: 10px;
     		color: white;
         }
 
@@ -259,10 +253,10 @@
 				position: relative;
 				background-color: #ff4633;
 				height: 50%;
-				/*border-radius: 0px 0px 0px 220px;*/
+				border-radius: 0px 150px 0px 150px;
 				padding-left: 3%;
 				padding-right: 3%;
-				/*padding-top: 6%;*/
+				padding-top: 1%;
 				top:25%;
 				z-index: 2;
 
@@ -272,12 +266,13 @@
 					font-family: HelveticaNeueRoman;
 					line-height: 1.5;
 					color: #041f4a;
-					padding-right: 3rem!important;
-					padding-left: 3rem!important;
+					padding-right: 3rem;
+					padding-left: 3rem;
 					text-align: center;
 					width: 33%;
 					float: left;
 					margin-top: 5%;
+					font-size: 11pt;
 				    
 				}
 
@@ -298,17 +293,19 @@
 				-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
 				filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
 				border-radius: 20px;
-				padding-top: 3%;
-				padding-left: 4%;
+				padding-top: 2%;
+				padding-left: 3%;
 				padding-right: 2%;
 			}
 
 				.text2 {
-					float:left;
-					width: 55%;
-					padding-right:6%; 
-					padding-top: 1%;
-					font-size: 11pt;
+				    float: left;
+				    width: 55%;
+				    line-height: 1.4;
+				    padding-right: 6%;
+				    padding-top: 2%;
+				    font-size: 11pt;
+				    padding-bottom: 2%;
 				}
 
 				.text2 ~ .text2 {
@@ -343,7 +340,7 @@
 
 				#mapa {
 					position: absolute;
-					bottom: 7%;
+					bottom: 4%;
 					right: 14%;
 					width: 46vw;
 				}	
@@ -555,7 +552,9 @@
 			#footer1 {
 				background-color: white;
 				height: 60%;
-				width: 102%;
+				width: 100%;
+				padding-top: 10%;
+    			padding-left: 2%;
 				
 			}
 
@@ -563,15 +562,19 @@
 				position: absolute;
 				height: 35%;
 				top: 23%;
-				left: -3%;
+				left: -15%;
 			}
 
 			#arrowRight {
 				position: absolute;
 				height: 35%;
 				top: 23%;
-				right: 3%;
+				right: -14%;
 				transform: rotate(180deg);
+			}
+
+			#arrowRightMobile {
+				display: none;
 			}
 
 				#titleFooter {
@@ -580,17 +583,31 @@
 					text-align: center;
 					line-height: 1.2;
 					font-size: 2.5rem;position: relative;
+					width: 25%;
+					float:left;
 				}
 
 
 					#opinion1 {
 						text-align: left;
 						position: relative;
+						color: #041f4a;
+						width: 24%;
+						float:left;
+						font-family: HelveticaNeue Light;
+						margin-left: 10%;
+						margin-right: 6%;
+						    margin-top: 1%;
 					}
 
 					#opinion2 {
 						text-align: left;
 						position: relative;
+						color: #041f4a;
+						width: 24%;
+						float:left;
+						font-family: HelveticaNeue Light;
+						    margin-top: 1%;
 					}					    
 
 
@@ -599,7 +616,7 @@
 				height: 40%;
 				width: 100%;
 				color:white;
-				padding-left: 10%;
+				/*padding-left: 10%;*/
 				position:relative;
 			}
 
@@ -611,24 +628,43 @@
 				}
 
 			#logoFooter {
+				display: none;
 				height: 10%;
 				position: absolute;
 				top: 15%;
 				left: 11%;
 			}
 
-			.lastFotoer {
+			.oneFooter {
+				width: 33%;
+				float: left;
+				font-family: HelveticaNeueMd;
+				padding-top: 3%;
+				padding-left: 5%;
+				color: #ff4633;
+				cursor:pointer;
+			}
+
+			.lastFooter {
+				width: 33%;
 				float:left;
-				min-width: auto;
-				margin-top: 0!important;
+				font-family: HelveticaNeue Light!important;
+				margin-top: 3%;
+				padding-left: 5%;
+				text-decoration: underline;
+				/*min-width: auto;*/
+				/*margin-top: 0!important;*/
+				cursor:pointer;
 			}
 
 			#copyright {
+				float:left;
+				width: 100%;
 				padding-left: 1%;
-				margin: 0!important;
+				padding-top: 5%;
+				font-family: HelveticaNeue Light Italic;
+				padding-left: 5%;
 			}
-
-
 
 
 		#first {
@@ -640,14 +676,14 @@
 
 
 			#soft {
-				display: none;
+				/*display: none;*/
 	    		position: absolute;
-				top: 108%;
-  				  left: 57%;
+				top: 330%;
+  				  left: 25%;
    				 height: 24%;
 	    		z-index: 0;
 	    		animation-name: plastic;
-	    		animation-duration: 8s ;
+	    		animation-duration: 5s ;
 	    		animation-iteration-count: infinite;
 	    	}
 
@@ -676,6 +712,7 @@
 	    	}
 
 	    	#water {
+	    		display: none;
 	    		position: absolute;
 	    		top: 342%;
 				left: 28%;
@@ -686,7 +723,7 @@
 	    		animation-iteration-count: infinite;
 	    	}
 
-	    	#palito {
+	    	#palito {display: none;
 	    		position: absolute;
 	    		top: 328%;
     			left: 7%;
@@ -754,9 +791,9 @@
 		 p {font-size: 13pt;}
 
 		 #firstCont {
-		 	height: 40%;
-		padding-left: 6%;
-		padding-right: 6%;
+			height: 40%;
+			padding-left: 6%;
+			padding-right: 6%;
 			top:28%;
 		 }
 
@@ -791,16 +828,35 @@
 				text-align: center;
 				line-height: 1.2;
 			}
+			.text5 {
+				font-size: 1.2rem;
+			}
 
 			#opinion1, #opinion2 {
 				
 				    padding-right: 115px!important;
 				    padding-left: 30px!important;
+				    margin-top: 2%;
+				    width: 27%;
 			}
 
-		#botella {
-			margin-top: 8%;
-		}
+			#opinion1 {
+				margin-left: 9%;
+				margin-right: 1%;
+				margin-top: 2%;
+			}
+
+			#arrowLeft {
+				left: -15%
+			}
+
+			#arrowRight {
+				right: 0;
+			}
+
+			#botella {
+				margin-top: 8%;
+			}
 
 	}
 
@@ -820,14 +876,21 @@
     		right: 14%;
 		}
 
-		.text1 {
-			margin-top: 5%;
-	    }
+
 	}
 	
 	@media screen and (min-width:950px) and (max-width: 1200px) {
 
-		h2 {
+		#firstCont {
+			padding:0;
+		}
+
+		.text1 {
+			padding-right: 1.5rem;
+			padding-left: 1.5rem;
+	    }
+
+/*		h2 {
 		 	font-size: 2.5rem!important;
 		}
 		#mapa {
@@ -852,11 +915,11 @@
 		#botella {
 			right: 27%;
 			margin-top: 15%;
-		}
+		}*/
 
 
 	}
-
+/*
 	@media screen and (max-width: 1120px) {
 		#mapa {
 			bottom: 12%;
@@ -1145,31 +1208,60 @@
 				}
 	}
 
-	
+	*/
 	@media screen and (max-width: 375px) {
-
-		h2 {
-        	font-family: HelveticaNeue Bold Condensed;
-        	font-size: 14px;
-        	margin-top: 0;
-       		margin-bottom: 0;
-        }
 
         #seabed {
         	display: none;
         }
 
-       body {
+        body {
         	background-color: #041f4a;
-        }
+        }   
+        p {
+        	font-size:12pt;
+        } 
+
+    	h1 {
+			font-size:2.5rem;
+			padding-top: 5%;
+			line-height: 1.1;
+		}
 
         #logo {
 			width: 70%;
+		}		
+
+		#buttonsCont {
+			width: 30%;
+			padding-right: 5%;
+    		padding-top: 5%;
+		}
+
+		#burger { 	
+			display: block;		
+			height: 30%;
+		 }
+
+		 #burger img {
+			height: 100%;
+		 	float:right;
+		 	-webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+		 }
+
+		 	#burgerCont {
+				display: block;
+			}
+
+
+		.button {
+			display: none;
 		}
 
 		#top {
-			bottom: 5%;
-			right: 8%;
+			bottom: 3%;
+			right: 7%;
 			height: 7%;
 		}
 
@@ -1184,226 +1276,100 @@
 			display: none;
 		}
 
-
-		#buttonsCont {
-			width: 30%;
-			padding-right: 5%;
-    		padding-top: 5%;
-		}
-		
-
-		#burger { 	
-			display: block;		
-			height: 30%;
-		 }
-
-		 #burger img {
-			height: 100%;
-		 	float:right;
-		 }
-
-		 	#burgerCont {
-				display: block;
-			}
-
-
-		.button {
-			display: none;
-		}
-
 		#firstCont {
-			height: 80%;
-			padding-top: 7%;
-			padding-bottom: 7%;
-			top: 10%;
-
+			height: 78%;
+			padding-top: 5%;
+			padding-bottom: 5%;
+			top: 10%;	
+			border-radius: 0px 80px 0px 80px;
+			-webkit-filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5));
 		}
 
 			.text1 {
-
 			    line-height: 1.2;
-				padding-right: 2rem!important;
-				padding-left: 2rem!important;
+				padding-right: 1rem;
+				padding-left: 1rem;
 				margin-bottom: 0;
-				margin-top: 0;
-
+				margin-top: 3%;
+				width: 100%;
 			}
 
 		#secondCont {
-				top:15%;
+				top:13%;
 				left: 8%;
-				height: 70vh;
+				height: 75vh;
 				width: 85vw;
-				margin:auto;
-				padding-right: 3%;
-				padding-left: 4%;
 				text-align: center;
+				-webkit-filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5)); 
+				filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5));
 			}
 
-			h1 {
-				font-size:1.6rem!important;
-				padding-top: 5%;
+			.text2 {
+				text-align: center;
+				float:none;
+				width: 100%;
+				font-size:12pt;
+				line-height: 1.4;
+				padding: 8px 10px 20px 14px;
 			}
 
-		.text2 {
-			text-align: center;
-			float:none;
-			width: 100%;
-			font-size:13pt;
-			line-height: 1.6;
-		}
+			#mapa {
+				display: none;
+			}
 
-		.text2 ~ .text2 {
-			display: none;
-		}
 
-		#mapa {
-			display: none;
-			
-		}
-
-		#verMapa {
-			padding-right: 80px;
-			padding-left: 80px;
-			height: 50px;
-			margin-left: 5%;
-			font-size: 23px;
-		}
-
+			#verMapa {
+				height: 50px;
+				font-size: 24px;
+				width: 100%;
+				padding: 8px 0 0 0;
+			}
 
 		#thirdCont {
 			width: 85vw;
 			right: 8%;
 			text-align: center;
-			padding-left: 2%;
-			padding-right: 3%;
-			top:13%;
-			height: 70vh;
+			top:12%;
+			height: 75vh;
+			padding-left: 4%;
+			-webkit-filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5));
+		}
+
+			.text3 {
+				width: 100%;
+				font-size:12pt;
+				line-height: 1.4;
+				text-align: center;
+				float:none;
+				padding: 8px 10px 20px 10px;
 			}
 
-		.text3 {
-			width: 100%;
-			font-size:13pt;
-			line-height: 1.6;
-			text-align: center;
-		}
-
-		#test {
-			padding-right: 90px;
-			padding-left: 90px;
-			height: 50px;
-			margin-right: 11%;
-			font-size: 23px;
-			background-color:#041f4a;
-
-		}
-
-		#fondoMarino {
-			width: 166%;
-			position: absolute;
-			bottom: -2%;
-			right: -46%;
-			z-index: 0;
-			overflow: hidden;
-		}
+			#test {
+				height: 50px;
+				font-size: 24px;
+				width: 100%;
+				padding: 8px 0 0 0;
+				background-color:#041f4a;
+			}
 
 
-			#plantas {
+				#plantas {
 				    height: 64%;
 				    left: 6%;
 				    z-index:-1;
 				    opacity: 0.5
-				}
+				}		
 
-		#contLastLeft {
-			width: 80%;
-			margin-top: 8%;
-			margin-left: 13%;
-			padding-right: 10%;
-			padding-top: 9%;
-			text-align: center;
-		}
-
-			#habitos {
-					padding-right: 80px;
-					padding-left: 80px;
-					height: 50px;
-					font-size: 20px;
-					padding-top: 10px;
-					border-radius: 7.5px;
-					cursor: pointer;
-					float: left;
-					margin-top: 1%;
-					margin-left: 6%;
+			#fondoMarino {
+				width: 166%;
+				position: absolute;
+				bottom: -2%;
+				right: -46%;
+				z-index: 0;
+				overflow: hidden;
 			}
-
-
-			#contLastRight {
-				width: 80%;
-				margin-top: -8%;
-				margin-left: 12%;
-			}
-
-			#botella {
-				top: 7%;
-			}
-
-			#footer {
-				width: 103%;
-				padding-left: 2%;
-			}
-
-				#titleFooter {
-					font-size: 2.5rem;
-				}
-
-				#footer1 {
-					padding-top: 20%;
-					width: 101%;
-					height: 65%;
-				}
-
-					#opinion1 {
-						text-align: center;
-					}
-
-					#opinion2 {
-						display:none;
-					}
-				#footer2 {
-					height: 30%;
-					padding-left: 0;
-					padding-top: 4%;
-
-				}
-
-					.text5 {
-						padding-top: 0;
-						padding-bottom: 0;
-						display: none;
-					}
-
-					.lastFooter {
-						text-align: center;
-
-					}
-
-					#logoFooter {
-						display: none;
-					}
-
-						#arrowRight, #arrowLeft {
-							display: none;
-						}
-
-						#copyright
-						{
-							margin-left: 0;
-						}
-
-				#soft, #detergent, #straw, #water, #palito {
-					display: none;
-				} 
 
 				.fish {
 					height: 1%;
@@ -1428,6 +1394,121 @@
 					bottom: 7%;
 					left:15%;
 				}
+
+/*		#last {
+			width: 100%;
+		}*/
+		#contLastLeft {
+			width: 100%;
+			margin:8% 0 0 0;
+			padding: 16px 10% 0px 8%;
+			text-align: center;
+		}
+
+			.text4 {
+				padding: 5% 0 6% 0;
+				line-height: 1.4;
+			}
+
+			#habitos {
+				height: 50px;
+				font-size: 24px;
+				width: 100%;
+				padding: 8px 0 0 0;
+			}
+
+		#contLastRight {
+			width: 80%;
+			margin-top: -7%;
+			margin-left: 13%;
+		}
+
+		#footer {
+			width: 100%;
+		}
+
+			#footer1 {
+				background-color: white;
+				height: 70%;
+				width: 100%;
+				padding-left: 0;
+				padding-top: 25%;
+			}
+
+			#titleFooter {
+				width: 100%;
+			}
+
+
+				#opinion1 {
+					color:#041f4a;
+					font-size: 12pt;
+					font-family: HelveticaNeue Light;
+					text-align: center;
+					padding-left: 15%;
+					padding-right: 15%;
+					line-height: 1.3;
+					padding-top: 5%;
+					width: 100%;
+					margin: 0;
+				}
+
+				#opinion2 {
+					display:none;
+				}
+
+
+				#arrowLeft {
+					display: none;
+					height: 30%;
+					top: 30%;
+					left: 5%;
+				}
+
+				#arrowRight {
+					display:none;
+				}
+
+				#arrowRightMobile {
+					display: none!important;
+					position:absolute;
+					display:block;
+					height: 29%;
+					top: 30%;
+					right: 5%;
+					transform: rotate(180deg);
+				}
+
+				#footer2 {
+					height: 30%;
+				}
+
+				.oneFooter {
+					display: none;
+				}
+				
+				.lastFooter {
+					margin-top: 3%;
+					width: 100%;
+					text-align: center;
+					font-size: 14pt;
+					padding: 0;
+				}
+
+				#copyright {
+					font-size: 10pt;
+					padding-top: 10%;
+					text-align: center;
+				}
+
+				#soft, #detergent, #straw, #water, #palito {
+					display: none;
+				} 
+
+
+
+
+
 
 
 	}	
