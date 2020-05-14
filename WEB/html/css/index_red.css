@@ -945,7 +945,7 @@
 @media screen and (max-width: 450px) {
 
 
-		    #seabed {
+		#seabed {
         	display: none;
         }
 
@@ -1243,7 +1243,7 @@
 
 @media screen and (max-width: 375px) {
 
-		        #seabed {
+		 #seabed {
         	display: none;
         }
 
