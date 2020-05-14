@@ -1,0 +1,319 @@
+		@font-face {
+			font-family: HelveticaNeueMd;
+			src: url(../fonts/HelveticaNeueMd.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeueRoman;
+			src: url(../fonts/HelveticaNeueRoman.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeue Bold Condensed;
+			src: url(../fonts/HelveticaNeueBdCn.otf);
+		}
+
+		@font-face {
+			font-family: HelveticaNeue Black Condensed;
+			src: url(../fonts/HelveticaNeueBlackCond.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeue Light Italic;
+			src: url(../fonts/HelveticaNeueLightIt.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeue Medium Italic;
+			src: url(../fonts/HelveticaNeueMdIt.otf);
+		}
+		@font-face {
+			font-family: HelveticaNeue Light;
+			src: url(../fonts/HelveticaNeueLt.otf);
+		}
+
+	    * {
+             box-sizing: border-box;
+             margin:auto;
+        }
+
+        p {font-family: HelveticaNeue Light;
+        	color:white;
+        }
+
+        h1 {
+        	font-family: HelveticaNeue Bold Condensed;
+        	font-size: 40pt;
+        	line-height: 1.2;
+        	text-decoration: none;
+    		color: white;
+        }
+
+
+        h2 {
+        	font-family: HelveticaNeue Bold Condensed;
+        	font-size: 1.8rem;
+        	text-decoration: none;
+        	margin-top: 0;
+    		margin-bottom: 10px;
+    		color: white;
+        }
+
+        .cursive {
+        	font-family: HelveticaNeue Light Italic;
+        	font-weight: 900;
+        	font-size: 12pt;
+        	color: #041f4a;
+        }
+
+
+        body,html {
+			background-color: #041f4a;
+			width: 100%;
+			margin:0;
+			padding:0;
+			overflow:hidden;
+
+		}
+
+		#top {
+			position: fixed;
+			bottom: 10%;
+			right: 5%;
+			height: 8%;
+			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0.5));
+			cursor: pointer;
+			z-index:1;
+			display: none;
+		}
+
+		#top:hover {
+			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0));
+		}
+
+		#seabed {
+			position: fixed;
+			right: 0;
+			bottom: 0;
+			min-width: 100%;
+			min-height: 100%;
+			z-index: -2;
+		}
+
+		#appGames {
+			height: 11%;
+			position: fixed;
+			z-index: 3;
+			bottom: 5%;
+			left: 4%;
+			-webkit-filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.5));
+			cursor: pointer;
+		}
+
+
+		#appGames:hover {
+			-webkit-filter: drop-shadow(6px 6px 4px rgba(0,0,0,0)); 
+			filter: drop-shadow(6px 6px 4px rgba(0,0,0,0));
+		}
+
+
+		#home {
+			height: 100vh;
+			position: relative;
+			background-color: #041f4a;
+		}
+
+
+
+		#homePage {
+
+			transform: rotateY(180deg);
+			object-fit: cover;
+			width: 100vw;
+			height: 100vh;
+/*			position: fixed;
+			top: 0;
+			left: 0;*/
+		}
+
+		#background {
+			position: absolute;
+			background-image:url('img/background.gif');
+			width: 100%;
+			background-repeat:no-repeat;
+			background-size:contain;
+			background-position:center;
+			z-index: -1;
+		}
+
+		#header {
+			height: 100px;
+			width: 100%;
+			position: fixed;
+			top:0;
+			left: 0;
+			z-index: 3;
+		}
+
+		#logo {
+			float:left;
+			width:50%;
+			height: 100%;
+			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0));
+		}
+
+		.logoIMG {
+			width:40%;
+			margin-top: 35px;
+			margin-left: 50px;
+		}
+
+		#logo1 {
+			display: block;
+		}
+
+		#logo2, #logo3 {
+			display:none;
+		}
+
+		#sos {
+			display: none;
+		}
+
+		#buttonsCont {
+			float:left;
+			width:50%;
+			height: 100%;
+			padding-right: 50px;
+		}
+
+			#burger {
+				display: none;
+
+			}
+
+				#cross {
+					display:none;
+				}
+
+			#burgerCont {
+				display: none;
+				position: fixed;
+				top:0;
+				right:-100%;
+				width: 100%;
+				/*margin-right: - 100%;*/
+				background-color:#ff4633;
+				height: 100%;
+				z-index: -1;
+				padding-top: 30%;
+				}
+
+					.opcionesMenu {
+						font-family: HelveticaNeue Bold Condensed;
+						font-size: 30pt;
+						text-align: center;
+						text-decoration: none;
+						color: white;
+						cursor:pointer;
+						padding-top: 5%;
+						padding-bottom: 5%;
+					}
+
+
+		.button {
+			min-width:10px;
+			margin-top: 35px;
+			padding-right: 25px;
+			padding-left: 25px;
+			height: 38px;
+			float:right;
+			margin-left: 30px;
+			font-family: HelveticaNeue Light;
+			font-size: 15px;
+			letter-spacing: 0.5px;
+			color:white;
+			text-align: center;
+			padding-top: 8px;
+			border-radius: 7.5px;
+			cursor: pointer;
+			-webkit-filter: drop-shadow(4px 4px 3px rgba(0,0,0,0.2)); 
+			filter: drop-shadow(4px 4px 3px rgba(0,0,0,0.2));
+		}
+
+		.button:hover {
+			background-color: red!important;
+		}
+
+
+			#contFormulario {
+				height: 70vh;
+				width:40%;
+				border:1px solid red;
+				position: relative;
+			    top: 20%;
+			    left: 9%;
+			    float: left;
+			}
+
+			#contContact {
+				height: 70vh;
+				width:40%;
+				border:1px solid red;
+				position: relative;
+			    top: 20%;
+			    left: 10%;
+			    float: left;
+			}
+
+				.form {
+					border-radius: 10px;
+					background-color: #041f4a;
+					height: 45px;
+					/*max-width: fit-content;*/
+					color: #ffffff73;
+					font-family: HelveticaNeue Light;
+					-webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5)); 
+					filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5));
+					margin-bottom: 2%;
+					float: left;
+					padding: 10px 20px 0 20px;
+					margin-right: 35%;
+				}
+
+					#message {
+						margin-right: 3%;
+						width: 90%;
+						height: 30vh;
+					}
+
+					#sendButton {
+					color: white;
+					background-color: #ff4633;
+					padding-right: 50px;
+					padding-left: 50px;
+					height: 40px;
+					font-family: HelveticaNeue Light;
+					font-size: 18px;
+					letter-spacing: 0.5px;
+					text-align: center;
+					padding-top: 6px;
+					border-radius: 7.5px;
+					cursor: pointer;
+					float: left;
+					margin-top: 1%;
+					-webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5)); 
+					filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5));
+				}
+
+					#sendButton:hover {
+					-webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0)); 
+					filter: drop-shadow(8px 8px 8px rgba(0,0,0,0));
+				}
+
+
+
+		#first {
+			height: 100vh;
+			width: 100%;
+			background: #ff4633;
+		}
+
+
