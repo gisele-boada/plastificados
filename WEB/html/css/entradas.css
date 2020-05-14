@@ -526,7 +526,7 @@
 
 	}
 
-		@media screen and (max-width: 1090px) {
+		@media screen and (min-width: 1035px) (max-width: 1090px) {
 
 		#titEntrada {
 			width: 33%;
@@ -544,6 +544,44 @@
 
 			top: 58%;
 		}
+
+
+	}
+
+		@media screen and (min-width: 840px) and (max-width: 1035px) {
+
+		#titEntrada {
+			width: 34%;
+		}
+
+			#soft {
+  				left: 50%;
+	    	}
+	    	#detergent {
+	    		left: 48%;
+	    	}
+	    	#straw {
+				left: 82%;
+	    	}
+	    	#water {
+    			left: 78%;
+	    	}
+	}
+
+	@media screen and (min-width: 750px) and (max-width: 840px) {
+
+		#titEntrada {
+			width: 38%;
+		}
+
+		#cuerpoEntrada {
+			width: 34%
+		}
+
+		#soft, #detergent, #straw, #water, #palito {
+			display: none;
+		} 
+
 
 
 	}
