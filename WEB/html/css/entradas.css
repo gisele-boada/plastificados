@@ -399,8 +399,14 @@
 							color:white;
 							font-family: HelveticaNeue Light;
 							font-size: 16px;
-							padding: 2% 30% 0% 30%;
+							padding: 8% 68% 2% 10%;
 						}
+				#contNumEntradas img {
+					width: 20%;
+					margin-left: 10%;
+    				margin-top: 2%;
+    				cursor: pointer;
+				}
 
 
 
@@ -458,6 +464,15 @@
 	    		animation-duration: 9s ;
 	    		animation-iteration-count: infinite;
 	    	}
+
+	    #decoContact {
+			position: absolute;
+			bottom:-200%;
+			right: 0;
+			height: 40%;
+			-webkit-filter: drop-shadow(-15px -8px 10px rgba(0, 0, 0, 0.5));
+			filter: drop-shadow(-15px -8px 10px rgba(0, 0, 0, 0.5));
+		}
 
 
 	@keyframes plastic {
