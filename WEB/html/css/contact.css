@@ -165,11 +165,11 @@
 			margin-left: 50px;
 		}
 
-		#logo1 {
+		#logo2 {
 			display: block;
 		}
 
-		#logo2, #logo3 {
+		#logo1, #logo3 {
 			display:none;
 		}
 
@@ -246,22 +246,13 @@
 			#contFormulario {
 				height: 70vh;
 				width:40%;
-				border:1px solid red;
 				position: relative;
 			    top: 20%;
 			    left: 9%;
 			    float: left;
 			}
 
-			#contContact {
-				height: 70vh;
-				width:40%;
-				border:1px solid red;
-				position: relative;
-			    top: 20%;
-			    left: 10%;
-			    float: left;
-			}
+
 
 				.form {
 					border-radius: 10px;
@@ -310,10 +301,393 @@
 
 
 
+			#contContact {
+				height: 70vh;
+				width:40%;
+				position: relative;
+			    top: 20%;
+			    left: 10%;
+			    float: left;
+			}
+
+				#contContactInner {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					height: 52vh;
+					width: 80%;
+				}
+
+					#titleContact {
+						height: 20%;
+	
+						color: white;
+						font-family: HelveticaNeue Bold Condensed;
+						font-size: 26pt;
+					}
+
+						#pointRed {
+							height: 55%;
+	    					padding-bottom: 1%;
+						}
+
+						#textContact {
+							color:white;
+							font-family: HelveticaNeue Light;
+							font-size: 11pt;
+							padding-left: 10%;
+						}
+			
+				#infoContact {
+					font-family: HelveticaNeue Light;
+					padding-left: 10%;
+					padding-top: 3%;
+				}
+
+				.infoContact1 {
+					color:#ff4633;
+					font-size: 11pt;
+					padding-bottom: 5px;
+    				padding-top: 5px;
+				}
+
+				.infoContact2 {
+					color:white;
+					font-size: 11pt;
+				}
+
+				#verMaps {
+					position: absolute;
+					bottom: 0px;
+					height: 52%;
+					right: 7%;
+					cursor: pointer;
+					-webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5)); 
+					filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5));
+				}
+
+
+				#verMaps:hover {
+					-webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0)); 
+					filter: drop-shadow(8px 8px 8px rgba(0,0,0,0));
+			}
+
 		#first {
 			height: 100vh;
 			width: 100%;
-			background: #ff4633;
+			background: #041f4a;
+			padding-top: 8%;
+		}
+
+		#topMapa {
+			position: absolute;
+			bottom: -90%;
+			height: 5%;
+			margin-left: 47%;
+			cursor: pointer;
+		}
+
+		#topMapa:hover {
+			transform: scale(1.1);
 		}
 
 
+@media screen and (min-width: 1600px) and (max-width: 2570px) {
+
+
+	.form {
+		padding: 12px;
+	}
+
+	#sendButton {
+		padding-top: 9px;
+	}
+
+	#titleContact {
+		font-size: 50pt;
+	}
+
+	#pointRed {
+		height: 50%;
+		padding-bottom: 1%;
+		padding-top: 1%;
+	}
+
+	#textContact {
+		font-size: 12pt;
+		padding-right: 20%;
+	}
+
+	.infoContact1 {
+		font-size: 13pt;
+		padding-top: 20px;
+	}
+
+	.infoContact2 {
+		font-size: 12pt;
+	}
+
+	#verMaps {
+		bottom: 25%;
+		height: 36%;
+		right: 22%;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+
+	#pointRed {
+		    padding-top: 5%;
+		    padding-bottom: 0;
+	}
+
+	#verMaps {
+		bottom: 18%;
+		height: 42%;
+		right: 5%;
+	}
+}
+
+
+@media screen and (max-width: 450px) {
+
+
+		#seabed {
+        	display: none;
+        }
+
+        body {
+        	background-color: #041f4a;
+        }   
+        p {
+        	font-size:12pt;
+        } 
+
+    	h1 {
+			font-size:2.5rem;
+			padding-top: 5%;
+			line-height: 1.1;
+		}
+
+        #logo {
+			width: 70%;
+		}		
+
+		#buttonsCont {
+			width: 30%;
+			padding-right: 5%;
+    		padding-top: 5%;
+		}
+
+		#burger { 	
+			display: block;		
+			height: 30%;
+		 }
+
+		 #burger img {
+			height: 100%;
+		 	float:right;
+		 	-webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+		 }
+
+		 	#burgerCont {
+				display: block;
+			}
+
+
+		.button {
+			display: none;
+		}
+
+		#top {
+			bottom: 3%;
+			right: 7%;
+			height: 7%;
+		}
+
+		.logoIMG {
+			margin-top: 8%;
+			margin-left: 8%;
+			width: 88%;
+			margin-top: 6%;
+		}
+
+		#appGames {
+			display: none;
+		}
+
+	#contFormulario {
+		   display: none;
+	}
+
+	#contContact {
+		width: 90%;
+		top: 0%;
+		left: -3%;
+	}
+
+	#verMaps {
+		bottom: -45%;
+		height: 45%;
+		right: 26%;
+	}
+
+	#infoContact {
+		padding-top: 5%;
+		padding-left: 2%;
+	}
+
+	#pointRed {
+		display: none;
+	}
+
+	#titleContact {
+		padding-left: 2%;
+	}
+
+		.infoContact1, .infoContact2 {
+			padding-top:1%;
+			font-size: 12pt;
+			padding-left:0;
+		}
+
+		#textContact {
+			font-size: 12pt;
+			padding-left: 2%;
+		}
+
+	#topMapa {
+		margin-left: 37%;
+	}
+
+	#first {
+		    padding-top: 28%;
+	}
+}
+
+
+@media screen and (max-width: 375px) {
+
+		 #seabed {
+        	display: none;
+        }
+
+        body {
+        	background-color: #041f4a;
+        }   
+        p {
+        	font-size:12pt;
+        } 
+
+    	h1 {
+			font-size:2.5rem;
+			padding-top: 5%;
+			line-height: 1.1;
+		}
+
+        #logo {
+			width: 70%;
+		}		
+
+		#buttonsCont {
+			width: 30%;
+			padding-right: 5%;
+    		padding-top: 5%;
+		}
+
+		#burger { 	
+			display: block;		
+			height: 30%;
+		 }
+
+		 #burger img {
+			height: 100%;
+		 	float:right;
+		 	-webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+		 }
+
+		 	#burgerCont {
+				display: block;
+			}
+
+
+		.button {
+			display: none;
+		}
+
+		#top {
+			bottom: 3%;
+			right: 7%;
+			height: 7%;
+		}
+
+		.logoIMG {
+			margin-top: 8%;
+			margin-left: 8%;
+			width: 88%;
+			margin-top: 6%;
+		}
+
+		#appGames {
+			display: none;
+		}
+
+	#contFormulario {
+		   display: none;
+	}
+
+	#contContact {
+		width: 90%;
+		top: 0%;
+		left: -3%;
+	}
+
+	#verMaps {
+		bottom: -45%;
+		height: 45%;
+		right: 26%;
+	}
+
+	#infoContact {
+		padding-top: 5%;
+		padding-left: 2%;
+	}
+
+	#pointRed {
+		display: none;
+	}
+
+	#titleContact {
+		padding-left: 1%;
+		height: 18%;
+	}
+
+		.infoContact1, .infoContact2 {
+			padding-top:1%;
+			font-size: 12pt;
+			padding-left:0;
+		}
+
+		#textContact {
+			font-size: 12pt;
+			padding-left: 2%;
+		}
+
+		#topMapa {
+			position: absolute;
+			bottom: -95%;
+			height: 5%;
+			margin-left: 35%;
+			cursor:pointer;
+		}
+
+		#topMapa:hover {
+			transform: scale(1.1);
+		}
+
+		#first {
+		    padding-top: 9%;
+	}
+}

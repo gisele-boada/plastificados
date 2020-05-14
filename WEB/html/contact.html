@@ -4,26 +4,20 @@
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
-		<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
-		<!-- <link rel="stylesheet" type="text/css" href="css/index_red.css"> -->
-		<link rel="stylesheet" type="text/css" href="css/contact.css">
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-		
 
+		<link rel="stylesheet" type="text/css" href="css/contact.css">
+		<link rel="stylesheet" type="text/css" href="css/maps.css">
 		<script src="js/jquery.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="js/scroll_entradas.js" ></script>
-<!-- 		<script src="js/scroll_mobile.js" media="media screen and (max-width: 768px)"></script>  -->
+		<script src="js/scroll_contact.js" ></script>
+
+
+		<script src='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.js'></script>
+		<link href='https://api.mapbox.com/mapbox.js/v3.3.0/mapbox.css' rel='stylesheet' />
 
 
 
-		
-	<style>
 
-
-
-	</style>
 </head>	
 <body>
 
@@ -58,7 +52,8 @@
 					"right": "0",
 					"transition": "right 0.5s"
 			});
-			$("#logo1").css("display", "none");
+
+			$("#logo2").css("display", "none");
 			$("#logo3").css("display", "block");
 
 		});
@@ -73,7 +68,7 @@
 					"right": "-100%",
 					"transition": "right 0.5s"
 			});
-			$("#logo1").css("display", "block");
+			$("#logo2").css("display", "block");
 			$("#logo3").css("display", "none");
 		});
 
@@ -82,23 +77,62 @@
 		});
 
 
-//////////////CLIC i UNCLICK ITEM////////////////
-
-$(document).ready(function () {
-  $(".entradaSvg").click(function () {
-    $(".entradaSvg.clicked").toggleClass("clicked");
-	    /*$("#unidadesCont").css("display","block");*/
-	    // if you don't want to be able to deselect the li that is already selected
-	    // add this 
-	     //if (!$(this).hasClass("clicked")) {
-	      $(this).toggleClass("clicked");
-	     //}
-	 });
-});
 
 
 
+//////////////////////MAPS JQUERY///////////////////////////////
 
+
+
+/*grup = [
+			["Nom1", "Descripció", [41.3887901, 2.1589899] ],
+			["Nom2", "Descripció", [41.3887901, 2.1589899] ],
+			["Nom3", "Descripció", [41.4124532, 2.1316655] ],
+			["Nom4", "Descripció", [41.5, 2.17] ]
+]*/
+
+/*			item = grup[3][2] ;*/
+
+			estils = "mapbox://styles/giselebd/cka52y5ip00lg1ipdfq4hownm";
+
+			// acces_token és la key pròpia de Mapbox
+			L.mapbox.accessToken = 'pk.eyJ1IjoiZ2lzZWxlYmQiLCJhIjoiY2thM212NWJjMDVoazNmbXZ0Mm55cGIzNSJ9.9kIEgU5fjKgrCZqtDoXUBA';
+
+			//variables de mapbox: addTo, styleLayer, accessToken;
+
+			// L és l'objecte global Leaflet, on hi ha tots els recursos
+			// L.map() crea l'objecte mapa a dins la variable map 
+			// L.setView() passa els paràmetres de coordenades i el zoom inicial
+			var map = L.mapbox.map('mapX').setView([41.4124532, 2.1316655], 10);
+
+			// Afegim un estil
+			L.mapbox.styleLayer(estils).addTo(map);
+
+
+			var icona1 = L.icon({
+				iconUrl: 'img/contact/icon1.svg',     // imatge icona
+				shadowUrl: 'img/contact/shadow.png',  // imatge ombra
+
+				iconSize:     [38, 56], // amplada, alçada
+				shadowSize:   [50, 40], // amplada, alçada de l'ombra
+				iconAnchor:   [22, 56], // punt d'ancoratge de la icona
+				shadowAnchor: [4, 40],  // punt d'ancoratge de l'ombra
+				popupAnchor:  [0, -50] // punt d'ancoratge del popup respecte del de la icona
+			});	
+			
+
+			//añadir marcador
+			L.marker([41.4124532, 2.1316655], {icon: icona1}).addTo(map).bindPopup('<div id="popUp"><img id="logoMaps" src="img/contact/logo1.gif"></div>')/*.openPopup()*/;
+
+
+
+			///////////////////////////////////////
+
+		/////SCROLL TOP///////
+		$("#topMapa").on("click", function topFunction() {
+			$('html, body').animate({scrollTop:0}, 'slow');
+
+	   	});
 
 
 
@@ -121,19 +155,23 @@ $(document).ready(function () {
 		</div></a>
 		<div id="buttonsCont">
 			<div id="burgerCont">
-				<div class="opcionesMenu">ENTRADAS</div>
-				<div class="opcionesMenu">VISITA VIRTUAL</div>
+				<a href="entradas.html"><div class="opcionesMenu">ENTRADAS</div></a>
+				<a href="contact.html"><div class="opcionesMenu">CONTACTO</div></a>
+				<a href="../../games/html/index.html"><div class="opcionesMenu">GAMES</div></a>
+				<div class="opcionesMenu">TOUR VIRTUAL</div>
 			</div>
 			<div id="burger">
 				<img id="burgerImg" src="img/burger.svg">
 				<img id="cross" src="img/cross.svg">
 			</div>
 
-			<div class="button" style="background-color: #ff4633">Contacto</div>
-			<a href="entradas.html"><div class="button" style="background-color: #041f4a">Entradas</div></a>
+			<a href="contact.html"><div class="button" style="background-color: #ff4633">Contacto</div></a>
+			<a href="entradas.html">
+				<div class="button" style="background-color: #041f4a">Entradas</div></a>
 		</div>
 	</div>
 	
+
 
 	<div id="home">
 		<div id="contFormulario">
@@ -143,16 +181,40 @@ $(document).ready(function () {
 			<div class="form" id="message">Sabemos que tienes un mensaje para nosotros :)</div>
 			<div id="sendButton">Enviar</div>
 		</div>
-		<div id="contContact">sdsds</div>
+		<div id="contContact">
+			<div id="contContactInner">
+				<div id="titleContact">
+					<img id="pointRed"src="img/contact/pointRed.svg">
+				CONTACTO
+				</div>
+				<div id="textContact">En el caso de tener una consulta específica o urgente, siempre nos puedes llamar o enviar un email, y estaremos encantados de ayudarte.
+				</div>
+				<div id="infoContact">
+					<div class="infoContact1">Email</div>
+					<div class="infoContact2">gisele.boada@gmail.com</div>
+					<div class="infoContact1">Teléfono</div>
+					<div class="infoContact2">617 05 70 26</div>
+					<div class="infoContact1">Dirección</div>
+					<div class="infoContact2">C/ Desconocida, 32<br>
+					00888 Barcelona<br>
+					España
+				</div>
+				<img id="verMaps" src="img/contact/verMaps.svg">
+				</div>
+
+			</div>
+		</div>
 <div style="clear:both;"></div>
  	
 	</div>
 	<div id="first">
-	
-			
-
+		<img id="topMapa" src="img/contact/topMapa.svg">
+		<div id='mapX'></div>		
+		
 		
 	</div>
+
+
 
 
 <!-- 	<img id="soft" src="img/deco/soft.svg">
