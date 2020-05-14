@@ -360,7 +360,7 @@
 				position: absolute;
 				top:18%;
 				right: 10%;
-				height: 62vh;
+				height: 65vh;
 				width: 50vw;
 				-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
 				filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
@@ -368,7 +368,7 @@
 				padding-right: 4%;
 				padding-top: 3%;
 				text-align: right;
-				padding-left: 12%;
+				padding-left: 8%;
 				z-index: 1;
 				overflow: hidden;
 			}
@@ -406,7 +406,7 @@
 					border-radius: 7.5px;
 					cursor: pointer;
 					float: right;
-					margin-top: 1%;
+					margin-top: 3%;
 				}
 
 				#test:hover {
@@ -491,9 +491,9 @@
 
 				.text4 {
 					padding-right: 0;
-					padding-top: 3%;
+					padding-top: 5%;
 					color: white;
-					padding-bottom: 1%;
+					padding-bottom: 5%;
 				}
 
 
@@ -776,7 +776,7 @@
 
 
 
-	@media screen and (min-width: 1600px) and (max-width: 2570px) {
+@media screen and (min-width: 1600px) and (max-width: 2570px) {
 		 h1{
 		 	font-size: 4rem!important;
 		 }
@@ -797,6 +797,15 @@
 			top:28%;
 		 }
 
+		 #secondCont {
+		 	width: 50%;
+		 	height: 50vh;
+		 }
+
+		 #thirdCont {
+		 	width: 46vw;
+		 	height: 58vh;
+		}
 
 		 #secondCont {
 		 	height: 55vh;
@@ -804,7 +813,7 @@
 
 		 #mapa {
 			bottom: 14%;
-    		right: 18%;
+    		right: 14%;
 		}
 
 		#contLastLeft {
@@ -819,6 +828,14 @@
 
 				.text4 {
 					padding-right: 20%;
+					padding-top: 4%;
+					padding-bottom: 6%;
+				}
+
+				#habitos {
+					padding: 13px 80px 0 80px;
+					height: 50px;
+					font-size: 20px;
 				}
 
 			#titleFooter {
@@ -858,360 +875,77 @@
 				margin-top: 8%;
 			}
 
-	}
+}
 
-	@media screen and (min-width: 1380px) and (max-width: 1600px) {
-		 h1{
-		 	font-size: 3.5rem!important;
-		 }
-		 h2 {
-		 	font-size: 2.5rem!important;
-		 	margin-right: -5%;
-			margin-left: -5%;
-			margin-bottom: 5%!important;
-		 }
+@media screen and (min-width: 940px) and (max-width: 1190px) {
 		
-		 #mapa {
-			bottom: 11%;
-    		right: 14%;
+		#firstCont {
+			    padding-top: 2%;
 		}
 
-
-	}
-	
-	@media screen and (min-width:950px) and (max-width: 1200px) {
-
-		#firstCont {
-			padding:0;
+		h2 {
+			font-size:1.5rem!important;
 		}
 
 		.text1 {
-			padding-right: 1.5rem;
-			padding-left: 1.5rem;
-	    }
-
-/*		h2 {
-		 	font-size: 2.5rem!important;
-		}
-		#mapa {
-			bottom: 10%;
-    		right: 14%;
-		}
-
-		#contLastLeft {
-			width: 35%;
-			padding-right: 3%;
-		}
-
-		#contLastRight {
-			width: 55%;
-		}
-
-		#plato {
-			width: 90%;
-			margin-top: 5%;
-		}
-
-		#botella {
-			right: 27%;
-			margin-top: 15%;
-		}*/
-
-
-	}
-/*
-	@media screen and (max-width: 1120px) {
-		#mapa {
-			bottom: 12%;
-			right: 9%;				
+			padding-right: 2rem;
+			padding-left: 2rem;
 		}
 
 		#secondCont {
-			width: 65vw;
+			width:60vw;
+			height: 70vh;		
 		}
-	}
-
-	@media screen and (max-width: 1025px) {
-
-
-		#mapa {
-			bottom: 14%;
-			right: 6%;
-			width: 49vw;	
-		}
-
-	}
-	@media screen and (max-width: 870px) {
-		#secondCont {
-			width: 68vw;
-		}
-	}
-	
-	@media screen and (max-width: 750px) {
-		h1 {
-			font-size:2.3rem!important;
-		}
-
-				h2 {
-        	font-family: HelveticaNeue Bold Condensed;
-        	font-size: 16px;
-        	margin-top: 0;
-       		margin-bottom: 0;
-        }
-
-        #logo {
-			width: 70%;
-		}
-
-		#top {
-			bottom: 5%;
-			right: 8%;
-			height: 7%;
-		}
-
-		.logoIMG {
-			margin-left: 8%;
-			width: 88%;
-			margin-top: 6%;
-		}
-
-		#appGames {
-			height: 15%;
-			position: fixed;
-			bottom: 5%;
-			left: 5%;
-		}
-
-		#seabed {
-        	display: none;
-        }
-
-        body {
-        	background-color: #041f4a;
-        }
-
-
-		#buttonsCont {
-			width: 30%;
-			padding-right: 5%;
-    		padding-top: 5%;
-		}
-
-		#appGames {
-			display: none;
-		}
-		
-
-		#burger { 	
-			display: block;		
-			height: 30%;
-		 }
-
-		 #burger img {
-			height: 100%;
-		 	float:right;
-		 }
-
-		 	#burgerCont {
-				display: block;
-			}
-
-
-		.button {
-			display: none;
-		}
-
-		#firstCont {
-			height: 77%;
-			padding-top: 22%;
-			padding-bottom: 7%;
-		}
-
-			.text1 {
-
-			    line-height: 1.2;
-				padding-right: 2rem!important;
-				padding-left: 2rem!important;
-				margin-bottom: 0;
-				margin-top: 0;
-
-			}
-
-		#secondCont {
-				top:15%;
-				left: 8%;
-				height: 70vh;
-				width: 85vw;
-				margin:auto;
-				padding-right: 3%;
-				padding-left: 4%;
-				text-align: center;
-			}
-
 
 		.text2 {
-			text-align: center;
-			float:none;
-			width: 100%;
-			font-size:13pt;
-			line-height: 1.6;
-			padding-left:4%;
-			padding-right:5%;
+			padding-right: 0;
 		}
-
-		.text2 ~ .text2 {
-			display: none;
-		}
-
-		#mapa {
-			display: none;
-			
-		}
-
-		#verMapa {
-			padding-right: 80px;
-			padding-left: 80px;
-			height: 50px;
-			margin-left: 8%;
-			font-size: 23px;
-		}
-
 
 		#thirdCont {
-			width: 85vw;
-			right: 8%;
-			text-align: center;
-			padding-left: 2%;
-			padding-right: 2%;
-			top:13%;
 			height: 70vh;
-			}
-
-		.text3 {
-			width: 100%;
-			font-size:13pt;
-			line-height: 1.6;
-			text-align: center;
-			padding-left:5%;
-			padding-right:5%;
+			width: 55vw;
+			padding-left: 5%;
 		}
 
-		#test {
-			padding-right: 90px;
-			padding-left: 90px;
-			height: 50px;
-			margin-right: 17%;
-			font-size: 23px;
-			background-color:#041f4a;
+		.text3 {padding-left: 8%}
 
-		}
-
-		#fondoMarino {
-			width: 166%;
-			position: absolute;
-			bottom: -2%;
-			right: -46%;
-			z-index: 0;
-			overflow: hidden;
-		}
-
-
-			#plantas {
-				    height: 64%;
-				    left: 6%;
-				    z-index:-1;
-				    opacity: 0.5
-				}
-
-
-		#contLastLeft {
-			width: 80%;
-			margin-top: 8%;
-			margin-left: 13%;
-			padding-right: 10%;
-			padding-top: 9%;
-			text-align: center;
-		}
-
-			#habitos {
-					padding-right: 80px;
-					padding-left: 80px;
-					height: 50px;
-					font-size: 20px;
-					padding-top: 10px;
-					border-radius: 7.5px;
-					cursor: pointer;
-					float: left;
-					margin-top: 1%;
-					margin-left: 10%;
-			}
-
+		#contLastLeft {padding-right: 0;
+			width: 32%;}
 
 		#contLastRight {
-				width: 80%;
-				margin-top: -15%;
-				margin-left: 12%;
-			}
-
-			#botella {
-				top: 7%;
-			}
-
-		#footer {
-			width: 103%;
+			width: 58%;
+			margin-left: 3%;
+			margin-top: 13%;
 		}
 
-			#titleFooter {
-				font-size: 2.5rem;
-			}
+		#opinion2  {display:none;}
 
-			#footer1 {
-				padding-top: 20%;
-				width: 101%;
-			}
+		#footer1 {
+			padding-top: 7%;
+		}
 
-				#opinion1 {
-					text-align: center;
-				}
+		#opinion1 {margin-top: 6%;
+			margin-right: 10%;}
 
-				#opinion2 {
-					display:none;
-				}
-
-				#soft, #detergent, #straw, #water, #palito {
-					display: none;
-				} 
+		#arrowRightMobile {
+			display: block;
+		}
 
 
-				.fish {
-					height: 1%;
-					bottom: 14%;
-					left:10%;
-				}
+		#mapa {
+			bottom:11%;
+			right: 8%;
+			width: 50vw;
+		}
+}
 
-				.fish ~.fish {
-					height: 1%;
-					bottom: 12%;
-					left:25%;
-				}
 
-				.oposite {
-					height: 1%;
-					bottom: 10%;
-					left:4%;
-				}
 
-				.oposite ~.oposite {
-					height: 1%;
-					bottom: 7%;
-					left:16%;
-				}
-	}
 
-	*/
-	@media screen and (max-width: 375px) {
+@media screen and (max-width: 450px) {
 
-        #seabed {
+
+		    #seabed {
         	display: none;
         }
 
@@ -1395,9 +1129,6 @@
 					left:15%;
 				}
 
-/*		#last {
-			width: 100%;
-		}*/
 		#contLastLeft {
 			width: 100%;
 			margin:8% 0 0 0;
@@ -1506,9 +1237,304 @@
 				} 
 
 
+}
 
 
 
+@media screen and (max-width: 375px) {
+
+		        #seabed {
+        	display: none;
+        }
+
+        body {
+        	background-color: #041f4a;
+        }   
+        p {
+        	font-size:12pt;
+        } 
+
+    	h1 {
+			font-size:2.5rem;
+			padding-top: 5%;
+			line-height: 1.1;
+		}
+
+        #logo {
+			width: 70%;
+		}		
+
+		#buttonsCont {
+			width: 30%;
+			padding-right: 5%;
+    		padding-top: 5%;
+		}
+
+		#burger { 	
+			display: block;		
+			height: 30%;
+		 }
+
+		 #burger img {
+			height: 100%;
+		 	float:right;
+		 	-webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+		 }
+
+		 	#burgerCont {
+				display: block;
+			}
 
 
-	}	
+		.button {
+			display: none;
+		}
+
+		#top {
+			bottom: 3%;
+			right: 7%;
+			height: 7%;
+		}
+
+		.logoIMG {
+			margin-top: 8%;
+			margin-left: 8%;
+			width: 88%;
+			margin-top: 6%;
+		}
+
+		#appGames {
+			display: none;
+		}
+
+		#firstCont {
+			height: 78%;
+			padding-top: 5%;
+			padding-bottom: 5%;
+			top: 10%;	
+			border-radius: 0px 80px 0px 80px;
+			-webkit-filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5));
+		}
+
+			.text1 {
+			    line-height: 1.2;
+				padding-right: 1rem;
+				padding-left: 1rem;
+				margin-bottom: 0;
+				margin-top: 3%;
+				width: 100%;
+			}
+
+		#secondCont {
+				top:13%;
+				left: 8%;
+				height: 75vh;
+				width: 85vw;
+				text-align: center;
+				-webkit-filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5)); 
+				filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5));
+			}
+
+			.text2 {
+				text-align: center;
+				float:none;
+				width: 100%;
+				font-size:12pt;
+				line-height: 1.4;
+				padding: 8px 10px 20px 14px;
+			}
+
+			#mapa {
+				display: none;
+			}
+
+
+			#verMapa {
+				height: 50px;
+				font-size: 24px;
+				width: 100%;
+				padding: 8px 0 0 0;
+			}
+
+		#thirdCont {
+			width: 85vw;
+			right: 8%;
+			text-align: center;
+			top:12%;
+			height: 75vh;
+			padding-left: 4%;
+			-webkit-filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5));
+		}
+
+			.text3 {
+				width: 100%;
+				font-size:12pt;
+				line-height: 1.4;
+				text-align: center;
+				float:none;
+				padding: 8px 10px 20px 10px;
+			}
+
+			#test {
+				height: 50px;
+				font-size: 24px;
+				width: 100%;
+				padding: 8px 0 0 0;
+				background-color:#041f4a;
+			}
+
+
+				#plantas {
+				    height: 64%;
+				    left: 6%;
+				    z-index:-1;
+				    opacity: 0.5;
+				}		
+
+			#fondoMarino {
+				width: 166%;
+				position: absolute;
+				bottom: -2%;
+				right: -46%;
+				z-index: 0;
+				overflow: hidden;
+			}
+
+				.fish {
+					height: 1%;
+					bottom: 14%;
+					left:10%;
+				}
+
+				.fish ~.fish {
+					height: 1%;
+					bottom: 12%;
+					left:24%;
+				}
+
+				.oposite {
+					height: 1%;
+					bottom: 10%;
+					left:4%;
+				}
+
+				.oposite ~.oposite {
+					height: 1%;
+					bottom: 7%;
+					left:15%;
+				}
+
+		#contLastLeft {
+			width: 100%;
+			margin:8% 0 0 0;
+			padding: 16px 10% 0px 8%;
+			text-align: center;
+		}
+
+			.text4 {
+				padding: 5% 0 6% 0;
+				line-height: 1.4;
+			}
+
+			#habitos {
+				height: 50px;
+				font-size: 24px;
+				width: 100%;
+				padding: 8px 0 0 0;
+			}
+
+		#contLastRight {
+			width: 80%;
+			margin-top: -7%;
+			margin-left: 13%;
+		}
+
+		#footer {
+			width: 100%;
+		}
+
+			#footer1 {
+				background-color: white;
+				height: 70%;
+				width: 100%;
+				padding-left: 0;
+				padding-top: 25%;
+			}
+
+			#titleFooter {
+				width: 100%;
+			}
+
+
+				#opinion1 {
+					color:#041f4a;
+					font-size: 12pt;
+					font-family: HelveticaNeue Light;
+					text-align: center;
+					padding-left: 15%;
+					padding-right: 15%;
+					line-height: 1.3;
+					padding-top: 5%;
+					width: 100%;
+					margin: 0;
+				}
+
+				#opinion2 {
+					display:none;
+				}
+
+
+				#arrowLeft {
+					display: none;
+					height: 30%;
+					top: 30%;
+					left: 5%;
+				}
+
+				#arrowRight {
+					display:none;
+				}
+
+				#arrowRightMobile {
+					display: none!important;
+					position:absolute;
+					display:block;
+					height: 29%;
+					top: 30%;
+					right: 5%;
+					transform: rotate(180deg);
+				}
+
+				#footer2 {
+					height: 30%;
+				}
+
+				.oneFooter {
+					display: none;
+				}
+				
+				.lastFooter {
+					margin-top: 3%;
+					width: 100%;
+					text-align: center;
+					font-size: 14pt;
+					padding: 0;
+				}
+
+				#copyright {
+					font-size: 10pt;
+					padding-top: 10%;
+					text-align: center;
+				}
+
+				#soft, #detergent, #straw, #water, #palito {
+					display: none;
+				} 
+}
+
+
+
+		
