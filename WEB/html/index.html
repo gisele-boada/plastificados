@@ -6,11 +6,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
 
 		<link rel="stylesheet" type="text/css" href="css/index_red.css">
-	
+		<title>PLASTIFICADOS</title>
+		<link rel="icon" type="image/png" href="img/icon.png" />
 
 		<script src="js/jquery.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="js/scroll.js" ></script> 
+		<!-- <script src="js/scroll.js" ></script>  -->
 
 
 
@@ -71,7 +72,7 @@
 					"transition": "right 0.5s"
 			});
 			$("#logo1").css("display", "block");
-			$("#logo1").css("display", "none");
+			$("#logo2").css("display", "none");
 			$("#logo3").css("display", "none");
 		});
 
@@ -138,7 +139,47 @@
 
    		 	});
 
+   	/////////////////////////////////////
 
+   	   		 	
+/*   	var pos = $('#first').position();
+	console.dir(pos);*/
+
+////////INTENT CANVI COLOR LOG SEGONS POSICIO Y //////////////////////
+
+/*		$(window).resize(function(){
+
+		       if ($(window).width() <= 1914) {  
+
+					$(window).scroll(function(){
+					    var wScroll = $(this).scrollTop();
+
+						if (wScroll>=969){
+							console.log("969");
+							$('#logo1').css("display", "none");
+		        			$('#logo2').css("display", "block");
+		        			$('#logo3').css("display", "none");
+		        			$('#top').css("display", "block");
+							
+						} if (wScroll>=1938) {
+							console.log(wScroll);
+					        $('#logo1').css("display", "none");
+					        $('#logo2').css("display", "block");
+					        $('#logo3').css("display", "none");
+					         $('#top').css("display", "block");
+
+						} if (wScroll>=2907) {
+							console.log(wScroll);
+					        $('#logo1').css("display", "none");
+							$('#logo2').css("display", "block");
+							$('#logo3').css("display", "none");
+						}
+
+					});
+
+		       }     
+
+		});*/
 
 
 	///////////////////////////////////
@@ -183,6 +224,7 @@
 				<div class="button" style="background-color: #041f4a">Entradas</div></a>
 		</div>
 	</div>
+
 
 	<div id="home">
 		<a href="../../games/html/index.html"><img id="appGames" src="img/appGames.svg"></a>

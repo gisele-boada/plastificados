@@ -107,6 +107,7 @@
 			$("#start").hide(50, 0);
 			gestioTimer(); //s'executa el compta enrrera
 			closeMenu();
+			document.documentElement.requestFullscreen();
 		
 
 	});
@@ -341,6 +342,7 @@ $("#start").on("click", function(){
 		$(".replay").hide(50, 0); //DESAPARECE BUTTON opacity 0
 		gestioTimer();
 		closeMenu();
+		document.documentElement.requestFullscreen();
 	});
 
 

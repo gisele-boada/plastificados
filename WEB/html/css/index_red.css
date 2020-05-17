@@ -63,12 +63,13 @@
         }
 
 
-        body,html {
+        body {
 			
 			width: 100%;
 			margin:0;
 			padding:0;
-			overflow:hidden;
+			/*overflow:hidden;*/
+			overflow-x: hidden;
 
 		}
 
@@ -156,6 +157,8 @@
 			width:50%;
 			height: 100%;
 			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0));
+			-webkit-filter: drop-shadow(4px 3px 2px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(4px 3px 2px rgba(0,0,0,0.5));
 		}
 
 		.logoIMG {
@@ -945,7 +948,7 @@
 @media screen and (max-width: 450px) {
 
 
-		#seabed {
+		    #seabed {
         	display: none;
         }
 
@@ -1249,6 +1252,7 @@
 
         body {
         	background-color: #041f4a;
+
         }   
         p {
         	font-size:12pt;
@@ -1303,6 +1307,7 @@
 			width: 88%;
 			margin-top: 6%;
 		}
+
 
 		#appGames {
 			display: none;

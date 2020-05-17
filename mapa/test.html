@@ -1,0 +1,277 @@
+<html><head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.typekit.net/vvl4bqb.css">
+	<style>
+
+
+		@font-face {
+			font-family: HelveticaNeue Bold Condensed;
+			src: url(fonts/HelveticaNeueBdCn.otf);
+		}
+		*{
+			padding:0;
+			margin:0;
+			font-family:monospace;
+			box-sizing:border-box;
+		}
+
+		body{
+			background-color: #041f4a;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		#video{ 
+			width: 90%;
+			margin-left: 5%;
+		}	
+
+		#barra {
+			/*border:1px solid red; */
+			border-radius: 25px;
+			/*margin-left: 600px;*/
+			overflow: hidden;
+			cursor: pointer;
+			background: linear-gradient(45deg, #ff4633, red);
+			position: absolute;
+    		right: -5%;
+    		bottom: 43%;
+    		width:400px;
+		}
+
+		#progres {
+			width:1%;
+			height:30px;
+			/*background: linear-gradient(45deg, #ff4633, red);*/
+    		border-radius: 25px;
+			cursor: pointer;
+			background-color: transparent;
+			/*position: absolute;*/
+			right: 8%;
+		}
+
+		.boto{border:1px solid #099;
+			margin-top:10px;
+			margin-bottom:10px;
+			width:200px;
+			height:60px;
+			float:left;
+		}
+
+		#temps{
+			color: white;
+			margin-left: 42%;
+			margin-top: 10px;
+			font-size: 20pt;
+			font-family: myriad-pro-condensed, sans-serif;
+			font-weight: 700;
+			font-style: normal;
+			font-size: 25pt;
+			color: #ff4d33;
+			margin-bottom: 80px;
+		}
+
+		div#barra {
+		    transform: rotate(-90deg);
+		}
+
+		#marker {
+			height: 100%;
+		}
+
+
+		#popUp {
+			position: absolute;
+			width: 30%;
+			height: 30%;
+			margin-top: 17%;
+			margin-left: 35%;
+			background-color:#ff4633;
+			border-radius: 20px;
+			color:#041f4a;
+			font-family: HelveticaNeue Bold Condensed;
+			font-size: 25pt;
+			line-height: 1.4;
+			text-align: center;
+			padding: 2% 5% 0 5%;
+			-webkit-filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5)); 
+			filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+			z-index: 2;
+		}
+
+			#entendido {
+				margin-left: 20%;
+				margin-right: 20%;
+				margin-top: 6%;
+				background: #041f4a;
+				color: white;
+				padding: 2%;
+				border-radius: 15px;
+				-webkit-filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.5)); 
+				filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.5));
+				cursor: pointer;
+			}
+
+			#entendido:hover {
+				-webkit-filter: drop-shadow(6px 6px 4px rgba(0,0,0,0)); 
+				filter: drop-shadow(6px 6px 4px rgba(0,0,0,0));
+			}
+
+			@media screen and (max-width: 1370px) and (min-width: 1200px) {
+
+				#popUp {
+					width: 40%;
+					height: 50%;
+					margin-top: 13%;
+					margin-left: 30%;
+					padding-top: 3%;
+				}
+
+			}
+
+			@media screen and (max-width: 1200px) and (min-width: 850px) {
+
+				#popUp {
+					width: 55%;
+					height: 55%;
+					margin-top: 13%;
+					margin-left: 23%;
+				}
+
+			}
+
+			@media screen and (max-width: 800px) {
+				#barra {
+					    width: 200px;
+					    height: 20px;
+				}
+
+				#progres {
+					    height: 100%;
+				}
+		
+			}
+			
+			@media screen and (max-width: 850px) and (min-width: 300px){
+				#popUp {
+					width: 65%;
+					height: 70%;
+					margin-top: 10%;
+					margin-left: 19%;
+				}
+
+			}
+
+
+
+	</style>
+
+</head>
+<body>
+	<div id="popUp">Haz click en la barra desde abajo hacia arriba para ver la evolución de los años.
+		<div id="entendido">ENTENDIDO</div>
+	</div>
+	<video id="video">
+	  <source src="vid/mapa.mp4" type="video/mp4">
+	</video>
+	
+	<div id="barra">
+		<div id="progres"> 
+    		<img id="marker" src="vid/marker.svg">
+    	</div>
+	</div>
+
+	
+	<script>
+
+
+		////////////Pop Up close --> FULLSCREEN//////////////
+
+			$("#entendido").on("click", function() {
+				$("#popUp").hide();
+				document.documentElement.requestFullscreen()
+			});
+
+		////////////////////////
+
+		video = document.getElementById("video") ;
+		var estat = 0 ;
+		
+		temps    = document.getElementById("temps") ;
+		barra    = document.getElementById("barra") ;
+		progres  = document.getElementById("progres") ;
+		
+				
+		video.ontimeupdate =  actualitzar;
+
+		function actualitzar(){		
+		
+			// calculem el percentatge
+			percent = (100 / video.duration) * video.currentTime ;			
+			percent = percent.toFixed(0) ;
+			
+			/*temps.innerHTML = video.currentTime + " / " + percent + "%";
+
+*/			
+			progres.style.width =  percent + "%"
+
+			
+		};
+		
+		barra.onclick = function(e){
+
+			// console.log('eix x' + e.clientX);
+			// console.log('eix y' + e.clientY);
+
+			
+
+			let heightResponsive = $('div#barra').width();
+			let heightMarker = $('img#marker').width() / 2;
+			
+			
+
+			switch (heightResponsive) {
+				case 200:
+					var percetatgeResponsive = $('div#barra').width() / 100 * 28 ;
+				break;
+				case 400:
+					var percetatgeResponsive = $('div#barra').width() / 100 * 20 ;
+				break;
+			}
+
+			var offset = $(this).offset(),
+                relativeX = (e.pageX - offset.left),
+                relativeY = (e.pageY - offset.top);
+
+
+			console.log(percetatgeResponsive);
+		
+			var x = heightResponsive - e.clientY + percetatgeResponsive;
+
+			// console.log(e);
+			
+			// console.log(x);
+			time = ( video.duration * x ) / heightResponsive ;
+			
+			video.currentTime = time ;
+
+			jQuery("#marker").css( {position:"absolute", left:heightResponsive - relativeY - heightMarker});
+			
+		};
+
+
+
+
+
+
+
+
+	</script>
+
+
+
+
+
+
+
+</body></html>

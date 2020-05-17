@@ -7,8 +7,8 @@ $("#verMaps").on("click", function(){
         scrollTop: $("#first").offset().top},
         1200);
         $('#logo1').css("display", "none");
-        $('#logo2').css("display", "none");
-        $('#logo3').css("display", "block");
+        $('#logo2').css("display", "block");
+        $('#logo3').css("display", "none");
 });
 
  $('#home').bind('mousewheel', function(e){
