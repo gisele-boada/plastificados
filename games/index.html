@@ -20,7 +20,6 @@
 			}
 
 			body,html {
-				/*background-color: #041f4a;				*/
 				overflow: hidden;
 				margin:0;
 				padding:0;
@@ -39,6 +38,11 @@
 				width: 18%;
 				-webkit-filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.5));
 				filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0.5));
+			}
+
+			#logo:hover {
+				-webkit-filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0));
+				filter: drop-shadow(8px 8px 5px rgba(0, 0, 0, 0));
 			}
 
 			#turn {
@@ -178,14 +182,12 @@
 					cursor: pointer;
 				}
 
-
-
 			}	
 
-			@media screen and (min-width: 1800px) {
+			@media screen and (max-width: 1800px) {
 				
 				.button {
-					padding-top: 3%; 
+					padding-top: 2%; 
 				}
 			}
 
@@ -234,7 +236,7 @@
 			<a href="dosanddonts.html"><div class="button" id="g4" >Do's and don'ts.</div></a>
 
 
-			<a href="../../web/html/index.html"><img id="logo" src="img/deco/logo.svg"></a>
+			<a href="../web/index.html"><img id="logo" src="img/deco/logo.svg"></a>
 			<div id="shareCont">
 				<div id="share"> Share </div>
 				<svg id="shareSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 60" >

@@ -38,6 +38,7 @@
 
 	   	});
 
+/*////////////////*/
 /*	$(window).resize(function(){
     	if ($(window).width() <= 768){
         	$("#logo1").css("display","none");
@@ -76,9 +77,6 @@
 			$("#logo3").css("display", "none");
 		});
 
-		$(".opcionesMenu").on("click", function(){
-			$(".opcionesMenu").css("background-color", "#041f4a");
-		});
 
 
 	//////////////SOMBRA MOVIMIENTO PLATO///////////////////////
@@ -121,6 +119,9 @@
 
 
 	/////////////PLANTAS GROW///////////////////////
+
+  
+
    		 	$(window).scroll(function(){
         		var wScroll = $(this).scrollTop();
 
@@ -139,10 +140,35 @@
 
    		 	});
 
+
+   		 	$(window).scroll(function(){
+        		var wScroll = $(this).scrollTop();
+
+				if (wScroll>=2200){
+
+				$("#plantas").css({"bottom":"-38%",
+						"transition" : "bottom 3s" });
+					
+				} if (wScroll>=2600) {
+				$("#plantas").css({"bottom":"-20%",
+						"transition" : "bottom 2s" });
+				} if (wScroll>=3500) {
+				$("#plantas").css({"bottom":"-38%",
+						"transition" : "bottom 2s" });
+				}
+
+   		 	});
+
+
+
+
+
+
+
    	/////////////////////////////////////
 
    	   		 	
-/*   	var pos = $('#first').position();
+/*   	var pos = $('#last').position();
 	console.dir(pos);*/
 
 ////////INTENT CANVI COLOR LOG SEGONS POSICIO Y //////////////////////
@@ -207,27 +233,27 @@
 				<img id="sos" src="img/sos.svg">
 			</div>
 		</a>
+		<!--MENU MOBILE-->
 		<div id="buttonsCont">
 			<div id="burgerCont">
 				<a href="entradas.html"><div class="opcionesMenu">ENTRADAS</div></a>
 				<a href="contact.html"><div class="opcionesMenu">CONTACT</div></a>
-				<a href="../../games/html/index.html"><div class="opcionesMenu">GAMES</div></a>
+				<a href="../games/index.html"><div class="opcionesMenu">GAMES</div></a>
 				<div class="opcionesMenu">TOUR VIRTUAL</div>
 			</div>
 			<div id="burger">
 				<img id="burgerImg" src="img/burger.svg">
 				<img id="cross" src="img/cross.svg">
 			</div>
-
+		<!--*MENU WEB-->
 			<a href="contact.html"><div class="button" style="background-color: #ff4633">Contacto</div></a>
-			<a href="entradas.html">
-				<div class="button" style="background-color: #041f4a">Entradas</div></a>
+			<a href="entradas.html"><div class="button" style="background-color: #041f4a">Entradas</div></a>
 		</div>
 	</div>
 
 
 	<div id="home">
-		<a href="../../games/html/index.html"><img id="appGames" src="img/appGames.svg"></a>
+		<a href="../games/index.html"><img id="appGames" src="img/appGames.svg"></a>
 		<video autoplay muted loop id="homePage" src="img/deco/background.mp4" type="video/mp4"></video> 
 	</div>
 
@@ -254,14 +280,14 @@
 			<div class="text2"><p>Los problemas relacionados con el medioambiente no aparecen de un día para otro. Lo mismo ocurre con el consumo y mal uso del plástico en el plano global. Desde que se descubrió lo útil que era el plástico en los cuarenta, el consumo del plástico ha ido subiendo exponencialmente. </p></div>
 			<!-- <div class="text2"><p>¡Clica en "Ver mapa" y analiza el crecimiento a nivel global!</p></div> -->
 			<div style="clear: both;"></div>
-			<div id="verMapa">Ver mapa</div>
+			<a href="../mapa/mapa.html"><div id="verMapa">Ver mapa</div>
 		</div>
-		<img id="mapa" src="img/mapa.svg">
+		<img id="mapa" src="img/mapa.svg"></a>
 	</div>
 	<div id="third">
 		<div id="thirdCont">
 			<h1>¿TE ATREVES A DESCUBRIR SI ESTÁS PLASTIFICADO?</h1>
-			<div class="text3"><p>Los problemas relacionados con el medioambiente no aparecen de un día para otro. Lo mismo ocurre con el <span style="font-family: HelveticaNeue Medium Italic; color: #041f4a;">consumo</span> y mal uso del plástico en el plano global. Desde que se descubrió lo útil que era el plástico en los cuarenta, el consumo del plástico ha ido subiendo exponencialmente. </p>
+			<div class="text3"><p>Los problemas relacionados con el medioambiente no aparecen de un día para otro. Lo mismo ocurre con el y mal uso del plástico en el plano global. Desde que se descubrió lo útil que era el plástico en los cuarenta, el consumo del plástico ha ido subiendo exponencialmente. </p>
 			</div>
 			<div style="clear: both;"></div>
 			<div id="test">Test</div>

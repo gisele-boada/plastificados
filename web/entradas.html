@@ -77,10 +77,6 @@
 			$("#logo3").css("display", "none");
 		});
 
-		$(".opcionesMenu").on("click", function(){
-			$(".opcionesMenu").css("background-color", "#041f4a");
-		});
-
 
 //////////////CLIC i UNCLICK ITEM////////////////
 
@@ -98,10 +94,14 @@ $(document).ready(function () {
 
 
 
+	/////SCROLL TOP///////
+		$("#topMapa").on("click", function topFunction() {
+			$('html, body').animate({scrollTop:0}, 'slow');
+				$("#logo1").css("display", "block");
+				$("#logo2").css("display", "none");
+				$("#logo3").css("display", "none");
 
-
-
-
+	   	});
 	///////////////////////////////////
 	});
 	
@@ -231,6 +231,8 @@ $(document).ready(function () {
 	<img id="water" src="img/deco/water.svg">
 	<img id="palito" src="img/deco/palito.svg">
 	<img id="decoContact" src="img/contact/decoContact.svg">
+
+	<img id="topMapa" src="img/contact/topMapa.svg">
 	
 </body>
 

@@ -80,8 +80,9 @@
 			height: 8%;
 			filter: drop-shadow(3px 4px 4px rgba(0,0,0,0.5));
 			cursor: pointer;
-			z-index:1;
-			display: none;
+			/*z-index:1;*/
+			/*display: none;*/
+			z-index: 1;
 		}
 
 		#top:hover {
@@ -118,12 +119,12 @@
 		#home {
 			height: 100vh;
 			position: relative;
+			z-index: 1;
 		}
 
 
 
 		#homePage {
-
 			transform: rotateY(180deg);
 			object-fit: cover;
 			width: 100vw;
@@ -131,6 +132,12 @@
 /*			position: fixed;
 			top: 0;
 			left: 0;*/
+			-webkit-filter: drop-shadow(0px 11px 10px rgba(0,0,0,0.5));
+		    filter: drop-shadow(0px 11px 10px rgba(0,0,0,0.5));
+		    
+		}
+
+
 		}
 
 		#background {
@@ -212,7 +219,6 @@
 						font-family: HelveticaNeue Bold Condensed;
 						font-size: 30pt;
 						text-align: center;
-						text-decoration: none;
 						color: white;
 						cursor:pointer;
 						padding-top: 5%;
@@ -256,7 +262,7 @@
 				position: relative;
 				background-color: #ff4633;
 				height: 50%;
-				border-radius: 0px 150px 0px 150px;
+				/*border-radius: 0px 150px 0px 150px;*/
 				padding-left: 3%;
 				padding-right: 3%;
 				padding-top: 1%;
@@ -365,8 +371,8 @@
 				right: 10%;
 				height: 65vh;
 				width: 50vw;
-				-webkit-filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5)); 
-				filter: drop-shadow(0px 30px 15px rgba(0,0,0,0.5));
+				-webkit-filter: drop-shadow(-17px 20px 10px rgba(0,0,0,0.5)); 
+				filter: drop-shadow(-17px 20px 10px rgba(0,0,0,0.5));
 				border-radius: 20px;
 				padding-right: 4%;
 				padding-top: 3%;
@@ -688,6 +694,8 @@
 	    		animation-name: plastic;
 	    		animation-duration: 5s ;
 	    		animation-iteration-count: infinite;
+	    		-webkit-filter: drop-shadow(-12px 15px 5px  rgba(0, 0, 0, 0.5));
+				filter: drop-shadow(-12px 15px 5px rgba(0, 0, 0, 0.5));
 	    	}
 
 	    	#detergent {
@@ -779,9 +787,9 @@
 
 
 
-@media screen and (min-width: 1600px) and (max-width: 2570px) {
+@media screen and (min-width: 1700px) and (max-width: 2570px) {
 		 h1{
-		 	font-size: 4rem!important;
+		 	font-size: 3.5rem!important;
 		 }
 
 		 h2 {
@@ -817,6 +825,20 @@
 		 #mapa {
 			bottom: 14%;
     		right: 14%;
+		}
+
+		#verMapa {
+			font-size: 21px;
+		}
+
+		#test {
+			font-size: 21px;
+		}
+
+		#habitos {
+			padding: 9px 70px 0 70px;
+			height: 45px;
+			font-size: 21px;
 		}
 
 		#contLastLeft {
@@ -880,7 +902,8 @@
 
 }
 
-@media screen and (min-width: 940px) and (max-width: 1190px) {
+@media screen and (min-width: 750px) and (max-width: 1190px) {
+
 		
 		#firstCont {
 			    padding-top: 2%;
@@ -910,8 +933,9 @@
 			padding-left: 5%;
 		}
 
-		.text3 {padding-left: 8%}
-
+		.text3 {padding-left: 8%;}
+		
+		.text5 {    margin-top: 8%;}
 		#contLastLeft {padding-right: 0;
 			width: 32%;}
 
@@ -927,11 +951,15 @@
 			padding-top: 7%;
 		}
 
-		#opinion1 {margin-top: 6%;
-			margin-right: 10%;}
+		#opinion1 {
+			margin-top: 9%;
+			margin-right: 10%;
+			width: 40%;
+			margin-left: 20%;
+		}
 
 		#arrowRightMobile {
-			display: block;
+			display: none;
 		}
 
 
@@ -940,21 +968,42 @@
 			right: 8%;
 			width: 50vw;
 		}
+
+		#titleFooter {
+			font-size: 2.3rem;
+    		width: 30%;
+		}
+
+			#arrowLeft {
+				display: none;
+			}
+
+			#arrowRight {
+				display: none;
+			}
+
 }
 
 
 
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 750px) {
 
+		body {
+			overflow-x: hidden; 
 
-		    #seabed {
+		}
+
+		a {text-decoration: none;}
+
+		#seabed {
         	display: none;
         }
 
         body {
         	background-color: #041f4a;
         }   
+
         p {
         	font-size:12pt;
         } 
@@ -989,11 +1038,14 @@
 
 		 	#burgerCont {
 				display: block;
+
 			}
+		
 
 
 		.button {
 			display: none;
+
 		}
 
 		#top {
@@ -1018,7 +1070,7 @@
 			padding-top: 5%;
 			padding-bottom: 5%;
 			top: 10%;	
-			border-radius: 0px 80px 0px 80px;
+			/*border-radius: 0px 80px 0px 80px;*/
 			-webkit-filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5)); 
 			filter: drop-shadow(0px 15px 10px rgba(0,0,0,0.5));
 		}
@@ -1238,6 +1290,10 @@
 				#soft, #detergent, #straw, #water, #palito {
 					display: none;
 				} 
+
+				.opcionesMenu:hover {
+					background-color: red;
+				}
 
 
 }
@@ -1542,4 +1598,53 @@
 
 
 
-		
+@media screen and (max-width: 360px) and (min-width: 320px) {
+	
+
+	#firstCont {
+		padding-top: 0;
+		padding-left: 1%;
+    padding-right: 1%;
+	}
+
+	#secondCont {
+		left: 5%;
+    height: 78vh;
+    width: 90vw;
+	}
+
+	#verMapa {
+		margin-left: 5%;
+		width: 90%;
+	}
+
+	#thirdCont {
+		padding-left: 4%;
+		height: 78vh;
+		width: 90vw;
+		right: 5%;
+	}
+
+	#test {
+		margin-right: 4%;
+		width: 90%;
+	}
+
+	#habitos {
+		    margin-left: 5%;
+		    width: 90%;
+	}
+
+	#contLastLeft {
+		    padding: 16px 6% 0px 3%;
+	}
+
+	#contLastRight {
+		margin-top: -5%;
+	}
+
+	.text4 {
+		    padding: 2% 0 3% 0;
+	}
+
+}

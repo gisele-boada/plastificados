@@ -28,6 +28,18 @@
 			margin-left: 5%;
 		}	
 
+		#turn {
+			background-color: #041f4a;
+			height: 100vh;
+			width: 100%;
+			font-family: HelveticaNeue Bold Condensed;
+			font-size: 25pt;
+			color: #ff4633;
+			text-align: center;
+			padding-top: 15%;
+
+		}
+
 		#barra {
 			/*border:1px solid red; */
 			border-radius: 25px;
@@ -119,6 +131,43 @@
 				filter: drop-shadow(6px 6px 4px rgba(0,0,0,0));
 			}
 
+			#back {display: none;
+				position: absolute;
+				top: 45%;
+				left:4%;
+				z-index: 2;
+				color: #041f4a;
+				font-family: HelveticaNeue Bold Condensed;
+				font-size: 20pt;
+				background-color: #ff4633;
+				border-radius: 15px;
+				padding: 10px 25px 10px 25px;
+				-webkit-filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.3)); 
+				filter: drop-shadow(6px 6px 4px rgba(0,0,0,0.3));
+				cursor: pointer;
+			}
+
+			#back:hover {
+				-webkit-filter: drop-shadow(6px 6px 4px rgba(0,0,0,0)); 
+				filter: drop-shadow(6px 6px 4px rgba(0,0,0,0));
+			}
+
+
+			/*		//////////////BLOQUEO SOLO LANDSCAPE VIEW///////////*/
+
+			@media only screen and (orientation:portrait){
+				#turn{ display:block; }
+				#content{ display:none; }
+			}
+			@media only screen and (orientation:landscape){
+				#turn{ display:none; }
+				#content{ display:block; }
+			}
+
+
+
+			/*//////////QUERIES////////////*/
+
 			@media screen and (max-width: 1950px) and (min-width: 1600px) {
 			#barra {
 					width: 500px;
@@ -150,6 +199,10 @@
 					margin-left: 23%;
 				}
 
+				#back {
+					font-size: 18pt;
+				}
+
 			}
 
 			@media screen and (max-width: 800px) {
@@ -160,6 +213,11 @@
 
 				#progres {
 					    height: 100%;
+				}
+
+				#back {
+					font-size: 15pt;
+					
 				}
 		
 			}
@@ -187,19 +245,28 @@
 
 </head>
 <body>
-	<div id="popUp">Haz click en la barra desde abajo hacia arriba para ver la evolución de los años.
-		<div id="entendido">ENTENDIDO</div>
-	</div>
-	<video id="video">
-	  <source src="vid/mapa.mp4" type="video/mp4">
-	</video>
+
+	<div id="content">
+		<div id="popUp">Haz click en la barra desde abajo hacia arriba para ver la evolución de los años.
+			<div id="entendido">ENTENDIDO</div>
+		</div>
+		<a href="../web/index.html"><div id="back">ATRÁS</div></a>
+		<video id="video">
+		  <source src="vid/mapa.mp4" type="video/mp4">
+		</video>
+		
+		<div id="barra">
+			<div id="progres"> 
+	    		<img id="marker" src="vid/marker.svg">
+	    	</div>
+		</div>
 	
-	<div id="barra">
-		<div id="progres"> 
-    		<img id="marker" src="vid/marker.svg">
-    	</div>
 	</div>
 
+	<div id="turn">
+		Please rotate your device!
+		<!-- <img id="plants" src="img/deco/plants.svg"> -->
+	</div>
 	
 	<script>
 
@@ -208,6 +275,7 @@
 
 			$("#entendido").on("click", function() {
 				$("#popUp").hide();
+				$("#back").css("display", "block");
 				document.documentElement.requestFullscreen()
 			});
 
