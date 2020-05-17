@@ -684,7 +684,7 @@
 
 		#topMapa {
 			position: absolute;
-			bottom: -95%;
+			bottom: -98%!important;
 			height: 5%;
 			margin-left: 39%;
 			cursor:pointer;
