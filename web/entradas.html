@@ -12,8 +12,8 @@
 		<link rel="icon" type="image/png" href="img/icon.png" />
 		<title>PLASTIFICADOS</title>
 		<script src="js/jquery.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script src="js/scroll_entradas.js" ></script>
+<!-- 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="js/scroll_entradas.js" ></script> -->
 <!-- 		<script src="js/scroll_mobile.js" media="media screen and (max-width: 768px)"></script>  -->
 
 
@@ -47,6 +47,25 @@
     	}
 	});*/
 
+
+
+$("#empezar").on("click", function(){
+            $('body,html').animate({
+        scrollTop: $("#first").offset().top},
+        1200);
+        $('#logo1').css("display", "none");
+        $('#logo2').css("display", "block");
+        $('#logo3').css("display", "none");
+});
+
+ $(".item").on("click", function(){
+        $('body,html').animate({
+        scrollTop: $("#second").offset().top},
+        1200);
+        $('#logo1').css("display", "none");
+        $('#logo2').css("display", "block");
+        $('#logo3').css("display", "none");
+});
 
 	//////////////ABRIR MENU///////////////////////
 		$("#burgerImg").on("click", function(){
@@ -132,7 +151,7 @@ $(document).ready(function () {
 				<a href="entradas.html"><div class="opcionesMenu">ENTRADAS</div></a>
 				<a href="contact.html"><div class="opcionesMenu">CONTACT</div></a>
 				<a href="../games/index.html"><div class="opcionesMenu">GAMES</div></a>
-				<div class="opcionesMenu">TOUR VIRTUAL</div>
+				<a href="videotour.html"><div class="opcionesMenu">TOUR VIRTUAL</div></a>
 			</div>
 			<div id="burger">
 				<img id="burgerImg" src="img/burger.svg">
@@ -221,6 +240,7 @@ $(document).ready(function () {
 			</div>
 			<div id="contNumEntradas">
 				<img src="img/contact/contNumEntradas.svg">
+				<div id="pago">Pago</div>
 			</div>
 		</div>
 	</div>
@@ -229,10 +249,10 @@ $(document).ready(function () {
 	<img id="detergent" src="img/deco/detergent.svg">
 	<img id="straw" src="img/deco/straw.svg">
 	<img id="water" src="img/deco/water.svg">
-	<img id="palito" src="img/deco/palito.svg">
+	<!-- <img id="palito" src="img/deco/palito.svg"> -->
 	<img id="decoContact" src="img/contact/decoContact.svg">
 
-	<img id="topMapa" src="img/contact/topMapa.svg">
+	<!-- <img id="topMapa" src="img/contact/topMapa.svg"> -->
 	
 </body>
 

@@ -68,7 +68,7 @@
 			width: 100%;
 			margin:0;
 			padding:0;
-			overflow:hidden;
+			/*overflow:hidden;*/
 
 		}
 
@@ -258,14 +258,14 @@
 					border-radius: 10px;
 					background-color: #041f4a;
 					height: 45px;
-					/*max-width: fit-content;*/
+					width: 90%;
 					color: #ffffff73;
 					font-family: HelveticaNeue Light;
 					-webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5)); 
 					filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5));
 					margin-bottom: 2%;
 					float: left;
-					padding: 10px 20px 0 20px;
+					padding: 11px 20px 0 20px;
 					margin-right: 35%;
 				}
 

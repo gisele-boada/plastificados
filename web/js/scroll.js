@@ -1,7 +1,7 @@
 $(function() {
 	/////////////////////////////////////
 
-	if ( $(window).width() > 739) {
+	/*if ( $(window).width() > 739) {*/
 //Add your javascript for large screens here
 
 
@@ -188,12 +188,12 @@ $(function() {
 
 	///////////////////////////////////
 
-		}
+/*		}
 	else {
 	//Add your javascript for small screens here
 	
-	alert();
-	}
+	
+	}*/
 
 
 });

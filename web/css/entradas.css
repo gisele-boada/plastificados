@@ -75,7 +75,7 @@
 			width: 100%;
 			margin:0;
 			padding:0;
-			overflow:hidden;
+			/*overflow:hidden;*/
 		}
 
 
@@ -378,11 +378,13 @@
 					height: 100vh;
 					width: 100%;
 					border:1px solid transparent;
+					text-align: center;
 				}
 
 					#contSecond {
 						border:1px solid transparent;
 						height: 100%;
+
 					
 					}
 
@@ -399,13 +401,16 @@
 							color:white;
 							font-family: HelveticaNeue Light;
 							font-size: 16px;
-							padding: 8% 68% 2% 10%;
+							    padding: 2% 10% 6% 10%;
 						}
+
 				#contNumEntradas img {
-					width: 20%;
-					margin-left: 10%;
-    				margin-top: 2%;
+					width: 15%;
+					margin-left: 40%;
+    				/*margin-top: 4%;*/
+    				margin:auto;
     				cursor: pointer;
+    				margin-bottom: 3%;
 				}
 
 
@@ -473,6 +478,32 @@
 			-webkit-filter: drop-shadow(-15px -8px 10px rgba(0, 0, 0, 0.5));
 			filter: drop-shadow(-15px -8px 10px rgba(0, 0, 0, 0.5));
 		}
+
+			#pago {
+				background-color: #ff4633;
+			height: 45px;
+			width: 190px;
+				font-family: HelveticaNeue Light;
+				font-size: 20px;
+				letter-spacing: 0.5px;
+				text-align: center;
+				padding-top: 6px;
+				border-radius: 7.5px;
+				cursor: pointer;
+				color:white;
+			/*	margin-left: 42%;
+				margin-right: 47%;*/
+				
+			    -webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5)); 
+				filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.5));
+				margin:auto!important;
+			}
+
+			#pago:hover {
+					background-color: red;
+					-webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0)); 
+					filter: drop-shadow(8px 8px 8px rgba(0,0,0,0));
+			}
 
 
 
@@ -617,12 +648,15 @@
        		margin-bottom: 0;
         }
 
+        p{font-size: 14pt!important;}
+
          #seabed {
         	display: none;
         }
 
        body {
         	background-color: #041f4a;
+        	overflow-x: hidden;
         }
 
         #logo {
@@ -672,20 +706,26 @@
 			margin-left: 0;
 			text-align: center;
 			margin:auto;
+			    top: 17%;
+    		left: 8%;
 		}
 
 		#cuerpoEntrada {
 			text-align: center;
 			width: 100%;
 			padding-right: 11%;
-		}
+			top: 34%;
+    		left: 6%;
+			}
+		
 
 		#empezar {
 			float: none;
-			margin-left: 3%;
+			margin-left:4%;
 			width: 80%;
-			top:54%;
-
+			top:58%;
+			height: 55px;
+			font-size: 24px;
 		}
 
 		#entradas {
@@ -701,9 +741,18 @@
 		}
 
 		#bodyFirst {
-		    padding: 3% 5% 5% 5%;
+		    padding: 8% 10% 9% 13%;
 		    font-size: 14pt;
 		}
+		
+		#titSecond {
+			padding-left: 10%;
+			padding-right: 10%;
+			font-size: 2.5rem;
+			 margin-top: 26%;
+		}
+		#bodySecond {padding: 15% 6% 10% 10%;}
+		
 
 		.item {
 			width: 24%;
@@ -722,15 +771,33 @@
 			background-color:  #041f4a;
 		}
 
+		#contNumEntradas {
+			text-align: center;
+		}
+
 		#contNumEntradas img {
-			margin-left: 39%;
+			margin:auto;
 		}
 
 		#decoContact {
 			display: none;
 		}
 
+		#pago {
+			margin-left: 20%;
+		    margin-right: 20%;
+		    margin-top: 18%!important;
+		    font-size: 24px;
+		    height: 55px;
+		}
+
+		#home {
+			text-align: center;
+		}
+
 	}
+
+
 
 
 	@media screen and (max-width: 375px) {
@@ -742,12 +809,15 @@
        		margin-bottom: 0;
         }
 
+        p {font-size: 13pt!important;}
+
          #seabed {
         	display: none;
         }
 
        body {
         	background-color: #041f4a;
+        	overflow-x: hidden;
         }
 
         #logo {
@@ -806,25 +876,27 @@
 			text-align: center;
 			width: 100%;
 			padding-right: 10%;
+			top:35%;
 		}
 
 		#empezar {
 			float: none;
-			margin-left: 3%;
+			    margin-left: 7%;
 			width: 80%;
+			    top: 59%;
 		}
 
 		#entradas {
 			height: 82%;
 		}
 
-		#titFirst, #titSecond {
+		#titFirst  {
 			font-size: 2.5rem;
 			line-height: 1.2;
 			margin-top: 24%;
 		}
 
-		#bodyFirst, #bodySecond {
+		#bodyFirst {
 			    padding: 8% 5% 5% 5%;
 			    font-size: 14pt;
 		}
@@ -855,14 +927,38 @@
 			margin-left: 38%;
 		}
 
+		#contNumEntradas {
+			text-align: center;
+		}
+
 		#contNumEntradas img {
-			margin-left: 38%;
+			margin:auto;
 		}
 
 		#decoContact {
 			display: none;
 		}
+		
+		#titSecond {
+			padding-left: 12%;
+			padding-right: 12%;
+			font-size: 2.5rem;
+			padding-top: 3%;
+			marign:auto;
+		}
+		#bodySecond {padding: 12% 5% 10% 10%;}
 
+	}
+
+		#pago {
+			margin-left: 20%;
+		    margin-right: 20%;
+		    margin-top: 18%;
+		}
+
+		#second {
+			text-align: center;
+		}
 
 	}
 
@@ -882,7 +978,7 @@
 		}
 
 		#contNumEntradas img {
-			margin-left: 37%;
+			margin-left: 40%;
 		}
 
 		#decoContact {
