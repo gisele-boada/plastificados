@@ -8,27 +8,89 @@
 		<link rel="stylesheet" type="text/css" href="css/index_red.css">
 		<title>PLASTIFICADOS</title>
 		<link rel="icon" type="image/png" href="img/icon.png" />
-
-		<script src="js/jquery.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		 <script src="js/scroll.js" ></script>  
-
-
+		
+		
+		
 
 		
-	<style>
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////
+///////////     COMPTE! cal carregar el JQuery només un cop!!! 
+///////////     sinó podries carregar versions diferents que podrien entrar en conflicte
+/////////////////////////////////////////////////////////////////////////////////////////////////// -->
+		<script src="js/jquery.js"></script>
+		
+
+		
+<!--------------------------------------------------------------------------------------------
+				SCROLL suau dins la mateixa pàgina
+---------------------------------------------------------------------------------------------->		
+		<style>
+			html {scroll-behavior: smooth;}
+		</style>
 
 
 
-	</style>
+
 </head>	
 <body>
-
+<div id="scrollPagina" style="position:fixed;top:0;right:0;z-index:10000;width:60px;height:50px;background:green;color:white;padding:10px; display: none;"></div>
 	<script>
 
 		$(function() {
 	/////////////////////////////////////
+
 		
+	
+/**********************************************************************************/
+//////////////////////////////////   CONTROL SCROLL LOGO  //////////////////////////	
+		var posicio ;
+		
+		$(window).scroll(function() {
+			/// està pendent de l'SCROLL i obté la posició
+			posicio = window.scrollY;
+			fer(posicio);
+		
+		});
+		
+		function fer(p) {
+			document.getElementById("scrollPagina").innerHTML = p ;
+
+////////////CONTROL LOGO COLOR////////////////////////////////////////////////////////////////////////
+
+
+					if(   p  >= 0 ){
+						$('#logo1').css("display", "block");
+						$('#logo2').css("display", "none");
+						$('#logo3').css("display", "none");
+					}
+
+					if(   p  >= 600 ){
+						$('#logo1').css("display", "none");
+						$('#logo2').css("display", "block");
+						$('#logo3').css("display", "none");
+					}
+
+					if(   p  >= 2595 ){
+						$('#logo1').css("display", "none");
+						$('#logo2').css("display", "none");
+						$('#logo3').css("display", "block");
+					}
+
+					if(   p  >= 3285 ){
+						$('#logo1').css("display", "block");
+						$('#logo2').css("display", "none");
+						$('#logo3').css("display", "none");
+					}
+
+					
+		};
+
+
+/////////////////////////////////////////////////////////////////////////////////////	
+/***********************************************************************************/
+	
+	
+
 		/////SCROLL TOP///////
 		$("#top").on("click", function topFunction() {
 			$('html, body').animate({scrollTop:0}, 'slow');
@@ -162,52 +224,6 @@
 
 
 
-
-
-
-   	/////////////////////////////////////
-
-   	   		 	
-/*   	var pos = $('#last').position();
-	console.dir(pos);*/
-
-////////INTENT CANVI COLOR LOG SEGONS POSICIO Y //////////////////////
-
-/*		$(window).resize(function(){
-
-		       if ($(window).width() <= 1914) {  
-
-					$(window).scroll(function(){
-					    var wScroll = $(this).scrollTop();
-
-						if (wScroll>=969){
-							console.log("969");
-							$('#logo1').css("display", "none");
-		        			$('#logo2').css("display", "block");
-		        			$('#logo3').css("display", "none");
-		        			$('#top').css("display", "block");
-							
-						} if (wScroll>=1938) {
-							console.log(wScroll);
-					        $('#logo1').css("display", "none");
-					        $('#logo2').css("display", "block");
-					        $('#logo3').css("display", "none");
-					         $('#top').css("display", "block");
-
-						} if (wScroll>=2907) {
-							console.log(wScroll);
-					        $('#logo1').css("display", "none");
-							$('#logo2').css("display", "block");
-							$('#logo3').css("display", "none");
-						}
-
-					});
-
-		       }     
-
-		});*/
-
-
 	///////////////////////////////////
 	});
 	
@@ -230,7 +246,7 @@
 				<img id="logo1" class="logoIMG" src="img/logo1.gif">
 				<img id="logo2" class="logoIMG" src="img/logo2.gif">
 				<img id="logo3" class="logoIMG" src="img/logo3.gif">
-				<img id="sos" src="img/sos.svg">
+				<!-- <img id="sos" src="img/sos.svg"> -->
 			</div>
 		</a>
 		<!--MENU MOBILE-->
@@ -239,7 +255,7 @@
 				<a href="entradas.html"><div class="opcionesMenu">ENTRADAS</div></a>
 				<a href="contact.html"><div class="opcionesMenu">CONTACT</div></a>
 				<a href="../games/index.html"><div class="opcionesMenu">GAMES</div></a>
-				<a href="videoTour.html"><div class="opcionesMenu">TOUR VIRTUAL</div></a>
+				<div class="opcionesMenu">TOUR VIRTUAL</div>
 			</div>
 			<div id="burger">
 				<img id="burgerImg" src="img/burger.svg">
@@ -358,6 +374,11 @@
 	<img id="water" src="img/deco/water.svg">
 	<img id="palito" src="img/deco/palito.svg">
 
+	
+	
+
+	
+	
 </body>
 
 </html>
